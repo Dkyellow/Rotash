@@ -615,8 +615,14 @@ footer {
     font-size: 1.5rem;
     color: var(--white);
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1100;
+    /* Ensure it stays above everything */
     transition: var(--transition-smooth);
+}
+
+/* Ensure the X is visible when menu is active */
+body.menu-open .mobile-toggle {
+    color: var(--dark-charcoal) !important;
 }
 
 header.scrolled .mobile-toggle {

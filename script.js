@@ -64,6 +64,7 @@ const navLinks = document.querySelectorAll('.nav-link, .nav-links .btn');
 if (mobileToggle) {
     mobileToggle.addEventListener('click', () => {
         navLinksContainer.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
         const icon = mobileToggle.querySelector('i');
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-times');
@@ -74,6 +75,7 @@ if (mobileToggle) {
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navLinksContainer.classList.remove('active');
+        document.body.classList.remove('menu-open');
         const icon = mobileToggle.querySelector('i');
         if (icon) {
             icon.classList.add('fa-bars');
