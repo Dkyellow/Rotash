@@ -154,6 +154,16 @@ img {
     color: var(--white);
 }
 
+.hero-btns .btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.hero-btns .btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-blue);
+}
+
 /* Navbar */
 header {
     position: fixed;
@@ -237,8 +247,8 @@ header.scrolled .nav-link::after {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('commercial_refrigeration_hero.png');
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('commercial_refrigeration_hero.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -246,10 +256,11 @@ header.scrolled .nav-link::after {
     align-items: center;
     color: var(--white);
     text-align: center;
+    padding: 100px 0;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     opacity: 0;
     transform: translateY(30px);
@@ -257,15 +268,26 @@ header.scrolled .nav-link::after {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 8vw, 3.5rem);
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 4vw, 1.25rem);
     margin-bottom: 35px;
     color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btns .btn {
+    text-align: center;
 }
 
 @keyframes fadeInUp {
@@ -277,16 +299,16 @@ header.scrolled .nav-link::after {
 
 /* Sections */
 section {
-    padding: 100px 0;
+    padding: clamp(60px, 10vw, 100px) 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: clamp(40px, 8vw, 60px);
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: var(--primary-blue);
     margin-bottom: 15px;
 }
@@ -304,7 +326,7 @@ section {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
@@ -405,7 +427,7 @@ section {
 /* Projects Showcase */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -679,11 +701,24 @@ header.scrolled .mobile-toggle {
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        margin-left: 0 !important;
     }
 
     .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 }
