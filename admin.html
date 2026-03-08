@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | Rotash Power Project</title>
+    <meta name="description" content="Admin dashboard for managing Rotash Power Project quotes, notifications, and clients securely.">
+    <link rel="icon" type="image/png" href="logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -284,6 +286,15 @@
             }
         }
 
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-charcoal);
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -295,20 +306,79 @@
             }
             .main-content {
                 margin-left: 0;
-                padding: 20px;
+                padding: 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .top-header {
+                padding: 15px;
+                margin-bottom: 25px;
+                gap: 15px;
+            }
+            .top-header h1 {
+                font-size: 1.2rem;
+                flex-grow: 1;
+                text-align: center;
+            }
+            .user-profile div:first-child {
+                display: none; /* Hide text on mobile */
             }
             .mobile-menu-btn {
-                display: block !important;
-                background: none;
-                border: none;
-                font-size: 1.5rem;
-                color: var(--dark-charcoal);
-                cursor: pointer;
+                display: block;
             }
-        }
-
-        .mobile-menu-btn {
-            display: none;
+            .dashboard-cards {
+                grid-template-columns: 1fr; /* stack cards on mobile */
+                gap: 15px;
+            }
+            .panel {
+                padding: 15px;
+            }
+            
+            /* Responsive Table */
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                display: none;
+            }
+            tr {
+                margin-bottom: 20px;
+                border: 1px solid #eee;
+                border-radius: 8px;
+                padding: 10px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            }
+            td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #eee;
+                padding: 12px 5px;
+                text-align: right;
+            }
+            td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: var(--text-gray);
+                margin-right: 15px;
+                text-align: left;
+            }
+            td:last-child {
+                border-bottom: none;
+            }
+            .sidebar-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+                display: none;
+            }
+            .sidebar-overlay.active {
+                display: block;
+            }
         }
 
     </style>
@@ -318,6 +388,9 @@
 
     <div class="admin-layout">
         
+        <!-- Sidebar overlay for mobile -->
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
@@ -351,7 +424,7 @@
         <!-- Main Content -->
         <main class="main-content">
             
-            <header class="top-header">
+            <div class="top-header">
                 <button class="mobile-menu-btn" id="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -363,7 +436,7 @@
                     </div>
                     <div class="avatar">A</div>
                 </div>
-            </header>
+            </div>
 
             <div class="dashboard-cards">
                 <div class="stat-card">

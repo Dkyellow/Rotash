@@ -63,15 +63,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mobile Menu Toggle
     const mobileBtn = document.getElementById("mobile-menu-btn");
     const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebar-overlay");
 
     if (mobileBtn && sidebar) {
         mobileBtn.addEventListener("click", () => {
-            if (sidebar.style.transform === "translateX(0px)") {
-                sidebar.style.transform = "translateX(-100%)";
-            } else {
-                sidebar.style.transform = "translateX(0px)";
-                sidebar.style.zIndex = "1001";
-            }
+            sidebar.classList.toggle("active");
+            if (overlay) overlay.classList.toggle("active");
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener("click", () => {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
         });
     }
 });
@@ -91,11 +95,11 @@ function loadQuotes() {
         const row = document.createElement("tr");
 
         row.innerHTML = `
-            <td style="font-weight: 500;">${quote.name}</td>
-            <td>${quote.service}</td>
-            <td>${quote.date}</td>
-            <td><span class="status-badge ${statusClass}">${quote.status}</span></td>
-            <td>
+            <td style="font-weight: 500;" data-label="Client Name">${quote.name}</td>
+            <td data-label="Service Type">${quote.service}</td>
+            <td data-label="Date">${quote.date}</td>
+            <td data-label="Status"><span class="status-badge ${statusClass}">${quote.status}</span></td>
+            <td data-label="Action">
                 <button title="View Details" style="background: none; border: none; font-size: 1.1rem; color: var(--primary-blue); cursor: pointer; margin-right: 10px;">
                     <i class="fas fa-eye"></i>
                 </button>
