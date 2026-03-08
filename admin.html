@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Rotash Power Project</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            background-color: var(--ice-blue);
+        }
+
+        /* Admin Layout */
+        .admin-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-header {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sidebar-header .logo-img {
+            height: 40px;
+            margin: 0 auto 10px;
+            filter: brightness(0) invert(1);
+        }
+
+        .sidebar-menu {
+            padding: 20px 0;
+            flex-grow: 1;
+        }
+
+        .menu-item {
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-weight: 500;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            border-left: 4px solid var(--primary-light);
+        }
+
+        .menu-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            margin-left: 260px;
+            padding: 40px;
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            background: var(--white);
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .top-header h1 {
+            font-size: 1.5rem;
+            color: var(--dark-charcoal);
+            margin: 0;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        /* Dashboard Cards */
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: var(--ice-blue);
+            color: var(--primary-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+
+        .stat-info h3 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--dark-charcoal);
+        }
+
+        .stat-info p {
+            margin: 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Tables & Lists */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .panel {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .panel-header h2 {
+            font-size: 1.2rem;
+            color: var(--dark-charcoal);
+            margin: 0;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px 10px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            color: var(--text-gray);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        td {
+            color: var(--dark-charcoal);
+            font-size: 0.95rem;
+        }
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-new { background: #e3f2fd; color: #1976d2; }
+        .status-pending { background: #fff3e0; color: #f57c00; }
+        .status-resolved { background: #e8f5e9; color: #388e3c; }
+
+        /* Notifications List */
+        .notification-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .notification-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+
+        .notif-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--ice-blue);
+            color: var(--primary-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .notif-content h4 {
+            margin: 0 0 5px;
+            font-size: 0.95rem;
+            color: var(--dark-charcoal);
+        }
+
+        .notif-content p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        .notif-time {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+            .mobile-menu-btn {
+                display: block !important;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: var(--dark-charcoal);
+                cursor: pointer;
+            }
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="admin-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="logo.png" alt="Rotash" class="logo-img">
+                <h2 style="font-size: 1.2rem; margin: 0; font-family: 'Playfair Display', serif;">ADMIN PORTAL</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active">
+                    <i class="fas fa-chart-pie"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-file-invoice"></i>
+                    Quote Requests
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-bell"></i>
+                    Notifications
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-users"></i>
+                    Clients
+                </a>
+                <a href="index.html" class="menu-item" style="margin-top: auto;">
+                    <i class="fas fa-globe"></i>
+                    View Website
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <header class="top-header">
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Dashboard Overview</h1>
+                <div class="user-profile">
+                    <div style="text-align: right;">
+                        <p style="margin: 0; font-weight: 600; font-size: 0.9rem;">System Admin</p>
+                        <p style="margin: 0; font-size: 0.8rem; color: var(--text-gray);">admin@rotash.co.za</p>
+                    </div>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+
+            <div class="dashboard-cards">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <div class="stat-info">
+                        <h3 id="stat-quotes">24</h3>
+                        <p>Total Quotes</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #f57c00; background: #fff3e0;"><i class="fas fa-clock"></i></div>
+                    <div class="stat-info">
+                        <h3 id="stat-pending">8</h3>
+                        <p>Pending Review</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #388e3c; background: #e8f5e9;"><i class="fas fa-check-circle"></i></div>
+                    <div class="stat-info">
+                        <h3 id="stat-resolved">16</h3>
+                        <p>Resolved</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                
+                <!-- Quotes Table -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>Recent Quote Requests</h2>
+                        <a href="#" style="font-size: 0.9rem; color: var(--primary-blue); text-decoration: none;">View All</a>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table id="quotes-table">
+                            <thead>
+                                <tr>
+                                    <th>Client Name</th>
+                                    <th>Service Type</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Automatically populated by js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Notifications Panel -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>Recent Notifications</h2>
+                        <button class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem;" onclick="clearNotifications()">Clear All</button>
+                    </div>
+                    <ul class="notification-list" id="notification-list">
+                        <!-- Automatically populated by js -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
