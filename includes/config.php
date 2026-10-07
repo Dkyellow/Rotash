@@ -13,7 +13,12 @@ const SITE_NAME    = 'Rotash Power Projects';
 const PARENT_GROUP = 'Rotash Group';
 const TAGLINE      = 'Engineering environments. Delivering performance.';
 
-/** Live markets. Future markets (zimbabwe, zambia, botswana) append here. */
+/**
+ * Live markets. Future markets (zimbabwe, zambia, botswana) append here.
+ * 'pages' = routes that exist in this market (keys of $ROUTES).
+ * Nav/footer/sitemap/hreflang honour it; links to routes a market
+ * does not have fall back to the global URL automatically.
+ */
 $MARKETS = [
     'global' => [
         'code'     => 'global',
@@ -23,6 +28,7 @@ $MARKETS = [
         'lang'     => 'en',
         'hreflang' => 'x-default',
         'flag'     => 'INT',
+        'pages'    => ['', 'about/', 'services/', 'industries/', 'projects/', 'locations/', 'insights/', 'contact/'],
     ],
     'uk' => [
         'code'     => 'uk',
@@ -32,6 +38,7 @@ $MARKETS = [
         'lang'     => 'en-GB',
         'hreflang' => 'en-GB',
         'flag'     => 'GB',
+        'pages'    => ['', 'services/', 'industries/', 'projects/', 'contact/'],
     ],
     'south-africa' => [
         'code'     => 'south-africa',
@@ -41,9 +48,10 @@ $MARKETS = [
         'lang'     => 'en-ZA',
         'hreflang' => 'en-ZA',
         'flag'     => 'ZA',
+        'pages'    => ['', 'services/', 'industries/', 'projects/', 'contact/'],
     ],
     // Future:
-    // 'zimbabwe' => ['code'=>'zimbabwe','name'=>'Zimbabwe','label'=>'Zimbabwe','prefix'=>'/zimbabwe/','lang'=>'en-ZW','hreflang'=>'en-ZW','flag'=>'ZW'],
+    // 'zimbabwe' => ['code'=>'zimbabwe','name'=>'Zimbabwe','label'=>'Zimbabwe','prefix'=>'/zimbabwe/','lang'=>'en-ZW','hreflang'=>'en-ZW','flag'=>'ZW','pages'=>['','services/','industries/','projects/','contact/']],
 ];
 
 /** Canonical route paths (relative to market prefix). Order = sitemap order. */

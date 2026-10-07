@@ -1,218 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rotashpowerprojects.com</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://rotashpowerprojects.com/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/uk/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/south-africa/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/"/>
   </url>
   <url>
-    <loc>https://rotashpowerprojects.comabout/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://rotashpowerprojects.com/about/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comabout/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/about/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/about/"/>
   </url>
   <url>
-    <loc>https://rotashpowerprojects.com/uk/about/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://rotashpowerprojects.com/services/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comabout/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/about/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/about/"/>
-  </url>
-  <url>
-    <loc>https://rotashpowerprojects.com/south-africa/about/</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comabout/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/about/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/about/"/>
-  </url>
-  <url>
-    <loc>https://rotashpowerprojects.comservices/</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comservices/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/services/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/services/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/services/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/uk/services/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comservices/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/services/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/services/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/services/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/south-africa/services/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comservices/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/services/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/services/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/services/"/>
   </url>
   <url>
-    <loc>https://rotashpowerprojects.comindustries/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://rotashpowerprojects.com/industries/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comindustries/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/industries/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/industries/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/industries/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/uk/industries/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comindustries/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/industries/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/industries/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/industries/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/south-africa/industries/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comindustries/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/industries/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/industries/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/industries/"/>
   </url>
   <url>
-    <loc>https://rotashpowerprojects.comprojects/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://rotashpowerprojects.com/projects/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comprojects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/projects/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/projects/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/projects/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/uk/projects/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comprojects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/projects/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/projects/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/projects/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/south-africa/projects/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comprojects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/projects/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/projects/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/projects/"/>
   </url>
   <url>
-    <loc>https://rotashpowerprojects.comlocations/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://rotashpowerprojects.com/locations/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comlocations/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/locations/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/locations/"/>
   </url>
   <url>
-    <loc>https://rotashpowerprojects.com/uk/locations/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://rotashpowerprojects.com/insights/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comlocations/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/locations/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/locations/"/>
   </url>
   <url>
-    <loc>https://rotashpowerprojects.com/south-africa/locations/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://rotashpowerprojects.com/contact/</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comlocations/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/locations/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/locations/"/>
-  </url>
-  <url>
-    <loc>https://rotashpowerprojects.cominsights/</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.cominsights/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/insights/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/insights/"/>
-  </url>
-  <url>
-    <loc>https://rotashpowerprojects.com/uk/insights/</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.cominsights/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/insights/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/insights/"/>
-  </url>
-  <url>
-    <loc>https://rotashpowerprojects.com/south-africa/insights/</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.cominsights/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/insights/"/>
-    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/insights/"/>
-  </url>
-  <url>
-    <loc>https://rotashpowerprojects.comcontact/</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comcontact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/contact/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/contact/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/uk/contact/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comcontact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/contact/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/contact/"/>
   </url>
   <url>
     <loc>https://rotashpowerprojects.com/south-africa/contact/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.comcontact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rotashpowerprojects.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://rotashpowerprojects.com/uk/contact/"/>
     <xhtml:link rel="alternate" hreflang="en-ZA" href="https://rotashpowerprojects.com/south-africa/contact/"/>
   </url>

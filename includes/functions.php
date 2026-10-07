@@ -45,6 +45,13 @@ function market(string $code): array
     return $MARKETS[$code];
 }
 
+/** Does a route exist as a page in this market? */
+function page_exists(string $code, string $route): bool
+{
+    global $MARKETS;
+    return in_array($route, $MARKETS[$code]['pages'] ?? [], true);
+}
+
 /** Route path relative to the current market prefix ("/services/"). */
 function relative_route(): string
 {
@@ -55,50 +62,58 @@ function relative_route(): string
     return '/' . $rel;
 }
 
-/** Root-relative URL inside the current market: mp('services/') -> '/uk/services/'. */
+/** Root-relative URL inside the current market: mp('services/') -> '/uk/services/'. Falls back to global for pages the market lacks. */
 function mp(string $route = ''): string
 {
     global $MARKETS;
-    return '/' . ltrim($MARKETS[current_market_code()]['prefix'] . $route, '/');
-}
-
-/** Root-relative URL for a specific market. */
-function market_url(string $code, string $route = ''): string
-{
-    global $MARKETS;
+    $code = current_market_code();
+    if (!page_exists($code, $route)) {
+        return '/' . ltrim($route, '/');
+    }
     return '/' . ltrim($MARKETS[$code]['prefix'] . $route, '/');
 }
 
-/** Absolute canonical URL for a route in a market. */
+/** Root-relative URL for a specific market. Falls back to global for pages that market lacks. */
+function market_url(string $code, string $route = ''): string
+{
+    global $MARKETS;
+    if (!page_exists($code, $route)) {
+        return '/' . ltrim($route, '/');
+    }
+    return '/' . ltrim($MARKETS[$code]['prefix'] . $route, '/');
+}
+
+/** Absolute canonical URL for a route in a market (always slash-terminated). */
 function absolute_url(string $code, string $route): string
 {
     global $MARKETS;
-    $url  = SITE_DOMAIN . $MARKETS[$code]['prefix'] . $route;
-    $path = parse_url($url, PHP_URL_PATH) ?: '/';
-    if ($path !== '/' && !str_ends_with($path, '/')) {
-        $url .= '/';
-    } elseif ($path === '/') {
-        $url = SITE_DOMAIN . '/';
+    $path = $MARKETS[$code]['prefix'] . $route;
+    if ($path === '') {
+        return SITE_DOMAIN . '/';
     }
-    return $url;
+    if (!str_ends_with($path, '/')) {
+        $path .= '/';
+    }
+    return SITE_DOMAIN . '/' . ltrim($path, '/');
 }
 
 /**
- * hreflang cluster for the current page across every market.
+ * hreflang cluster for the current page across every market that has it.
+ * Returns [] when the page exists in fewer than 2 markets (global-only
+ * pages emit no hreflang at all — never a dead alternate URL).
  * Future locales appear automatically once added to $MARKETS.
  */
 function hreflang_links(): array
 {
-    global $MARKETS, $ROUTES;
+    global $MARKETS;
     $rel = ltrim(relative_route(), '/');
-    if (!array_key_exists($rel, $ROUTES)) {
-        return [];
-    }
     $links = [];
     foreach ($MARKETS as $code => $m) {
-        $links[$m['hreflang']] = absolute_url($code, $rel);
+        if (page_exists($code, $rel)) {
+            $links[$m['hreflang']] = absolute_url($code, $rel);
+        }
     }
-    return $links;
+    return count($links) >= 2 ? $links : [];
 }
 
 /** Breadcrumbs for the current page: [ ['label'=>..,'url'=>..], ... ] ending at current. */
