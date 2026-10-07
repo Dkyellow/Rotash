@@ -13,7 +13,7 @@ require __DIR__ . '/../includes/header.php';
 <!-- HERO -->
 <section class="hero">
     <div class="hero__media">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1800&q=80" alt="" fetchpriority="high">
+        <img src="/assets/img/uk-buildings.jpg" alt="" fetchpriority="high">
     </div>
     <div class="container hero__inner">
         <div class="hero__content">

@@ -12,7 +12,7 @@ require __DIR__ . '/../../includes/header.php';
 
 <section class="page-hero">
     <div class="page-hero__media">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt="" fetchpriority="high">
+        <img src="/assets/img/modern-office.jpg" alt="" fetchpriority="high">
     </div>
     <?php require __DIR__ . '/../../includes/breadcrumbs.php'; ?>
     <div class="container page-hero__inner">

@@ -48,7 +48,7 @@ require __DIR__ . '/includes/header.php';
         <div class="grid grid--2">
             <a class="market-card reveal" href="/uk/">
                 <div class="market-card__media">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="Modern commercial buildings in the United Kingdom" loading="lazy">
+                    <img src="/assets/img/uk-buildings.jpg" alt="Modern commercial buildings in the United Kingdom" loading="lazy">
                 </div>
                 <div class="market-card__body">
                     <span class="market-card__flag">United Kingdom · en-GB</span>
@@ -59,7 +59,7 @@ require __DIR__ . '/includes/header.php';
             </a>
             <a class="market-card reveal" data-delay="1" href="/south-africa/">
                 <div class="market-card__media">
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80" alt="Commercial retail environment served in South Africa" loading="lazy">
+                    <img src="/assets/img/retail-interior.jpg" alt="Commercial retail environment served in South Africa" loading="lazy">
                 </div>
                 <div class="market-card__body">
                     <span class="market-card__flag">South Africa · en-ZA</span>
@@ -69,7 +69,6 @@ require __DIR__ . '/includes/header.php';
                 </div>
             </a>
         </div>
-        <!-- TODO: Zimbabwe route (/zimbabwe/) activates when the market opens — add to $MARKETS in includes/config.php -->
     </div>
 </section>
 
@@ -227,7 +226,7 @@ foreach ($featured as $slug):
             </div>
             <a class="btn btn--secondary" href="/locations/">All locations</a>
         </div>
-        <div class="grid grid--3">
+        <div class="grid grid--2">
 <?php foreach (['uk', 'south-africa'] as $code): $o = $OFFICES[$code]; ?>
             <div class="office reveal">
                 <span class="market-card__flag"><?= e($MARKETS[$code]['name']) ?></span>
@@ -240,12 +239,6 @@ foreach ($featured as $slug):
                 <p class="office__map"><a class="btn-link" href="<?= e($MARKETS[$code]['prefix'] ?: '/') ?>contact/">Contact this office <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
             </div>
 <?php endforeach; ?>
-            <div class="office reveal" data-delay="2" style="border-style: dashed;">
-                <span class="market-card__flag">In preparation</span>
-                <h3 class="office__city">Zimbabwe</h3>
-                <p class="card__copy">Zimbabwe will open as the next Rotash Power Projects market, followed by further countries across the region.</p>
-                <p class="office__map"><a class="btn-link" href="/contact/">Register your interest <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></p>
-            </div>
         </div>
     </div>
 </section>

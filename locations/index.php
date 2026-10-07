@@ -12,7 +12,7 @@ require __DIR__ . '/../includes/header.php';
 
 <section class="page-hero">
     <div class="page-hero__media">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80" alt="" fetchpriority="high">
+        <img src="/assets/img/uk-buildings.jpg" alt="" fetchpriority="high">
     </div>
     <?php require __DIR__ . '/../includes/breadcrumbs.php'; ?>
     <div class="container page-hero__inner">
@@ -65,18 +65,13 @@ require __DIR__ . '/../includes/header.php';
 
 <section class="section section--navy">
     <div class="container">
-        <div class="grid grid--3">
+        <div class="grid grid--2">
             <div class="reveal">
                 <p class="eyebrow eyebrow--on-dark">Global</p>
                 <h3 class="display-md">Headed by <?= e(PARENT_GROUP) ?></h3>
                 <p class="card__copy" style="color: rgba(255,255,255,0.75); margin-top: 12px;">Group enquiries and international projects: <a href="mailto:<?= e($OFFICES['global']['email']) ?>" style="color: #fff; text-decoration: underline;"><?= e($OFFICES['global']['email']) ?></a></p>
             </div>
             <div class="reveal" data-delay="1">
-                <p class="eyebrow eyebrow--on-dark">Next market</p>
-                <h3 class="display-md">Zimbabwe</h3>
-                <p class="card__copy" style="color: rgba(255,255,255,0.75); margin-top: 12px;">Opening as the next Rotash Power Projects market, followed by further countries across the region.</p>
-            </div>
-            <div class="reveal" data-delay="2">
                 <p class="eyebrow eyebrow--on-dark">Not sure who to contact?</p>
                 <h3 class="display-md">Use the location selector</h3>
                 <p class="card__copy" style="color: rgba(255,255,255,0.75); margin-top: 12px;">Switch markets from the navigation at any time — you always choose which team you talk to.</p>

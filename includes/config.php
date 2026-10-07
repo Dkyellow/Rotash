@@ -4,7 +4,7 @@ declare(strict_types=1);
 /* ============================================================
    ROTASH POWER PROJECTS — global configuration
    Single source of truth: domain, markets, navigation, routes.
-   Adding Zimbabwe later = add one entry to $MARKETS and
+   Adding a market later = add one entry to $MARKETS and
    one prefix to the routes — nothing else changes.
    ============================================================ */
 
@@ -14,7 +14,7 @@ const PARENT_GROUP = 'Rotash Group';
 const TAGLINE      = 'Engineering environments. Delivering performance.';
 
 /**
- * Live markets. Future markets (zimbabwe, zambia, botswana) append here.
+ * Live markets. Additional markets append here.
  * 'pages' = routes that exist in this market (keys of $ROUTES).
  * Nav/footer/sitemap/hreflang honour it; links to routes a market
  * does not have fall back to the global URL automatically.
@@ -50,8 +50,6 @@ $MARKETS = [
         'flag'     => 'ZA',
         'pages'    => ['', 'services/', 'industries/', 'projects/', 'contact/'],
     ],
-    // Future:
-    // 'zimbabwe' => ['code'=>'zimbabwe','name'=>'Zimbabwe','label'=>'Zimbabwe','prefix'=>'/zimbabwe/','lang'=>'en-ZW','hreflang'=>'en-ZW','flag'=>'ZW','pages'=>['','services/','industries/','projects/','contact/']],
 ];
 
 /** Canonical route paths (relative to market prefix). Order = sitemap order. */

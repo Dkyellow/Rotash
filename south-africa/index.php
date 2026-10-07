@@ -14,7 +14,7 @@ $za = $OFFICES['south-africa'];
 <!-- HERO -->
 <section class="hero">
     <div class="hero__media">
-        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1800&q=80" alt="" fetchpriority="high">
+        <img src="/assets/img/retail-interior.jpg" alt="" fetchpriority="high">
     </div>
     <div class="container hero__inner">
         <div class="hero__content">

@@ -12,7 +12,7 @@ require __DIR__ . '/../includes/header.php';
 
 <section class="page-hero">
     <div class="page-hero__media">
-        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80" alt="" fetchpriority="high">
+        <img src="/assets/img/engineer-industrial.jpg" alt="" fetchpriority="high">
     </div>
     <?php require __DIR__ . '/../includes/breadcrumbs.php'; ?>
     <div class="container page-hero__inner">
@@ -67,7 +67,6 @@ require __DIR__ . '/../includes/header.php';
             <div class="hierarchy__markets">
                 <a class="hierarchy__market" href="/uk/">United Kingdom</a>
                 <a class="hierarchy__market" href="/south-africa/">South Africa</a>
-                <span class="hierarchy__market is-future">Zimbabwe — next</span>
             </div>
         </div>
     </div>
@@ -133,7 +132,7 @@ require __DIR__ . '/../includes/header.php';
                      plumbers, ISO). Do not publish unverified certification claims. -->
             </div>
             <div class="reveal" data-delay="1">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="Engineering work in an industrial environment" loading="lazy" style="border-radius: 12px;">
+                <img src="/assets/img/engineering-work.jpg" alt="Engineering work in an industrial environment" loading="lazy" style="border-radius: 12px;">
             </div>
         </div>
     </div>
@@ -147,10 +146,9 @@ require __DIR__ . '/../includes/header.php';
             <h2 class="display-lg">Two live markets, built for expansion</h2>
             <p>The platform is designed to grow: new countries plug into the same engineering standard, the same delivery process and the same digital presence.</p>
         </div>
-        <div class="grid grid--3">
+        <div class="grid grid--2">
             <div class="card reveal"><span class="market-card__flag">Live</span><h3 class="card__title mt-6">United Kingdom</h3><p class="card__copy">HVAC and building services engineering for British commercial and industrial clients.</p></div>
             <div class="card reveal" data-delay="1"><span class="market-card__flag">Live</span><h3 class="card__title mt-6">South Africa</h3><p class="card__copy">Climate control, commercial refrigeration and mechanical services from Eastern Cape operations.</p></div>
-            <div class="card reveal" data-delay="2" style="border-style: dashed;"><span class="market-card__flag">Next</span><h3 class="card__title mt-6">Zimbabwe</h3><p class="card__copy">The next market in the group's expansion, followed by further countries across the region.</p></div>
         </div>
     </div>
 </section>
