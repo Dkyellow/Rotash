@@ -42,7 +42,7 @@ $za = $OFFICES['south-africa'];
 <!-- ZA INTRODUCTION -->
 <section class="section section--white">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">The South Africa operation</p>
                 <h2 class="display-lg">Engineering built on cold-chain reality</h2>
@@ -85,7 +85,7 @@ foreach ($zaServices as $i => $id): $s = $SERVICES[$id]; ?>
 <!-- ZA APPROACH -->
 <section class="section section--navy">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow eyebrow--on-dark">How we work locally</p>
                 <h2 class="display-lg">Keeping operations running while we work</h2>
@@ -159,7 +159,7 @@ foreach ($zaProjects as $p): ?>
 <!-- ZA CONTACT -->
 <section class="section section--white">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">Contact · South Africa</p>
                 <h2 class="display-lg">Speak to the SA team</h2>

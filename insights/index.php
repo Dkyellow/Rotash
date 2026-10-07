@@ -52,7 +52,7 @@ require __DIR__ . '/../includes/header.php';
 
 <section class="section section--pale">
     <div class="container container--content">
-        <div class="grid grid--2" style="gap: 60px; align-items: center;">
+        <div class="grid grid--2 grid--loose items-center">
             <div class="reveal">
                 <p class="eyebrow">Stay informed</p>
                 <h2 class="display-lg">Engineering notes, occasionally</h2>

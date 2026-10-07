@@ -69,7 +69,7 @@ require __DIR__ . '/../../includes/header.php';
                 </div>
             </div>
 
-            <div class="contact-panel__card reveal" data-delay="1" style="padding: 40px;">
+            <div class="contact-panel__card reveal" data-delay="1">
                 <p class="eyebrow">Step 02</p>
                 <h2 class="display-md" style="margin-bottom: 24px;">Tell us about the project</h2>
 

@@ -48,7 +48,7 @@ require __DIR__ . '/../includes/header.php';
 
 <section class="section section--pale">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">Why sector knowledge matters</p>
                 <h2 class="display-lg">Different duty. Different design.</h2>

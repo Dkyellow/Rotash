@@ -40,7 +40,7 @@ require __DIR__ . '/../includes/header.php';
 <!-- UK INTRODUCTION -->
 <section class="section section--white">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">The UK operation</p>
                 <h2 class="display-lg">Building services engineering, delivered locally</h2>
@@ -92,7 +92,7 @@ foreach ($ukServices as $i => $id): $s = $SERVICES[$id]; ?>
 <!-- UK APPROACH -->
 <section class="section section--navy">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow eyebrow--on-dark">How we work in the UK</p>
                 <h2 class="display-lg">Programme discipline on live buildings</h2>
@@ -166,7 +166,7 @@ foreach ($ukProjects as $i => $p): ?>
 <!-- UK CONTACT -->
 <section class="section section--white">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">Contact · United Kingdom</p>
                 <h2 class="display-lg">Speak to the UK team</h2>

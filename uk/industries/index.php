@@ -47,7 +47,7 @@ require __DIR__ . '/../../includes/header.php';
 
 <section class="section section--pale">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">UK context</p>
                 <h2 class="display-lg">Built around occupancy and running cost</h2>

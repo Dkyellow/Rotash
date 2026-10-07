@@ -104,7 +104,7 @@ foreach ($homeServices as $i => $id):
 <!-- 04 — ENGINEERED FOR PERFORMANCE -->
 <section class="section section--white">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">Engineered for performance</p>
                 <h2 class="display-lg">How we work</h2>
@@ -153,7 +153,7 @@ $homeIndustries = ['commercial-buildings', 'retail', 'hospitality', 'industrial-
 foreach ($homeIndustries as $i => $id):
     $ind = $INDUSTRIES[$id];
 ?>
-            <a class="card card--dark reveal" data-delay="<?= $i % 4 ?>" href="/industries/" style="min-height: 180px;">
+            <a class="card card--dark reveal minh-180" data-delay="<?= $i % 4 ?>" href="/industries/">
                 <h3 class="card__title"><?= e($ind['name']) ?></h3>
                 <p class="card__copy"><?= e($ind['short']) ?></p>
             </a>

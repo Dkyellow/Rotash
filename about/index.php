@@ -32,7 +32,7 @@ require __DIR__ . '/../includes/header.php';
 <!-- Company story -->
 <section class="section section--white">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">Our story</p>
                 <h2 class="display-lg">From a regional engineering operation to an international platform</h2>
@@ -76,7 +76,7 @@ require __DIR__ . '/../includes/header.php';
 <!-- Engineering philosophy -->
 <section class="section section--navy">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow eyebrow--on-dark">Engineering philosophy</p>
                 <h2 class="display-lg">Performance is engineered, not promised</h2>
@@ -120,7 +120,7 @@ require __DIR__ . '/../includes/header.php';
 <!-- Quality, safety, professionalism -->
 <section class="section section--pale">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">Quality & safety</p>
                 <h2 class="display-lg">Professionalism is a process, not a posture</h2>

@@ -52,7 +52,7 @@ require __DIR__ . '/../includes/header.php';
 <!-- Delivery lifecycle -->
 <section class="section section--pale">
     <div class="container">
-        <div class="grid grid--2" style="gap: 60px; align-items: start;">
+        <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
                 <p class="eyebrow">Delivery</p>
                 <h2 class="display-lg">One lifecycle, whichever service you engage</h2>
