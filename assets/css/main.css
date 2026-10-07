@@ -661,7 +661,7 @@ a.hierarchy__market:hover { border-color: var(--blue); color: var(--blue); backg
 }
 
 @media (max-width: 640px) {
-    :root { --pad: 12px; --s-15: 40px; --s-6: 20px; --header-h: 64px; }
+    :root { --pad: 16px; --s-15: 40px; --s-6: 20px; --header-h: 64px; }
     .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
     .value-grid { grid-template-columns: 1fr; }
     .industry-grid { grid-template-columns: 1fr; }
