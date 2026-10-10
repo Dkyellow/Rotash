@@ -51,6 +51,7 @@
         <div class="footer__bottom">
             <p>&copy; <?= date('Y') ?> <?= e(SITE_NAME) ?>. All rights reserved. A <?= e(PARENT_GROUP) ?> company.</p>
             <p class="footer__bottom-note">rotashpowerprojects.com</p>
+            <p class="footer__bottom-credit">Developed by <a href="https://lesliesarai.co.zw">Leslie Sarai</a></p>
         </div>
     </div>
 </footer>

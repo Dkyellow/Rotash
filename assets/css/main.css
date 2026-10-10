@@ -605,6 +605,8 @@ a.hierarchy__market:hover { border-color: var(--blue); color: var(--blue); backg
 .footer__links li, .footer__contact li { margin-bottom: var(--s-3); font-size: 14px; color: rgba(255, 255, 255, 0.78); }
 .footer__links a, .footer__contact a { color: rgba(255, 255, 255, 0.78); }
 .footer__links a:hover, .footer__contact a:hover { color: var(--white); }
+.footer__bottom a { color: rgba(255, 255, 255, 0.78); }
+.footer__bottom a:hover { color: var(--white); }
 .footer__bottom { display: flex; justify-content: space-between; gap: var(--s-4); flex-wrap: wrap; padding-top: var(--s-6); font-size: 13px; color: rgba(255, 255, 255, 0.55); }
 
 /* ---------- 23. Utilities & motion ---------- */
@@ -684,7 +686,7 @@ a.hierarchy__market:hover { border-color: var(--blue); color: var(--blue); backg
     .field input, .field select, .field textarea { font-size: 16px; }
     .footer__links li, .footer__contact li { margin-bottom: 0; }
     .footer__links a, .footer__contact a { display: flex; align-items: center; min-height: 44px; }
-    .footer__bottom a { display: inline-block; padding: 8px 0; }
+    .footer__bottom a { display: inline-flex; align-items: center; min-height: 44px; }
     .office__line a { display: inline-flex; align-items: center; min-height: 44px; }
     .card--info a { display: inline-block; padding: 2px 0; }
     .office__line { flex-direction: column; gap: var(--s-1); }
