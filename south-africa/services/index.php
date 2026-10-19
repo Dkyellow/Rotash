@@ -34,7 +34,12 @@ require __DIR__ . '/../../includes/header.php';
         <div class="grid grid--3">
 <?php
 $zaList = array_values(array_filter($SERVICES, fn($s) => in_array('south-africa', $s['markets'], true)));
-$zaPrincipals = array_values(array_filter($zaList, fn($s) => !empty($s['principal'])));
+$zaPrincipals = [];
+foreach (['commercial-refrigeration', 'air-conditioning'] as $pid) {
+    if (isset($SERVICES[$pid]) && in_array('south-africa', $SERVICES[$pid]['markets'], true)) {
+        $zaPrincipals[] = $SERVICES[$pid];
+    }
+}
 $zaSupporting = array_values(array_filter($zaList, fn($s) => empty($s['principal'])));
 $zaList = array_merge($zaPrincipals, $zaSupporting);
 foreach ($zaList as $i => $s): ?>
