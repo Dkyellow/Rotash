@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'home',
-    'title'       => 'Rotash Power Projects — HVAC & Engineering | UK & South Africa',
-    'description' => 'Rotash Power Projects is an international HVAC and engineering company delivering climate control, ventilation and building services engineering across the United Kingdom and South Africa.',
+    'title'       => 'Refrigeration & Air Conditioning Services | Rotash Power Projects',
+    'description' => 'Rotash Power Projects designs, installs and maintains refrigeration and air-conditioning systems for commercial and industrial clients — commercial refrigeration in South Africa, air conditioning across the UK and South Africa.',
 ];
 
 require __DIR__ . '/includes/head.php';
@@ -17,9 +17,9 @@ require __DIR__ . '/includes/header.php';
     </div>
     <div class="container hero__inner">
         <div class="hero__content">
-            <p class="eyebrow eyebrow--on-dark">Rotash Power Projects</p>
-            <h1 class="display-hero">Engineering environments.<br>Delivering performance.</h1>
-            <p class="lede lede--on-dark">An international HVAC and engineering business designing, installing and maintaining climate and building-services systems across the United Kingdom and South Africa — backed by <?= e(PARENT_GROUP) ?>.</p>
+            <p class="eyebrow eyebrow--on-dark">Refrigeration & Air Conditioning</p>
+            <h1 class="display-hero">Refrigeration &amp; air conditioning.<br>Engineered to perform.</h1>
+            <p class="lede lede--on-dark">Commercial refrigeration for South Africa. Air conditioning for buildings across the United Kingdom and South Africa. Designed, installed and maintained — backed by <?= e(PARENT_GROUP) ?>.</p>
             <div class="hero__actions">
                 <a class="btn btn--primary btn--lg" href="/contact/">Request a Consultation</a>
                 <a class="btn btn--on-dark btn--lg" href="/services/">Explore our capabilities</a>
@@ -37,13 +37,38 @@ require __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<!-- 02 — GLOBAL PRESENCE -->
+<!-- 02 — CORE SERVICES -->
+<section class="section section--pale">
+    <div class="container">
+        <div class="section-head__row section-head reveal">
+            <div>
+                <p class="eyebrow">Core services</p>
+                <h2 class="display-lg">Refrigeration and air conditioning</h2>
+                <p>Our two principal services — surveyed, designed, installed, commissioned and maintained by one accountable team.</p>
+            </div>
+            <a class="btn btn--secondary" href="/services/">All services</a>
+        </div>
+        <div class="grid grid--2">
+<?php foreach (['commercial-refrigeration', 'air-conditioning'] as $i => $id): $s = $SERVICES[$id]; ?>
+            <article class="card card--hover svc-card reveal" data-delay="<?= $i ?>">
+                <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
+                <h3 class="card__title"><?= e($s['name']) ?></h3>
+                <p class="card__copy"><?= e($s['short']) ?></p>
+                <p class="card__foot body-sm text-muted">Available in: <?= e(implode(', ', array_map(fn($c) => $MARKETS[$c]['name'], $s['markets']))) ?></p>
+                <a class="btn-link" href="/services/#<?= e($s['id']) ?>">Explore <?= e(strtolower($s['name'])) ?> <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+            </article>
+<?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- 03 — WHO WE ARE -->
 <section class="section section--white">
     <div class="container">
         <div class="section-head reveal">
-            <p class="eyebrow">Global presence</p>
-            <h2 class="display-lg">One engineering standard. Two markets. More to come.</h2>
-            <p>Rotash Power Projects delivers work under a single technical standard, with local teams who understand the codes, climates and commercial realities of each market.</p>
+            <p class="eyebrow">Who we are</p>
+            <h2 class="display-lg">The refrigeration and air-conditioning company of <?= e(PARENT_GROUP) ?></h2>
+            <p>Rotash Power Projects designs, installs and maintains temperature-control systems for commercial and industrial clients — operating in the United Kingdom and South Africa's Eastern Cape under one technical standard.</p>
         </div>
         <div class="grid grid--2">
             <a class="market-card reveal" href="/uk/">
@@ -52,19 +77,19 @@ require __DIR__ . '/includes/header.php';
                 </div>
                 <div class="market-card__body">
                     <span class="market-card__flag">United Kingdom · en-GB</span>
-                    <h3 class="display-md">HVAC & building services engineering in the UK</h3>
-                    <p class="card__copy">Design, installation, commissioning and maintenance of climate systems for commercial and industrial buildings across the United Kingdom.</p>
+                    <h3 class="display-md">Air conditioning for buildings across the United Kingdom</h3>
+                    <p class="card__copy">Design, installation, commissioning and maintenance of air-conditioning and climate systems for commercial and industrial buildings across the United Kingdom.</p>
                     <div class="market-card__foot"><span class="btn-link">Visit the UK site <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span></div>
                 </div>
             </a>
             <a class="market-card reveal" data-delay="1" href="/south-africa/">
                 <div class="market-card__media">
-                    <img src="/assets/img/retail-interior.jpg" alt="Commercial retail environment served in South Africa" loading="lazy">
+                    <img src="/assets/img/retail-interior.jpg" alt="Commercial retail environment with display refrigeration in South Africa" loading="lazy">
                 </div>
                 <div class="market-card__body">
                     <span class="market-card__flag">South Africa · en-ZA</span>
-                    <h3 class="display-md">HVAC, refrigeration & engineering across South Africa</h3>
-                    <p class="card__copy">Climate control, commercial refrigeration and mechanical services delivered from Eastern Cape operations in Queenstown, East London and Mthatha.</p>
+                    <h3 class="display-md">Refrigeration and air conditioning across South Africa</h3>
+                    <p class="card__copy">Commercial refrigeration, air conditioning and climate control delivered from Eastern Cape operations in Queenstown, East London and Mthatha.</p>
                     <div class="market-card__foot"><span class="btn-link">Visit the South Africa site <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span></div>
                 </div>
             </a>
@@ -72,35 +97,42 @@ require __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<!-- 03 — WHAT WE DO -->
+<!-- 04 — SERVICE CAPABILITIES -->
 <section class="section section--pale">
     <div class="container">
         <div class="section-head__row section-head reveal">
             <div>
-                <p class="eyebrow">What we do</p>
-                <h2 class="display-lg">Core engineering capabilities</h2>
-                <p>Structured, repeatable disciplines — from first survey to commissioning and long-term maintenance.</p>
+                <p class="eyebrow">Capabilities</p>
+                <h2 class="display-lg">What that covers</h2>
+                <p>Confirmed refrigeration and air-conditioning capability — from the cold room to the condenser.</p>
             </div>
             <a class="btn btn--secondary" href="/services/">All services</a>
         </div>
         <div class="grid grid--3">
 <?php
-$homeServices = ['hvac', 'air-conditioning', 'ventilation', 'mechanical-services', 'maintenance', 'engineering-projects'];
-foreach ($homeServices as $i => $id):
-    $s = $SERVICES[$id];
+$racCapabilities = [
+    ['Walk-in cold rooms',      'Cold rooms for retail and food environments — specified, installed and commissioned to hold temperature.', 'South Africa', '/services/#commercial-refrigeration'],
+    ['Display refrigeration',   'Reach-in and display cases that keep product temperature stable through trading hours.', 'South Africa', '/services/#commercial-refrigeration'],
+    ['Cold-chain systems',      'Integrated back-of-house cooling that keeps the cold chain intact from store to dispatch.', 'South Africa', '/services/#commercial-refrigeration'],
+    ['Split, multi-split & VRF','Room and floor-by-floor air-conditioning systems specified to the building and its duty.', 'United Kingdom · South Africa', '/services/#air-conditioning'],
+    ['Packaged cooling',        'Packaged air-conditioning solutions for spaces and duties where they fit best.', 'United Kingdom · South Africa', '/services/#air-conditioning'],
+    ['Installation & maintenance','Survey, installation, commissioning and planned maintenance across both disciplines as one lifecycle.', 'United Kingdom · South Africa', '/services/'],
+];
+foreach ($racCapabilities as $i => [$capTitle, $capCopy, $capMarkets, $capHref]):
 ?>
             <article class="card card--hover svc-card reveal" data-delay="<?= $i % 3 ?>">
                 <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
-                <h3 class="card__title"><?= e($s['name']) ?></h3>
-                <p class="card__copy"><?= e($s['short']) ?></p>
-                <a class="btn-link" href="/services/">Service overview <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+                <h3 class="card__title"><?= e($capTitle) ?></h3>
+                <p class="card__copy"><?= e($capCopy) ?></p>
+                <p class="card__foot body-sm text-muted"><?= e($capMarkets) ?></p>
+                <a class="btn-link" href="<?= e($capHref) ?>">Discuss this capability <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
             </article>
 <?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<!-- 04 — ENGINEERED FOR PERFORMANCE -->
+<!-- 05 — ENGINEERED FOR PERFORMANCE -->
 <section class="section section--white">
     <div class="container">
         <div class="grid grid--2 grid--loose items-start">
@@ -108,8 +140,8 @@ foreach ($homeServices as $i => $id):
                 <p class="eyebrow">Engineered for performance</p>
                 <h2 class="display-lg">How we work</h2>
                 <div class="prose mt-6">
-                    <p>A building system is only as good as the process behind it. We treat every project as an engineering problem: understand the duty, specify to the duty, install to the drawing, and prove performance before handover.</p>
-                    <p>That discipline is what turns plant into reliable performance — stable environments, predictable running costs and systems that can be maintained by the people who operate them.</p>
+                    <p>A cooling system is only as good as the process behind it. We treat every project as an engineering problem: understand the duty, specify to the duty, install to the drawing, and prove performance before handover.</p>
+                    <p>That discipline is what turns plant into reliable performance — stable temperatures, predictable running costs and systems that can be maintained by the people who operate them.</p>
                 </div>
                 <a class="btn btn--secondary mt-8" href="/about/">Our engineering philosophy</a>
             </div>
@@ -135,20 +167,20 @@ foreach ($homeServices as $i => $id):
     </div>
 </section>
 
-<!-- 05 — INDUSTRIES -->
+<!-- 06 — INDUSTRIES -->
 <section class="section section--navy">
     <div class="container">
         <div class="section-head__row section-head reveal">
             <div>
                 <p class="eyebrow eyebrow--on-dark">Industries</p>
-                <h2 class="display-lg">Sectors we engineer for</h2>
-                <p>Different sectors impose different demands on air, temperature and reliability. We design to the sector, not to a template.</p>
+                <h2 class="display-lg">Sectors we cool</h2>
+                <p>Different sectors impose different demands on temperature, air and reliability. We design to the sector, not to a template.</p>
             </div>
             <a class="btn btn--on-dark" href="/industries/">All industries</a>
         </div>
         <div class="grid grid--4">
 <?php
-$homeIndustries = ['commercial-buildings', 'retail', 'hospitality', 'industrial-facilities', 'healthcare', 'offices', 'education', 'data-centres'];
+$homeIndustries = ['retail', 'hospitality', 'healthcare', 'industrial-facilities', 'commercial-buildings', 'offices', 'education', 'data-centres'];
 foreach ($homeIndustries as $i => $id):
     $ind = $INDUSTRIES[$id];
 ?>
@@ -161,19 +193,19 @@ foreach ($homeIndustries as $i => $id):
     </div>
 </section>
 
-<!-- 06 — FEATURED PROJECTS -->
+<!-- 07 — FEATURED PROJECTS -->
 <section class="section section--white">
     <div class="container">
         <div class="section-head__row section-head reveal">
             <div>
                 <p class="eyebrow">Selected work</p>
                 <h2 class="display-lg">Featured projects</h2>
-                <p>Engineering case studies — scope, challenge, solution and outcome.</p>
+                <p>Verified case studies — scope, challenge, solution and outcome.</p>
             </div>
             <a class="btn btn--secondary" href="/projects/">All projects</a>
         </div>
 <?php
-$featured = ['mainstream-supermarket-refrigeration', 'commercial-hvac-installation'];
+$featured = ['mainstream-supermarket-refrigeration'];
 $projectsBySlug = array_column($PROJECTS, null, 'slug');
 $flip = false;
 foreach ($featured as $slug):
@@ -199,7 +231,7 @@ foreach ($featured as $slug):
     </div>
 </section>
 
-<!-- 07 — WHY ROTASH -->
+<!-- 08 — WHY ROTASH -->
 <section class="section section--pale">
     <div class="container">
         <div class="section-head reveal">
@@ -215,7 +247,7 @@ foreach ($featured as $slug):
     </div>
 </section>
 
-<!-- 08 — LOCATIONS -->
+<!-- 09 — LOCATIONS -->
 <section class="section section--white">
     <div class="container">
         <div class="section-head__row section-head reveal">
@@ -243,6 +275,6 @@ foreach ($featured as $slug):
     </div>
 </section>
 
-<!-- 09 — FINAL CTA -->
+<!-- 10 — FINAL CTA -->
 <?php require __DIR__ . '/includes/cta-band.php'; ?>
 <?php require __DIR__ . '/includes/footer.php'; ?>

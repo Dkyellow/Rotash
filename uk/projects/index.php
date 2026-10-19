@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'projects',
-    'title'       => 'UK Engineering Projects & Case Studies | Rotash Power Projects',
-    'description' => 'HVAC and building services engineering case studies from the United Kingdom — scope, challenge, engineering solution, execution and outcome.',
+    'title'       => 'UK Case Studies — Air Conditioning & Building Services | Rotash Power Projects',
+    'description' => 'Case studies of air-conditioning and building-services work delivered in the United Kingdom — scope, challenge, engineering solution, execution and outcome. UK records are published only once confirmed.',
 ];
 
 require __DIR__ . '/../../includes/head.php';
@@ -29,10 +29,19 @@ require __DIR__ . '/../../includes/header.php';
         <div class="section-head reveal">
             <p class="eyebrow">Selected UK work</p>
             <h2 class="display-lg">Projects · United Kingdom</h2>
-            <!-- TODO(UK): replace draft records with confirmed, client-approved UK
-                 case studies (real locations, clients and outcomes). -->
         </div>
 
+<?php $ukProjectsBase = array_values(array_filter($PROJECTS, fn($p) => $p['market'] === 'uk')); ?>
+<?php if (empty($ukProjectsBase)): ?>
+        <div class="card reveal">
+            <h3 class="card__title">UK case studies are being confirmed</h3>
+            <p class="card__copy">Delivered UK work will be published here once the records are verified with our clients. Tell us about the building and the requirement in the meantime — the UK team responds within one business day.</p>
+            <div class="hero__actions mt-6">
+                <a class="btn btn--primary" href="/uk/contact/">Talk to the UK team</a>
+                <a class="btn btn--secondary" href="/projects/">See group case studies</a>
+            </div>
+        </div>
+<?php else: ?>
         <div class="filters reveal" data-filters>
             <div class="filter-group">
                 <span class="filter-group__label">Industry</span>
@@ -69,7 +78,7 @@ foreach (array_keys($ukSvc) as $sid): ?>
                      data-sector="<?= e($p['sector']) ?>" data-services="<?= e(implode(' ', $p['services'])) ?>">
                 <div class="case__media"><img src="<?= e($p['image']) ?>" alt="<?= e($p['title']) ?>" loading="lazy"></div>
                 <div class="case__body">
-                    <p class="case__sector"><?= e($INDUSTRIES[$p['sector']]['name']) ?> · UNITED KINGDOM<?= $p['placeholder'] ? ' · DRAFT' : '' ?></p>
+                    <p class="case__sector"><?= e($INDUSTRIES[$p['sector']]['name']) ?> · UNITED KINGDOM</p>
                     <h3 class="case__title"><?= e($p['title']) ?></h3>
                     <dl class="spec">
                         <div class="spec__row"><dt class="spec__key">Location</dt><dd class="spec__val"><?= e($p['location']) ?></dd></div>
@@ -87,11 +96,12 @@ foreach (array_keys($ukSvc) as $sid): ?>
             </article>
 <?php endforeach; ?>
         </div>
+<?php endif; ?>
     </div>
 </section>
 
 <?php $cta = [
-    'title'   => 'Your UK project, engineered the same way.',
+    'title'   => 'Your UK air-conditioning project, engineered the same way.',
     'copy'    => 'Share the building and the brief — the UK team will respond within one business day.',
 ]; ?>
 <?php require __DIR__ . '/../../includes/cta-band.php'; ?>

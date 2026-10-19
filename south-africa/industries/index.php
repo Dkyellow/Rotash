@@ -3,7 +3,7 @@
 $page = [
     'key'         => 'industries',
     'title'       => 'Industries We Serve in South Africa | Rotash Power Projects',
-    'description' => 'HVAC, refrigeration and mechanical engineering for South African retail, hospitality, industrial, commercial, healthcare and manufacturing operations.',
+    'description' => 'Commercial refrigeration and air conditioning for South African retail, hospitality, industrial, commercial, healthcare and manufacturing operations.',
 ];
 
 require __DIR__ . '/../../includes/head.php';

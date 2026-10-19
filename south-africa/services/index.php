@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'services',
-    'title'       => 'HVAC & Refrigeration Services in South Africa | Rotash Power Projects',
-    'description' => 'Commercial refrigeration, HVAC, air conditioning, ventilation, mechanical services and planned maintenance delivered across South Africa by Rotash Power Projects.',
+    'title'       => 'Refrigeration & Air Conditioning Services in South Africa | Rotash Power Projects',
+    'description' => 'Commercial refrigeration and air conditioning in South Africa — cold rooms, display refrigeration, split and VRF cooling, installation and planned maintenance from Eastern Cape operations.',
 ];
 
 require __DIR__ . '/../../includes/head.php';
@@ -12,14 +12,14 @@ require __DIR__ . '/../../includes/header.php';
 
 <section class="page-hero">
     <div class="page-hero__media">
-        <img src="/assets/img/engineering-work.jpg" alt="" fetchpriority="high">
+        <img src="/assets/img/refrigeration-display.jpg" alt="" fetchpriority="high">
     </div>
     <?php require __DIR__ . '/../../includes/breadcrumbs.php'; ?>
     <div class="container page-hero__inner">
         <div class="page-hero__content">
             <p class="eyebrow eyebrow--on-dark">Services · South Africa</p>
-            <h1 class="heading-1">HVAC & refrigeration services in South Africa</h1>
-            <p class="lede lede--on-dark">Everything the South African operation delivers — from cold rooms to complete building climate systems, under one contract.</p>
+            <h1 class="heading-1">Refrigeration &amp; air conditioning services in South Africa</h1>
+            <p class="lede lede--on-dark">From cold rooms to complete climate systems — the South African operation delivers both principal services under one contract.</p>
         </div>
     </div>
 </section>
@@ -28,12 +28,15 @@ require __DIR__ . '/../../includes/header.php';
     <div class="container">
         <div class="section-head reveal">
             <p class="eyebrow">Local capability</p>
-            <h2 class="display-lg">Services available in South Africa</h2>
-            <p>Delivered directly by the SA teams from Queenstown, East London and Mthatha.</p>
+            <h2 class="display-lg">Refrigeration and air conditioning first</h2>
+            <p>Both principal services, delivered directly by the SA teams from Queenstown, East London and Mthatha — with supporting categories beneath.</p>
         </div>
         <div class="grid grid--3">
 <?php
 $zaList = array_values(array_filter($SERVICES, fn($s) => in_array('south-africa', $s['markets'], true)));
+$zaPrincipals = array_values(array_filter($zaList, fn($s) => !empty($s['principal'])));
+$zaSupporting = array_values(array_filter($zaList, fn($s) => empty($s['principal'])));
+$zaList = array_merge($zaPrincipals, $zaSupporting);
 foreach ($zaList as $i => $s): ?>
             <article class="card card--hover svc-card reveal" id="za-<?= e($s['id']) ?>" data-delay="<?= $i % 3 ?>">
                 <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
@@ -87,7 +90,7 @@ foreach ($zaList as $i => $s): ?>
 </section>
 
 <?php $cta = [
-    'title'   => 'Scope your South African project.',
+    'title'   => 'Discuss your refrigeration or air-conditioning requirement.',
     'copy'    => 'Tell us the facility, the load and the timeline — the SA team will take it from there.',
 ]; ?>
 <?php require __DIR__ . '/../../includes/cta-band.php'; ?>

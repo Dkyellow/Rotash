@@ -4,8 +4,8 @@
  * Override text per page by setting $cta = ['title'=>..,'copy'=>..,'primary'=>..] before include.
  */
 $cta = array_merge([
-    'title'   => "Let's discuss your next project.",
-    'copy'    => 'Tell us about the building, the requirement and the constraints — we will tell you how we would engineer it.',
+    'title'   => 'Let’s discuss your refrigeration or air-conditioning requirements.',
+    'copy'    => 'Tell us about the facility, the temperatures you need to hold or the comfort you need to deliver — we will tell you how we would engineer it.',
     'primary' => 'Request a Consultation',
 ], $cta ?? []);
 ?>

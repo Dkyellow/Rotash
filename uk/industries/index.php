@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'industries',
-    'title'       => 'UK Industries — Sectors We Serve | Rotash Power Projects UK',
-    'description' => 'HVAC and building services engineering for UK commercial buildings, offices, retail, hospitality, healthcare, education, data centres and industrial facilities.',
+    'title'       => 'UK Industries — Sectors Served with Air Conditioning | Rotash Power Projects UK',
+    'description' => 'Air-conditioning engineering for UK commercial buildings, offices, retail, hospitality, healthcare, education, data centres and industrial facilities.',
 ];
 
 require __DIR__ . '/../../includes/head.php';

@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'contact',
-    'title'       => 'Contact Rotash Power Projects South Africa — HVAC Enquiries',
-    'description' => 'Contact the South African team of Rotash Power Projects — Queenstown, East London and Mthatha offices, phone, email and business hours. Choose your market for the correct details.',
+    'title'       => 'Contact Rotash Power Projects South Africa — Refrigeration & Air Conditioning Enquiries',
+    'description' => 'Contact the South African team of Rotash Power Projects — refrigeration and air-conditioning enquiries; Queenstown, East London and Mthatha offices, phone, email and business hours.',
 ];
 
 require __DIR__ . '/../../includes/head.php';
@@ -129,7 +129,7 @@ require __DIR__ . '/../../includes/header.php';
                     </div>
                     <div class="field">
                         <label for="f-message">Message <span class="req">*</span></label>
-                        <textarea id="f-message" name="message" rows="5" required placeholder="Facility type, location, timeline, and what the system needs to do."></textarea>
+                        <textarea id="f-message" name="message" rows="5" required placeholder="Facility type, temperatures or comfort requirement, location, timeline."></textarea>
                         <span class="field__error">Please tell us a little about the project.</span>
                     </div>
                     <button type="submit" class="btn btn--primary btn--lg" data-submit-btn>Discuss Your Project</button>

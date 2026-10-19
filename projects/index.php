@@ -2,8 +2,9 @@
 
 $page = [
     'key'         => 'projects',
-    'title'       => 'Engineering Projects & Case Studies | Rotash Power Projects',
-    'description' => 'Selected HVAC, refrigeration and mechanical engineering projects — documented by location, sector, scope, challenge, engineering solution and outcome.',
+    'title'       => 'Refrigeration & Air Conditioning Case Studies | Rotash Power Projects',
+    'description' => 'Selected refrigeration and air-conditioning case studies — documented by location, sector, scope, challenge, engineering solution and outcome.',
+
 ];
 
 require __DIR__ . '/../includes/head.php';
@@ -12,14 +13,14 @@ require __DIR__ . '/../includes/header.php';
 
 <section class="page-hero">
     <div class="page-hero__media">
-        <img src="/assets/img/construction-site.jpg" alt="" fetchpriority="high">
+        <img src="/assets/img/rooftop-chiller.jpg" alt="" fetchpriority="high">
     </div>
     <?php require __DIR__ . '/../includes/breadcrumbs.php'; ?>
     <div class="container page-hero__inner">
         <div class="page-hero__content">
             <p class="eyebrow eyebrow--on-dark">Projects</p>
-            <h1 class="heading-1">Engineering case studies</h1>
-            <p class="lede lede--on-dark">Each project documented the way engineering should be: the scope, the constraint we faced, the solution we engineered and what it delivered.</p>
+            <h1 class="heading-1">Refrigeration &amp; air-conditioning case studies</h1>
+            <p class="lede lede--on-dark">Each refrigeration and air-conditioning project documented the way engineering should be: the scope, the constraint we faced, the solution we engineered and what it delivered.</p>
         </div>
     </div>
 </section>
@@ -29,8 +30,9 @@ require __DIR__ . '/../includes/header.php';
         <div class="section-head reveal">
             <p class="eyebrow">Selected work</p>
             <h2 class="display-lg">Projects by market, sector and service</h2>
-            <!-- TODO: replace placeholder records in data/projects.php with confirmed,
-                 client-approved case studies (real client names, locations, outcomes). -->
+            <!-- Placeholder records in data/projects.php are filtered out at load
+                 (includes/bootstrap.php); publish one by setting placeholder => false
+                 once the client confirms it. -->
         </div>
 
         <div class="filters reveal" data-filters>
@@ -38,7 +40,9 @@ require __DIR__ . '/../includes/header.php';
                 <span class="filter-group__label">Country</span>
                 <div class="chips">
                     <button type="button" class="chip is-active" data-filter="country" data-value="all">All</button>
-<?php foreach (['uk', 'south-africa'] as $code): ?>
+<?php
+$usedMarkets = array_values(array_unique(array_column($PROJECTS, 'market')));
+foreach ($usedMarkets as $code): ?>
                     <button type="button" class="chip" data-filter="country" data-value="<?= e($code) ?>"><?= e($MARKETS[$code]['name']) ?></button>
 <?php endforeach; ?>
                 </div>
@@ -80,7 +84,7 @@ foreach (array_keys($usedServices) as $sid): ?>
                      data-services="<?= e(implode(' ', $p['services'])) ?>">
                 <div class="case__media"><img src="<?= e($p['image']) ?>" alt="<?= e($p['title']) ?>" loading="lazy"></div>
                 <div class="case__body">
-                    <p class="case__sector"><?= e($sectorName) ?> · <?= e(strtoupper($MARKETS[$p['market']]['name'])) ?><?= $p['placeholder'] ? ' · DRAFT' : '' ?></p>
+                    <p class="case__sector"><?= e($sectorName) ?> · <?= e(strtoupper($MARKETS[$p['market']]['name'])) ?></p>
                     <h3 class="case__title"><?= e($p['title']) ?></h3>
                     <dl class="spec">
                         <div class="spec__row"><dt class="spec__key">Project</dt><dd class="spec__val"><?= e($p['title']) ?></dd></div>

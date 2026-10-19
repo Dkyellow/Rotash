@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'insights',
-    'title'       => 'Insights — HVAC & Engineering Perspectives | Rotash Power Projects',
-    'description' => 'Technical articles and operating perspectives from Rotash Power Projects on HVAC specification, maintenance, commissioning and building performance.',
+    'title'       => 'Insights — Refrigeration & Air Conditioning Perspectives | Rotash Power Projects',
+    'description' => 'Technical articles and operating perspectives from Rotash Power Projects on refrigeration and air conditioning, specification, maintenance, commissioning and building performance.',
 ];
 
 require __DIR__ . '/../includes/head.php';
@@ -18,8 +18,8 @@ require __DIR__ . '/../includes/header.php';
     <div class="container page-hero__inner">
         <div class="page-hero__content">
             <p class="eyebrow eyebrow--on-dark">Insights</p>
-            <h1 class="heading-1">Engineering perspectives</h1>
-            <p class="lede lede--on-dark">Practical writing on specification, maintenance and delivery — from the people doing the work, across both markets.</p>
+            <h1 class="heading-1">Refrigeration &amp; air-conditioning perspectives</h1>
+            <p class="lede lede--on-dark">Practical writing on cooling specification, maintenance and delivery — from the people doing the work, across both markets.</p>
         </div>
     </div>
 </section>

@@ -5,7 +5,7 @@ require __DIR__ . '/includes/bootstrap.php';
 $page = [
     'key'         => '404',
     'title'       => 'Page Not Found | Rotash Power Projects',
-    'description' => 'The page you requested could not be found. Return to Rotash Power Projects — international HVAC and engineering services.',
+    'description' => 'The page you requested could not be found. Return to Rotash Power Projects — refrigeration and air-conditioning engineering services.',
 ];
 http_response_code(404);
 
@@ -33,8 +33,8 @@ require __DIR__ . '/includes/header.php';
 <section class="section section--white">
     <div class="container">
         <div class="grid grid--3">
-            <a class="card card--hover" href="/services/"><h2 class="card__title">Services</h2><p class="card__copy">HVAC, refrigeration, ventilation, maintenance and project delivery.</p></a>
-            <a class="card card--hover" href="/projects/"><h2 class="card__title">Projects</h2><p class="card__copy">Engineering case studies by market, sector and service.</p></a>
+            <a class="card card--hover" href="/services/"><h2 class="card__title">Services</h2><p class="card__copy">Commercial refrigeration, air conditioning, ventilation, maintenance and project delivery.</p></a>
+            <a class="card card--hover" href="/projects/"><h2 class="card__title">Projects</h2><p class="card__copy">Refrigeration &amp; air-conditioning case studies by market, sector and service.</p></a>
             <a class="card card--hover" href="/locations/"><h2 class="card__title">Locations</h2><p class="card__copy">Offices and contact details for every market.</p></a>
         </div>
     </div>

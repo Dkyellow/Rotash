@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'projects',
-    'title'       => 'South Africa Engineering Projects & Case Studies | Rotash',
-    'description' => 'HVAC, refrigeration and mechanical engineering case studies from South Africa — documented by location, sector, scope, challenge, solution and outcome.',
+    'title'       => 'South Africa Refrigeration & Air Conditioning Case Studies | Rotash',
+    'description' => 'Refrigeration and air-conditioning case studies from South Africa — cold rooms, display refrigeration and climate systems, documented by location, sector, scope, solution and outcome.',
 ];
 
 require __DIR__ . '/../../includes/head.php';
@@ -18,7 +18,7 @@ require __DIR__ . '/../../includes/header.php';
     <div class="container page-hero__inner">
         <div class="page-hero__content">
             <p class="eyebrow eyebrow--on-dark">Projects · South Africa</p>
-            <h1 class="heading-1">SA engineering case studies</h1>
+            <h1 class="heading-1">SA refrigeration &amp; air-conditioning case studies</h1>
             <p class="lede lede--on-dark">Work delivered across the Eastern Cape and beyond — documented the same way every time.</p>
         </div>
     </div>
@@ -29,8 +29,9 @@ require __DIR__ . '/../../includes/header.php';
         <div class="section-head reveal">
             <p class="eyebrow">Selected SA work</p>
             <h2 class="display-lg">Projects · South Africa</h2>
-            <!-- TODO(ZA): publish confirmed, client-approved case studies; convert
-                 draft records in data/projects.php once sign-off is received. -->
+            <!-- Placeholder records in data/projects.php are filtered out at load
+                 (includes/bootstrap.php); publish one by setting placeholder => false
+                 once the client confirms it. -->
         </div>
 
         <div class="filters reveal" data-filters>
@@ -69,7 +70,7 @@ foreach (array_keys($zaSvc) as $sid): ?>
                      data-sector="<?= e($p['sector']) ?>" data-services="<?= e(implode(' ', $p['services'])) ?>">
                 <div class="case__media"><img src="<?= e($p['image']) ?>" alt="<?= e($p['title']) ?>" loading="lazy"></div>
                 <div class="case__body">
-                    <p class="case__sector"><?= e($INDUSTRIES[$p['sector']]['name']) ?> · SOUTH AFRICA<?= $p['placeholder'] ? ' · DRAFT' : '' ?></p>
+                    <p class="case__sector"><?= e($INDUSTRIES[$p['sector']]['name']) ?> · SOUTH AFRICA</p>
                     <h3 class="case__title"><?= e($p['title']) ?></h3>
                     <dl class="spec">
                         <div class="spec__row"><dt class="spec__key">Location</dt><dd class="spec__val"><?= e($p['location']) ?></dd></div>

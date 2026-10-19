@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'services',
-    'title'       => 'HVAC & Engineering Services | Rotash Power Projects',
-    'description' => 'HVAC systems, air conditioning, ventilation, refrigeration, mechanical services, maintenance and end-to-end engineering project delivery — internationally, from Rotash Power Projects.',
+    'title'       => 'Refrigeration & Air Conditioning Services | Rotash Power Projects',
+    'description' => 'Commercial refrigeration and air-conditioning services — cold rooms, display refrigeration, split, VRF and packaged cooling, installation, commissioning and maintenance — with supporting building-services capabilities from Rotash Power Projects.',
 ];
 
 require __DIR__ . '/../includes/head.php';
@@ -18,25 +18,47 @@ require __DIR__ . '/../includes/header.php';
     <div class="container page-hero__inner">
         <div class="page-hero__content">
             <p class="eyebrow eyebrow--on-dark">Services</p>
-            <h1 class="heading-1">HVAC & engineering services</h1>
-            <p class="lede lede--on-dark">A complete building-climate capability — design, installation, commissioning, refrigeration and long-term maintenance — delivered to one engineering standard in every market.</p>
+            <h1 class="heading-1">Refrigeration &amp; air conditioning services</h1>
+            <p class="lede lede--on-dark">Two principal services — refrigeration and air conditioning — supported by building-services capability and delivered to one engineering standard in every market.</p>
         </div>
     </div>
 </section>
 
-<!-- Service categories -->
+<!-- Principal services -->
 <section class="section section--white" id="services">
     <div class="container">
         <div class="section-head reveal">
-            <p class="eyebrow">Capabilities</p>
-            <h2 class="display-lg">Service categories</h2>
+            <p class="eyebrow">Principal services</p>
+            <h2 class="display-lg">Refrigeration and air conditioning</h2>
+            <p>The two categories everything else supports — each scoped per market, surveyed, installed, commissioned and maintained by one accountable team.</p>
+        </div>
+        <div class="grid grid--2">
+<?php foreach (['commercial-refrigeration', 'air-conditioning'] as $i => $id): $s = $SERVICES[$id]; ?>
+            <article class="card card--hover svc-card reveal" id="<?= e($s['id']) ?>" data-delay="<?= $i ?>">
+                <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
+                <h3 class="card__title"><?= e($s['name']) ?></h3>
+                <p class="card__copy"><?= e($s['short']) ?></p>
+                <p class="card__foot body-sm text-muted">Markets: <?= e(implode(', ', array_map(fn($c) => $MARKETS[$c]['name'], $s['markets']))) ?></p>
+                <a class="btn-link" href="/contact/">Discuss this service <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+            </article>
+<?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- Supporting services -->
+<section class="section section--pale" id="supporting">
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="eyebrow">Supporting capability</p>
+            <h2 class="display-lg">Supporting engineering services</h2>
             <!-- Each category is structured to become its own SEO landing page
-                 (e.g. /uk/services/hvac/) once confirmed for that market.
+                 (e.g. /uk/services/air-conditioning/) once confirmed for that market.
                  Availability is controlled per market in data/services.php. -->
-            <p>Every engagement combines the categories below into a single scoped programme — survey, design, install, commission, maintain.</p>
+            <p>Categories that support the two principal services — combined with them into a single scoped programme: survey, design, install, commission, maintain.</p>
         </div>
         <div class="grid grid--3">
-<?php foreach (array_values($SERVICES) as $i => $s): ?>
+<?php $supporting = array_values(array_filter($SERVICES, fn(array $s): bool => empty($s['principal']))); foreach ($supporting as $i => $s): ?>
             <article class="card card--hover svc-card reveal" id="<?= e($s['id']) ?>" data-delay="<?= $i % 3 ?>">
                 <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
                 <h3 class="card__title"><?= e($s['name']) ?></h3>
@@ -50,7 +72,7 @@ require __DIR__ . '/../includes/header.php';
 </section>
 
 <!-- Delivery lifecycle -->
-<section class="section section--pale">
+<section class="section section--white">
     <div class="container">
         <div class="grid grid--2 grid--loose items-start">
             <div class="reveal">
@@ -83,13 +105,13 @@ require __DIR__ . '/../includes/header.php';
             <a class="card card--dark reveal" href="/uk/services/">
                 <p class="card__index" style="color: rgba(255,255,255,0.55);">United Kingdom</p>
                 <h3 class="card__title">Services in the UK</h3>
-                <p class="card__copy">HVAC, ventilation, air conditioning, mechanical services and maintenance for British buildings.</p>
+                <p class="card__copy">Air conditioning, ventilation, mechanical services and maintenance for British buildings.</p>
                 <span class="btn-link btn-link--on-dark mt-6" style="display: inline-flex;">UK services <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
             </a>
             <a class="card card--dark reveal" data-delay="1" href="/south-africa/services/">
                 <p class="card__index" style="color: rgba(255,255,255,0.55);">South Africa</p>
                 <h3 class="card__title">Services in South Africa</h3>
-                <p class="card__copy">Climate control, commercial refrigeration, ventilation and maintenance across the Eastern Cape and beyond.</p>
+                <p class="card__copy">Commercial refrigeration, air conditioning, climate control and maintenance across the Eastern Cape and beyond.</p>
                 <span class="btn-link btn-link--on-dark mt-6" style="display: inline-flex;">South Africa services <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
             </a>
         </div>

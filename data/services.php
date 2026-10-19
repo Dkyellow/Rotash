@@ -18,10 +18,11 @@ $SERVICES = [
         'markets' => ['uk', 'south-africa'],
     ],
     'air-conditioning' => [
-        'id'      => 'air-conditioning',
-        'name'    => 'Air Conditioning',
-        'short'   => 'Split, multi-split, VRF and packaged cooling solutions specified to the building and its duty.',
-        'markets' => ['uk', 'south-africa'],
+        'id'        => 'air-conditioning',
+        'name'      => 'Air Conditioning',
+        'short'     => 'Split, multi-split, VRF and packaged cooling solutions specified to the building and its duty.',
+        'markets'   => ['uk', 'south-africa'],
+        'principal' => true,
     ],
     'ventilation' => [
         'id'      => 'ventilation',
@@ -36,10 +37,11 @@ $SERVICES = [
         'markets' => ['uk', 'south-africa'],
     ],
     'commercial-refrigeration' => [
-        'id'      => 'commercial-refrigeration',
-        'name'    => 'Commercial Refrigeration',
-        'short'   => 'Walk-in cold rooms, display refrigeration and integrated cold-chain systems for retail and food environments.',
-        'markets' => ['south-africa'],
+        'id'        => 'commercial-refrigeration',
+        'name'      => 'Commercial Refrigeration',
+        'short'     => 'Walk-in cold rooms, display refrigeration and integrated cold-chain systems for retail and food environments.',
+        'markets'   => ['south-africa'],
+        'principal' => true,
     ],
     'mechanical-services' => [
         'id'      => 'mechanical-services',

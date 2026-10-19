@@ -11,7 +11,7 @@ declare(strict_types=1);
 const SITE_DOMAIN  = 'https://rotashpowerprojects.com';
 const SITE_NAME    = 'Rotash Power Projects';
 const PARENT_GROUP = 'Rotash Group';
-const TAGLINE      = 'Engineering environments. Delivering performance.';
+const TAGLINE      = 'Refrigeration & air conditioning. Engineered to perform.';
 
 /**
  * Live markets. Additional markets append here.

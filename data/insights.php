@@ -10,8 +10,8 @@ declare(strict_types=1);
 
 $INSIGHTS = [
     [
-        'slug'        => 'specifying-hvac-for-hot-climates',
-        'title'       => 'Specifying HVAC for Hot, Dry Climates',
+        'slug'        => 'specifying-cooling-for-hot-climates',
+        'title'       => 'Specifying Cooling for Hot, Dry Climates',
         'market'      => 'south-africa',
         'category'    => 'Engineering',
         'date'        => '2026-08-12',

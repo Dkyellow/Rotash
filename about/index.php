@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'about',
-    'title'       => 'About Rotash Power Projects — International HVAC & Engineering',
-    'description' => 'The story, engineering philosophy and capabilities behind Rotash Power Projects — a Rotash Group company delivering HVAC and mechanical engineering in the United Kingdom and South Africa.',
+    'title'       => 'About Rotash Power Projects — Refrigeration & Air Conditioning Engineering',
+    'description' => 'The story, engineering philosophy and capabilities behind Rotash Power Projects — a Rotash Group company delivering refrigeration and air-conditioning engineering in the United Kingdom and South Africa.',
 ];
 
 require __DIR__ . '/../includes/head.php';
@@ -18,12 +18,12 @@ require __DIR__ . '/../includes/header.php';
     <div class="container page-hero__inner">
         <div class="page-hero__content">
             <p class="eyebrow eyebrow--on-dark">About</p>
-            <h1 class="heading-1">An engineering company, built to perform</h1>
-            <p class="lede lede--on-dark">Rotash Power Projects is the HVAC and engineering business of <?= e(PARENT_GROUP) ?> — delivering climate and building-services engineering in the United Kingdom and South Africa under one technical standard.</p>
+            <h1 class="heading-1">Refrigeration &amp; air conditioning, built to perform</h1>
+            <p class="lede lede--on-dark">Rotash Power Projects is the refrigeration and air-conditioning business of <?= e(PARENT_GROUP) ?> — delivering cooling and climate engineering in the United Kingdom and South Africa under one technical standard.</p>
             <div class="page-hero__meta">
                 <div class="page-hero__meta-item"><strong>Parent group</strong> <?= e(PARENT_GROUP) ?></div>
                 <div class="page-hero__meta-item"><strong>Markets</strong> United Kingdom · South Africa</div>
-                <div class="page-hero__meta-item"><strong>Discipline</strong> HVAC · Mechanical engineering · Climate control</div>
+                <div class="page-hero__meta-item"><strong>Discipline</strong> Refrigeration · Air conditioning · Climate control</div>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@ require __DIR__ . '/../includes/header.php';
             </div>
             <div class="prose reveal" data-delay="1">
                 <p>Rotash Power Projects grew out of hands-on engineering work — installing, commissioning and maintaining the systems that keep buildings and businesses running. That practical foundation still shapes how the company operates: drawings before decisions, testing before claims.</p>
-                <p>Today the business delivers HVAC, refrigeration and mechanical services across two countries, with Eastern Cape operations in Queenstown, East London and Mthatha serving the South African market and a United Kingdom operation serving British clients.</p>
+                <p>Today the business delivers refrigeration and air conditioning across two countries, with Eastern Cape operations in Queenstown, East London and Mthatha serving the South African market and a United Kingdom operation serving British clients.</p>
                 <p>Both operate as one company with one standard of delivery — and both are part of <?= e(PARENT_GROUP) ?>, the parent organisation coordinating the group's international growth.</p>
             </div>
         </div>
@@ -101,17 +101,17 @@ require __DIR__ . '/../includes/header.php';
             <div>
                 <p class="eyebrow">Capabilities</p>
                 <h2 class="display-lg">What we are equipped to deliver</h2>
-                <p>A full project lifecycle in-house — from survey through to long-term maintenance.</p>
+                <p>Refrigeration and air conditioning first — with a full project lifecycle in-house, from survey through to long-term maintenance.</p>
             </div>
             <a class="btn btn--secondary" href="/services/">All services</a>
         </div>
         <div class="grid grid--3">
-            <div class="card card--hover reveal"><h3 class="card__title">Design & specification</h3><p class="card__copy">Load assessment, system selection, distribution design and controls strategy for new build and refurbishment.</p></div>
-            <div class="card card--hover reveal" data-delay="1"><h3 class="card__title">Installation & project delivery</h3><p class="card__copy">Site installation managed against drawings and programmes, coordinated with other trades.</p></div>
-            <div class="card card--hover reveal" data-delay="2"><h3 class="card__title">Commissioning & handover</h3><p class="card__copy">Balancing, performance verification, documentation and operator training at handover.</p></div>
-            <div class="card card--hover reveal"><h3 class="card__title">Maintenance & response</h3><p class="card__copy">Planned preventative maintenance, fault response and system optimisation across the installed base.</p></div>
-            <div class="card card--hover reveal" data-delay="1"><h3 class="card__title">Commercial refrigeration</h3><p class="card__copy">Cold rooms, display refrigeration and cold-chain systems for retail and food environments.</p></div>
-            <div class="card card--hover reveal" data-delay="2"><h3 class="card__title">Mechanical services</h3><p class="card__copy">Coordinated building mechanical services — plant, distribution and interfaces with other disciplines.</p></div>
+            <div class="card card--hover reveal"><h3 class="card__title">Commercial refrigeration</h3><p class="card__copy">Cold rooms, display refrigeration and cold-chain systems for retail and food environments.</p></div>
+            <div class="card card--hover reveal" data-delay="1"><h3 class="card__title">Air conditioning</h3><p class="card__copy">Split, multi-split, VRF and packaged air-conditioning systems for commercial and industrial buildings.</p></div>
+            <div class="card card--hover reveal" data-delay="2"><h3 class="card__title">Design & specification</h3><p class="card__copy">Load assessment, system selection, distribution design and controls strategy for new build and refurbishment.</p></div>
+            <div class="card card--hover reveal"><h3 class="card__title">Installation & project delivery</h3><p class="card__copy">Site installation managed against drawings and programmes, coordinated with other trades.</p></div>
+            <div class="card card--hover reveal" data-delay="1"><h3 class="card__title">Commissioning & handover</h3><p class="card__copy">Balancing, performance verification, documentation and operator training at handover.</p></div>
+            <div class="card card--hover reveal" data-delay="2"><h3 class="card__title">Maintenance & response</h3><p class="card__copy">Planned preventative maintenance, fault response and system optimisation across the installed base.</p></div>
         </div>
     </div>
 </section>
@@ -147,15 +147,15 @@ require __DIR__ . '/../includes/header.php';
             <p>The platform is designed to grow: new countries plug into the same engineering standard, the same delivery process and the same digital presence.</p>
         </div>
         <div class="grid grid--2">
-            <div class="card reveal"><span class="market-card__flag">Live</span><h3 class="card__title mt-6">United Kingdom</h3><p class="card__copy">HVAC and building services engineering for British commercial and industrial clients.</p></div>
-            <div class="card reveal" data-delay="1"><span class="market-card__flag">Live</span><h3 class="card__title mt-6">South Africa</h3><p class="card__copy">Climate control, commercial refrigeration and mechanical services from Eastern Cape operations.</p></div>
+            <div class="card reveal"><span class="market-card__flag">Live</span><h3 class="card__title mt-6">United Kingdom</h3><p class="card__copy">Air conditioning and building-services engineering for British commercial and industrial clients.</p></div>
+            <div class="card reveal" data-delay="1"><span class="market-card__flag">Live</span><h3 class="card__title mt-6">South Africa</h3><p class="card__copy">Commercial refrigeration and air conditioning from Eastern Cape operations.</p></div>
         </div>
     </div>
 </section>
 
 <?php $cta = [
-    'title'   => 'Work with an engineering partner.',
-    'copy'    => 'Discuss your building, your loads and your constraints with the team that will engineer them.',
+    'title'   => 'Discuss your refrigeration or air-conditioning requirement.',
+    'copy'    => 'Building, loads, constraints — with the team that will engineer them.',
 ]; ?>
 <?php require __DIR__ . '/../includes/cta-band.php'; ?>
 <?php require __DIR__ . '/../includes/footer.php'; ?>

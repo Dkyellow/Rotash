@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'services',
-    'title'       => 'HVAC Services in the UK — Design, Installation & Maintenance | Rotash',
-    'description' => 'UK HVAC services: system design, air conditioning, ventilation, heating and cooling, mechanical services, commissioning and planned maintenance for British buildings.',
+    'title'       => 'Air Conditioning Services in the UK — Design, Installation & Maintenance | Rotash',
+    'description' => 'UK air-conditioning services: design, installation, commissioning and planned maintenance of split, multi-split, VRF and packaged systems for British buildings.',
 ];
 
 require __DIR__ . '/../../includes/head.php';
@@ -12,14 +12,14 @@ require __DIR__ . '/../../includes/header.php';
 
 <section class="page-hero">
     <div class="page-hero__media">
-        <img src="/assets/img/modern-office.jpg" alt="" fetchpriority="high">
+        <img src="/assets/img/ac-technician.jpg" alt="" fetchpriority="high">
     </div>
     <?php require __DIR__ . '/../../includes/breadcrumbs.php'; ?>
     <div class="container page-hero__inner">
         <div class="page-hero__content">
             <p class="eyebrow eyebrow--on-dark">Services · United Kingdom</p>
-            <h1 class="heading-1">HVAC services for UK buildings</h1>
-            <p class="lede lede--on-dark">Everything the UK operation delivers — scoped, programmed and commissioned by one accountable team.</p>
+            <h1 class="heading-1">Air conditioning services for UK buildings</h1>
+            <p class="lede lede--on-dark">The UK operation's lead capability — survey, design, installation, commissioning and maintenance of air-conditioning systems, delivered by one accountable team.</p>
         </div>
     </div>
 </section>
@@ -28,12 +28,15 @@ require __DIR__ . '/../../includes/header.php';
     <div class="container">
         <div class="section-head reveal">
             <p class="eyebrow">UK capability</p>
-            <h2 class="display-lg">Services available in the United Kingdom</h2>
-            <p>Each category below is delivered directly by the UK team. Availability is confirmed per market — this list is what the UK operation presents today.</p>
+            <h2 class="display-lg">Air conditioning first, supporting services beneath</h2>
+            <p>Air conditioning is the UK operation's lead capability (refrigeration is delivered from our South African operation). The categories below are what the UK team presents today.</p>
         </div>
         <div class="grid grid--3">
 <?php
 $ukList = array_values(array_filter($SERVICES, fn($s) => in_array('uk', $s['markets'], true)));
+$ukPrincipals = array_values(array_filter($ukList, fn($s) => !empty($s['principal'])));
+$ukSupporting = array_values(array_filter($ukList, fn($s) => empty($s['principal'])));
+$ukList = array_merge($ukPrincipals, $ukSupporting);
 foreach ($ukList as $i => $s): ?>
             <article class="card card--hover svc-card reveal" id="uk-<?= e($s['id']) ?>" data-delay="<?= $i % 3 ?>">
                 <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
@@ -87,8 +90,8 @@ foreach ($ukList as $i => $s): ?>
 </section>
 
 <?php $cta = [
-    'title'   => 'Scope your UK project.',
-    'copy'    => 'Send the building type, location and timeline — the UK team will respond within one business day.',
+    'title'   => 'Discuss your UK air-conditioning requirement.',
+    'copy'    => 'Building type, location, timeline — the UK team will respond within one business day.',
 ]; ?>
 <?php require __DIR__ . '/../../includes/cta-band.php'; ?>
 <?php require __DIR__ . '/../../includes/footer.php'; ?>

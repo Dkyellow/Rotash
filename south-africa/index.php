@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'home',
-    'title'       => 'HVAC & Engineering Services in South Africa | Rotash Power Projects',
-    'description' => 'HVAC, commercial refrigeration and mechanical engineering across South Africa — design, installation, commissioning and maintenance from Eastern Cape operations in Queenstown, East London and Mthatha.',
+    'title'       => 'Refrigeration & Air Conditioning Services in South Africa | Rotash Power Projects',
+    'description' => 'Commercial refrigeration and air conditioning across South Africa — cold rooms, display refrigeration, climate systems and planned maintenance from Eastern Cape operations in Queenstown, East London and Mthatha.',
 ];
 
 require __DIR__ . '/../includes/head.php';
@@ -19,8 +19,8 @@ $za = $OFFICES['south-africa'];
     <div class="container hero__inner">
         <div class="hero__content">
             <p class="eyebrow eyebrow--on-dark">Rotash Power Projects · South Africa</p>
-            <h1 class="display-hero">HVAC & refrigeration<br>engineering across South Africa.</h1>
-            <p class="lede lede--on-dark">Climate control, commercial refrigeration and mechanical services for retail, hospitality and industrial operations — delivered from the Eastern Cape, held to one group engineering standard.</p>
+            <h1 class="display-hero">Refrigeration &amp; air conditioning<br>across South Africa.</h1>
+            <p class="lede lede--on-dark">Commercial refrigeration and air conditioning for retail, hospitality and industrial operations — delivered from the Eastern Cape, held to one group engineering standard.</p>
             <div class="hero__actions">
                 <a class="btn btn--primary btn--lg" href="/south-africa/contact/">Request a Consultation</a>
                 <a class="btn btn--on-dark btn--lg" href="/south-africa/services/">South Africa services</a>
@@ -131,7 +131,7 @@ foreach ($zaServices as $i => $id): $s = $SERVICES[$id]; ?>
         <div class="section-head__row section-head reveal">
             <div>
                 <p class="eyebrow">Projects · South Africa</p>
-                <h2 class="display-lg">SA engineering case studies</h2>
+                <h2 class="display-lg">Refrigeration &amp; air-conditioning case studies</h2>
             </div>
             <a class="btn btn--secondary" href="/south-africa/projects/">All SA projects</a>
         </div>
@@ -142,7 +142,7 @@ foreach ($zaProjects as $p): ?>
         <article class="case reveal<?= $flip ? ' case--flip' : '' ?>">
             <div class="case__media"><img src="<?= e($p['image']) ?>" alt="<?= e($p['title']) ?>" loading="lazy"></div>
             <div class="case__body">
-                <p class="case__sector"><?= e($INDUSTRIES[$p['sector']]['name']) ?> · SOUTH AFRICA<?= $p['placeholder'] ? ' · DRAFT' : '' ?></p>
+                <p class="case__sector"><?= e($INDUSTRIES[$p['sector']]['name']) ?> · SOUTH AFRICA</p>
                 <h3 class="case__title"><?= e($p['title']) ?></h3>
                 <dl class="spec">
                     <div class="spec__row"><dt class="spec__key">Location</dt><dd class="spec__val"><?= e($p['location']) ?></dd></div>
@@ -187,7 +187,7 @@ foreach ($zaProjects as $p): ?>
 </section>
 
 <?php $cta = [
-    'title'   => "Let's discuss your South African project.",
+    'title'   => 'Let’s discuss your refrigeration or air-conditioning requirement.',
     'copy'    => 'Store, plant or facility — tell us what has to keep running, and we will engineer around it.',
 ]; ?>
 <?php require __DIR__ . '/../includes/cta-band.php'; ?>

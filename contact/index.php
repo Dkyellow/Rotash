@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'contact',
-    'title'       => 'Contact Rotash Power Projects — Request a Consultation',
-    'description' => 'Discuss your HVAC or engineering project with Rotash Power Projects. Choose your market — United Kingdom or South Africa — for the right local contact details.',
+    'title'       => 'Contact Rotash Power Projects — Refrigeration & Air Conditioning Enquiries',
+    'description' => 'Discuss your refrigeration or air-conditioning requirements with Rotash Power Projects. Choose your market — United Kingdom or South Africa — for the right local contact details.',
 ];
 
 require __DIR__ . '/../includes/head.php';
@@ -18,7 +18,7 @@ require __DIR__ . '/../includes/header.php';
     <div class="container page-hero__inner">
         <div class="page-hero__content">
             <p class="eyebrow eyebrow--on-dark">Contact</p>
-            <h1 class="heading-1">Let's discuss your project</h1>
+            <h1 class="heading-1">Discuss your refrigeration or air-conditioning requirements</h1>
             <p class="lede lede--on-dark">Choose your market, and you will deal directly with the team that will deliver the work.</p>
         </div>
     </div>
@@ -129,7 +129,7 @@ require __DIR__ . '/../includes/header.php';
                     </div>
                     <div class="field">
                         <label for="f-message">Message <span class="req">*</span></label>
-                        <textarea id="f-message" name="message" rows="5" required placeholder="Building type, location, timeline, and what the system needs to do."></textarea>
+                        <textarea id="f-message" name="message" rows="5" required placeholder="Facility type, temperatures or comfort requirement, location, timeline."></textarea>
                         <span class="field__error">Please tell us a little about the project.</span>
                     </div>
                     <button type="submit" class="btn btn--primary btn--lg" data-submit-btn>Discuss Your Project</button>

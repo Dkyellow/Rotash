@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'industries',
-    'title'       => 'Industries We Serve — Commercial, Industrial & Critical Sectors | Rotash',
-    'description' => 'HVAC and engineering capability structured around the sectors that need it: commercial buildings, retail, hospitality, industrial facilities, healthcare, offices, education and data centres.',
+    'title'       => 'Industries We Serve — Refrigeration & Air Conditioning by Sector | Rotash',
+    'description' => 'The sectors Rotash Power Projects serves with refrigeration and air conditioning: retail, hospitality, healthcare, offices, industrial facilities, education and data centres — structured around what each sector demands.',
 ];
 
 require __DIR__ . '/../includes/head.php';
@@ -68,7 +68,7 @@ require __DIR__ . '/../includes/header.php';
 </section>
 
 <?php $cta = [
-    'title'   => 'Tell us what the building has to do.',
+    'title'   => 'Tell us what the temperature needs to do.',
     'copy'    => 'The sector, the occupancy, the constraints — we will engineer to them.',
 ]; ?>
 <?php require __DIR__ . '/../includes/cta-band.php'; ?>

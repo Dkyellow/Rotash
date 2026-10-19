@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'contact',
-    'title'       => 'Contact Rotash Power Projects UK — HVAC Enquiries',
-    'description' => 'Contact the United Kingdom team of Rotash Power Projects for HVAC, ventilation and building services enquiries. Choose your market for the correct local details.',
+    'title'       => 'Contact Rotash Power Projects UK — Air Conditioning Enquiries',
+    'description' => 'Contact the United Kingdom team of Rotash Power Projects for air-conditioning and building-services enquiries. Choose your market for the correct local details.',
 ];
 
 require __DIR__ . '/../../includes/head.php';
@@ -126,7 +126,7 @@ require __DIR__ . '/../../includes/header.php';
                     </div>
                     <div class="field">
                         <label for="f-message">Message <span class="req">*</span></label>
-                        <textarea id="f-message" name="message" rows="5" required placeholder="Building type, location, timeline, and what the system needs to do."></textarea>
+                        <textarea id="f-message" name="message" rows="5" required placeholder="Building type, comfort requirement, location, timeline."></textarea>
                         <span class="field__error">Please tell us a little about the project.</span>
                     </div>
                     <button type="submit" class="btn btn--primary btn--lg" data-submit-btn>Discuss Your Project</button>

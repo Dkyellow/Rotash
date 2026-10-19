@@ -159,6 +159,7 @@ function jsonld_organization(): array
         '@type' => 'Organization',
         '@id'   => SITE_DOMAIN . '/#organization',
         'name'  => SITE_NAME,
+        'description' => 'International refrigeration and air-conditioning services company designing, installing and maintaining cooling systems for commercial and industrial clients in the United Kingdom and South Africa.',
         'legalName' => PARENT_GROUP,
         'url'   => SITE_DOMAIN . '/',
         'logo'  => SITE_DOMAIN . '/assets/img/logo.png',

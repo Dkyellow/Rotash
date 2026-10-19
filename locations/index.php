@@ -32,8 +32,8 @@ require __DIR__ . '/../includes/header.php';
                 <p class="eyebrow">Market</p>
                 <h2 class="display-lg"><?= e($mk['name']) ?></h2>
                 <p><?= $code === 'uk'
-                    ? 'HVAC and building services engineering for clients across the United Kingdom.'
-                    : 'Climate control, commercial refrigeration and mechanical services from Eastern Cape operations.' ?></p>
+                    ? 'Air conditioning and building-services engineering for clients across the United Kingdom.'
+                    : 'Commercial refrigeration and air conditioning from Eastern Cape operations.' ?></p>
             </div>
             <a class="btn btn--secondary" href="<?= e($mk['prefix']) ?>contact/">Contact <?= e($mk['name']) ?></a>
         </div>
@@ -82,4 +82,3 @@ require __DIR__ . '/../includes/header.php';
 
 <?php require __DIR__ . '/../includes/cta-band.php'; ?>
 <?php require __DIR__ . '/../includes/footer.php'; ?>
-<!-- new comment -->

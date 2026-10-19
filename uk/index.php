@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'home',
-    'title'       => 'HVAC & Engineering Services in the UK | Rotash Power Projects',
-    'description' => 'HVAC design, installation, commissioning and maintenance for commercial and industrial buildings across the United Kingdom. The UK operation of Rotash Power Projects.',
+    'title'       => 'Air Conditioning & Building Services in the UK | Rotash Power Projects',
+    'description' => 'Air-conditioning design, installation, commissioning and maintenance for buildings across the United Kingdom. The UK operation of Rotash Power Projects.',
 ];
 
 require __DIR__ . '/../includes/head.php';
@@ -18,8 +18,8 @@ require __DIR__ . '/../includes/header.php';
     <div class="container hero__inner">
         <div class="hero__content">
             <p class="eyebrow eyebrow--on-dark">Rotash Power Projects · United Kingdom</p>
-            <h1 class="display-hero">HVAC & engineering<br>for UK buildings.</h1>
-            <p class="lede lede--on-dark">Design, installation, commissioning and maintenance of climate and mechanical systems for commercial and industrial clients across the United Kingdom — delivered by the UK team, to one group engineering standard.</p>
+            <h1 class="display-hero">Air conditioning<br>for UK buildings.</h1>
+            <p class="lede lede--on-dark">Design, installation, commissioning and maintenance of air-conditioning systems for commercial and industrial clients across the United Kingdom — delivered by the UK team, to one group engineering standard.</p>
             <div class="hero__actions">
                 <a class="btn btn--primary btn--lg" href="/uk/contact/">Request a Consultation</a>
                 <a class="btn btn--on-dark btn--lg" href="/uk/services/">UK services</a>
@@ -46,7 +46,7 @@ require __DIR__ . '/../includes/header.php';
                 <h2 class="display-lg">Building services engineering, delivered locally</h2>
             </div>
             <div class="prose reveal" data-delay="1">
-                <p>The United Kingdom operation of Rotash Power Projects handles HVAC and mechanical building services for British clients — from surveys and system design through installation, commissioning and planned maintenance.</p>
+                <p>The United Kingdom operation of Rotash Power Projects delivers air-conditioning and building-services work for British clients — from surveys and system design through installation, commissioning and planned maintenance. Commercial refrigeration is delivered from our South African operation.</p>
                 <p>UK projects run through the same process as every Rotash market: establish the duty, engineer to it, install to the drawing and prove performance at handover. Local delivery, group standard.</p>
                 <p>Whether the building is an occupied office, a retail environment or an industrial facility, the work is scoped around how the space is actually used — and what it costs to run.</p>
             </div>
@@ -70,13 +70,13 @@ require __DIR__ . '/../includes/header.php';
             <div>
                 <p class="eyebrow">Services · United Kingdom</p>
                 <h2 class="display-lg">What we deliver in the UK</h2>
-                <p>Full project lifecycle in one contract — no gaps between designer, installer and maintainer.</p>
+                <p>Air conditioning leads, with the supporting building-services categories beneath it — full project lifecycle in one contract.</p>
             </div>
             <a class="btn btn--secondary" href="/uk/services/">All UK services</a>
         </div>
         <div class="grid grid--3">
 <?php
-$ukServices = ['hvac', 'air-conditioning', 'ventilation', 'heating-cooling', 'mechanical-services', 'maintenance'];
+$ukServices = ['air-conditioning', 'hvac', 'ventilation', 'heating-cooling', 'mechanical-services', 'maintenance'];
 foreach ($ukServices as $i => $id): $s = $SERVICES[$id]; ?>
             <article class="card card--hover svc-card reveal" data-delay="<?= $i % 3 ?>">
                 <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
@@ -138,18 +138,26 @@ foreach ($ukServices as $i => $id): $s = $SERVICES[$id]; ?>
         <div class="section-head__row section-head reveal">
             <div>
                 <p class="eyebrow">Projects · United Kingdom</p>
-                <h2 class="display-lg">UK engineering case studies</h2>
-                <!-- TODO(UK projects): confirm and publish delivered UK work. -->
+                <h2 class="display-lg">UK case studies</h2>
             </div>
             <a class="btn btn--secondary" href="/uk/projects/">All UK projects</a>
         </div>
 <?php
 $ukProjects = array_values(array_filter($PROJECTS, fn($p) => $p['market'] === 'uk'));
-foreach ($ukProjects as $i => $p): ?>
+if (empty($ukProjects)): ?>
+        <div class="card reveal">
+            <h3 class="card__title">UK case studies are being confirmed</h3>
+            <p class="card__copy">Delivered UK work will be published here once the records are verified. In the meantime, tell us about your building and the team will scope it — refrigeration and air-conditioning work across the group is documented on our main projects page.</p>
+            <div class="hero__actions mt-6">
+                <a class="btn btn--secondary" href="/projects/">See group case studies</a>
+                <a class="btn btn--primary" href="/uk/contact/">Talk to the UK team</a>
+            </div>
+        </div>
+<?php else: foreach ($ukProjects as $i => $p): ?>
         <article class="case reveal">
             <div class="case__media"><img src="<?= e($p['image']) ?>" alt="<?= e($p['title']) ?>" loading="lazy"></div>
             <div class="case__body">
-                <p class="case__sector"><?= e($INDUSTRIES[$p['sector']]['name']) ?> · UNITED KINGDOM<?= $p['placeholder'] ? ' · DRAFT' : '' ?></p>
+                <p class="case__sector"><?= e($INDUSTRIES[$p['sector']]['name']) ?> · UNITED KINGDOM</p>
                 <h3 class="case__title"><?= e($p['title']) ?></h3>
                 <dl class="spec">
                     <div class="spec__row"><dt class="spec__key">Location</dt><dd class="spec__val"><?= e($p['location']) ?></dd></div>
@@ -159,7 +167,7 @@ foreach ($ukProjects as $i => $p): ?>
                 <p class="case__result"><strong>Outcome —</strong> <?= e($p['outcome']) ?></p>
             </div>
         </article>
-<?php endforeach; ?>
+<?php endforeach; endif; ?>
     </div>
 </section>
 
@@ -195,7 +203,7 @@ foreach ($ukProjects as $i => $p): ?>
 </section>
 
 <?php $cta = [
-    'title'   => "Let's discuss your UK project.",
+    'title'   => 'Let’s discuss your UK cooling requirement.',
     'copy'    => 'Building type, location, timeline — the UK team will take it from there.',
 ]; ?>
 <?php require __DIR__ . '/../includes/cta-band.php'; ?>
