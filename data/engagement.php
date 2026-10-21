@@ -10,6 +10,7 @@ declare(strict_types=1);
 $ENGAGEMENT_MODELS = [
     [
         'id'      => 'direct',
+        'icon'    => 'users',
         'name'    => 'Direct contract',
         'summary' => 'We contract straight with the client and carry the whole package.',
         'detail'  => 'The owner, operator or facility manager appoints us directly. We own the survey, the specification, the installation, the commissioning and the handover — and the responsibility for the system performing afterwards.',
@@ -22,6 +23,7 @@ $ENGAGEMENT_MODELS = [
     ],
     [
         'id'      => 'subcontract',
+        'icon'    => 'helmet',
         'name'    => 'Subcontracted delivery',
         'summary' => 'We are appointed by main contractors and equipment manufacturers to deliver their refrigeration or air-conditioning package.',
         'detail'  => 'A significant share of the work is delivered as a subcontract package. We work to the main contractor’s drawings, programme and site rules, coordinate with other trades on site, and report back against a scope that has already been defined by someone else.',
@@ -34,6 +36,7 @@ $ENGAGEMENT_MODELS = [
     ],
     [
         'id'      => 'maintenance',
+        'icon'    => 'calendar',
         'name'    => 'Maintenance and service agreements',
         'summary' => 'Planned servicing and fault response for installed plant, including plant we did not install.',
         'detail'  => 'A refrigeration system only holds its temperature if somebody is accountable for it. We take on planned preventive maintenance, reactive call-out and system optimisation for installed base — and for equipment inherited from a previous contractor once we have surveyed and recorded it.',
@@ -46,6 +49,7 @@ $ENGAGEMENT_MODELS = [
     ],
     [
         'id'      => 'consultancy',
+        'icon'    => 'document',
         'name'    => 'Survey, design and tender support',
         'summary' => 'Independent technical input before anything is bought or built.',
         'detail'  => 'Sometimes the useful work happens before there is a project to install — an assessment of what is already installed, a load calculation, a tender specification, or an opinion on a system another contractor has quoted. We take on that work on its own, documented properly.',

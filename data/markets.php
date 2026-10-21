@@ -46,10 +46,10 @@ $MARKET_CONTENT = [
         ],
         'services_note' => 'Both principal disciplines and the medical cold chain service are delivered by the South African teams directly.',
         'facts' => [
-            ['value' => '3',       'label' => 'Offices',    'note' => 'Queenstown, East London and Mthatha'],
-            ['value' => 'Cold',    'label' => 'Chain core', 'note' => 'Commercial refrigeration and medical cold chain'],
-            ['value' => 'Direct',  'label' => 'Contracting', 'note' => 'Appointed by clients, main contractors and manufacturers'],
-            ['value' => '4-stage', 'label' => 'Delivery',   'note' => 'Survey, specification, installation, maintenance'],
+            ['value' => '3',       'label' => 'Offices',    'note' => 'Queenstown, East London and Mthatha', 'icon' => 'pin'],
+            ['value' => 'Cold',    'label' => 'Chain core', 'note' => 'Commercial refrigeration and medical cold chain', 'icon' => 'snowflake'],
+            ['value' => 'Direct',  'label' => 'Contracting', 'note' => 'Appointed by clients, main contractors and manufacturers', 'icon' => 'users'],
+            ['value' => '4-stage', 'label' => 'Delivery',   'note' => 'Survey, specification, installation, maintenance', 'icon' => 'ruler'],
         ],
         'coverage' => [
             'title' => 'Coverage',
@@ -96,10 +96,10 @@ $MARKET_CONTENT = [
         ],
         'services_note' => 'Refrigeration, medical cold chain and air conditioning are all delivered by the Zimbabwe team.',
         'facts' => [
-            ['value' => 'Harare',  'label' => 'Base',       'note' => 'Zimbabwe operations and enquiries'],
-            ['value' => 'Cold',    'label' => 'Chain core', 'note' => 'Refrigeration and medical cold chain'],
-            ['value' => 'Direct',  'label' => 'Contracting', 'note' => 'Appointed by clients, main contractors and manufacturers'],
-            ['value' => '4-stage', 'label' => 'Delivery',   'note' => 'Survey, specification, installation, maintenance'],
+            ['value' => 'Harare',  'label' => 'Base',       'note' => 'Zimbabwe operations and enquiries', 'icon' => 'pin'],
+            ['value' => 'Cold',    'label' => 'Chain core', 'note' => 'Refrigeration and medical cold chain', 'icon' => 'snowflake'],
+            ['value' => 'Direct',  'label' => 'Contracting', 'note' => 'Appointed by clients, main contractors and manufacturers', 'icon' => 'users'],
+            ['value' => '4-stage', 'label' => 'Delivery',   'note' => 'Survey, specification, installation, maintenance', 'icon' => 'ruler'],
         ],
         'coverage' => [
             'title' => 'Coverage',
@@ -146,10 +146,10 @@ $MARKET_CONTENT = [
         ],
         'services_note' => 'Air conditioning and ventilation lead the UK operation; refrigeration and medical cold chain are available through the group.',
         'facts' => [
-            ['value' => 'UK',      'label' => 'Market',     'note' => 'Air conditioning, ventilation and building services'],
-            ['value' => 'Live',    'label' => 'Buildings', 'note' => 'Phased around occupied premises'],
-            ['value' => 'Direct',  'label' => 'Contracting', 'note' => 'Appointed by clients, main contractors and manufacturers'],
-            ['value' => '4-stage', 'label' => 'Delivery',   'note' => 'Survey, specification, installation, maintenance'],
+            ['value' => 'UK',      'label' => 'Market',     'note' => 'Air conditioning, ventilation and building services', 'icon' => 'globe'],
+            ['value' => 'Live',    'label' => 'Buildings', 'note' => 'Phased around occupied premises', 'icon' => 'building'],
+            ['value' => 'Direct',  'label' => 'Contracting', 'note' => 'Appointed by clients, main contractors and manufacturers', 'icon' => 'users'],
+            ['value' => '4-stage', 'label' => 'Delivery',   'note' => 'Survey, specification, installation, maintenance', 'icon' => 'ruler'],
         ],
         'coverage' => [
             'title' => 'Coverage',

@@ -22,6 +22,7 @@ $engagement = array_merge([
         <div class="engagement-grid">
 <?php foreach ($ENGAGEMENT_MODELS as $i => $model): ?>
             <article class="engagement reveal" data-delay="<?= $i % 4 ?>">
+                <span class="icon-badge"><?= icon($model['icon'] ?? 'users') ?></span>
                 <p class="engagement__index"><?= str_pad((string) ($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
                 <h3 class="engagement__name"><?= e($model['name']) ?></h3>
                 <p class="engagement__summary"><?= e($model['summary']) ?></p>

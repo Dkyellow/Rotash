@@ -55,16 +55,16 @@ foreach ($switchOrder as $mc):
                     <h3 class="contact-panel__title"><?= e($mc === 'global' ? 'Group desk' : $mk['name']) ?></h3>
                     <p class="contact-panel__note"><?= e($cp['note']) ?></p>
                     <dl class="contact-lines">
-                        <div><dt>Phone</dt><dd><a href="tel:<?= e(tel_href($cp['phone'])) ?>"><?= e($cp['phone']) ?></a></dd></div>
-                        <div><dt>Email</dt><dd><a href="mailto:<?= e($cp['email']) ?>"><?= e($cp['email']) ?></a></dd></div>
+                        <div><dt><?= icon('phone', 'line-icon') ?><span class="visually-hidden">Phone</span></dt><dd><a href="tel:<?= e(tel_href($cp['phone'])) ?>"><?= e($cp['phone']) ?></a></dd></div>
+                        <div><dt><?= icon('mail', 'line-icon') ?><span class="visually-hidden">Email</span></dt><dd><a href="mailto:<?= e($cp['email']) ?>"><?= e($cp['email']) ?></a></dd></div>
 <?php if ($cp['hours'] !== ''): ?>
-                        <div><dt>Hours</dt><dd><?= e($cp['hours']) ?></dd></div>
+                        <div><dt><?= icon('clock', 'line-icon') ?><span class="visually-hidden">Hours</span></dt><dd><?= e($cp['hours']) ?></dd></div>
 <?php endif; ?>
 <?php if ($cp['whatsapp'] !== ''): ?>
-                        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/<?= e($cp['whatsapp']) ?>" target="_blank" rel="noopener">+<?= e($cp['phone']) ?></a></dd></div>
+                        <div><dt><?= icon('chat', 'line-icon') ?><span class="visually-hidden">WhatsApp</span></dt><dd><a href="https://wa.me/<?= e($cp['whatsapp']) ?>" target="_blank" rel="noopener">+<?= e($cp['phone']) ?></a></dd></div>
 <?php endif; ?>
 <?php foreach ($cp['offices'] as $loc): ?>
-                        <div><dt><?= e($loc['city']) ?></dt><dd><?= e($loc['address']) ?></dd></div>
+                        <div><dt><?= icon('pin', 'line-icon') ?><span class="visually-hidden">Office</span></dt><dd><?= e($loc['address']) !== '' ? e($loc['address']) : e($loc['city']) . ' — address to be confirmed' ?></dd></div>
 <?php endforeach; ?>
                     </dl>
                 </div>

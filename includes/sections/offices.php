@@ -44,12 +44,12 @@ $office_head = $office_head ?? [];
 <?php else: ?>
                 <dl class="office-card__lines">
 <?php foreach ($cp['offices'] as $loc): ?>
-                    <div><dt><?= e($loc['city']) ?></dt><dd><?= e($loc['address']) ?></dd></div>
+                    <div><dt><?= icon('pin', 'line-icon') ?><span class="visually-hidden">Office</span></dt><dd><strong><?= e($loc['city']) ?></strong><?= e($loc['address']) ?></dd></div>
 <?php endforeach; ?>
-                    <div><dt>Phone</dt><dd><a href="tel:<?= e(tel_href($cp['phone'])) ?>"><?= e($cp['phone']) ?></a></dd></div>
-                    <div><dt>Email</dt><dd><a href="mailto:<?= e($cp['email']) ?>"><?= e($cp['email']) ?></a></dd></div>
+                    <div><dt><?= icon('phone', 'line-icon') ?><span class="visually-hidden">Phone</span></dt><dd><a href="tel:<?= e(tel_href($cp['phone'])) ?>"><?= e($cp['phone']) ?></a></dd></div>
+                    <div><dt><?= icon('mail', 'line-icon') ?><span class="visually-hidden">Email</span></dt><dd><a href="mailto:<?= e($cp['email']) ?>"><?= e($cp['email']) ?></a></dd></div>
 <?php if ($cp['hours'] !== ''): ?>
-                    <div><dt>Hours</dt><dd><?= e($cp['hours']) ?></dd></div>
+                    <div><dt><?= icon('clock', 'line-icon') ?><span class="visually-hidden">Hours</span></dt><dd><?= e($cp['hours']) ?></dd></div>
 <?php endif; ?>
                 </dl>
 <?php endif; ?>

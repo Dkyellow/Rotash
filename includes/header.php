@@ -53,8 +53,11 @@ $disciplines = services_for_market($code);
 <?php foreach ($disciplines as $sid => $s): ?>
                             <li>
                                 <a class="nav__menu-link<?= $s['kind'] === 'specialist' ? ' is-specialist' : '' ?>" href="<?= e(mp('services/')) ?>#<?= e($sid) ?>">
-                                    <span class="nav__menu-name"><?= e($s['nav']) ?></span>
-                                    <span class="nav__menu-note"><?= e($s['summary']) ?></span>
+                                    <span class="nav__menu-icon"><?= icon($s['icon'] ?? 'ruler') ?></span>
+                                    <span class="nav__menu-text">
+                                        <span class="nav__menu-name"><?= e($s['nav']) ?></span>
+                                        <span class="nav__menu-note"><?= e($s['summary']) ?></span>
+                                    </span>
                                 </a>
                             </li>
 <?php endforeach; ?>

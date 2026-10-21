@@ -29,7 +29,7 @@ $method = array_merge([
                 <li class="method__item">
                     <span class="method__num"><?= e($stage['num']) ?></span>
                     <div>
-                        <h3 class="method__title"><?= e($stage['name']) ?></h3>
+                        <h3 class="method__title"><?= icon($stage['icon'] ?? 'clipboard') ?><?= e($stage['name']) ?></h3>
                         <p class="method__copy"><?= e($stage['copy']) ?></p>
                     </div>
                 </li>

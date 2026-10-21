@@ -45,10 +45,10 @@ require __DIR__ . '/../includes/sections/offices.php';
             </div>
             <div class="contact-desk reveal" data-delay="1">
                 <p class="contact-desk__label">Group enquiries</p>
-                <p class="contact-desk__row"><span>Phone</span><a href="tel:<?= e(tel_href(GROUP_CONTACT['phone'])) ?>"><?= e(GROUP_CONTACT['phone']) ?></a></p>
-                <p class="contact-desk__row"><span>Email</span><a href="mailto:<?= e(GROUP_CONTACT['email']) ?>"><?= e(GROUP_CONTACT['email']) ?></a></p>
-                <p class="contact-desk__row"><span>WhatsApp</span><a href="https://wa.me/<?= e(GROUP_CONTACT['whatsapp']) ?>" target="_blank" rel="noopener">+<?= e(GROUP_CONTACT['phone']) ?></a></p>
-                <p class="contact-desk__row"><span>Hours</span><?= e(GROUP_CONTACT['hours']) ?></p>
+                <p class="contact-desk__row"><span><?= icon('phone', 'line-icon') ?>Phone</span><a href="tel:<?= e(tel_href(GROUP_CONTACT['phone'])) ?>"><?= e(GROUP_CONTACT['phone']) ?></a></p>
+                <p class="contact-desk__row"><span><?= icon('mail', 'line-icon') ?>Email</span><a href="mailto:<?= e(GROUP_CONTACT['email']) ?>"><?= e(GROUP_CONTACT['email']) ?></a></p>
+                <p class="contact-desk__row"><span><?= icon('chat', 'line-icon') ?>WhatsApp</span><a href="https://wa.me/<?= e(GROUP_CONTACT['whatsapp']) ?>" target="_blank" rel="noopener">+<?= e(GROUP_CONTACT['phone']) ?></a></p>
+                <p class="contact-desk__row"><span><?= icon('clock', 'line-icon') ?>Hours</span><?= e(GROUP_CONTACT['hours']) ?></p>
             </div>
         </div>
     </div>
