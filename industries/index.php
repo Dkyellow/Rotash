@@ -2,74 +2,62 @@
 
 $page = [
     'key'         => 'industries',
-    'title'       => 'Industries We Serve — Refrigeration & Air Conditioning by Sector | Rotash',
-    'description' => 'The sectors Rotash Power Projects serves with refrigeration and air conditioning: retail, hospitality, healthcare, offices, industrial facilities, education and data centres — structured around what each sector demands.',
+    'title'       => 'Sectors We Serve — Cooling Engineered by Industry | Rotash',
+    'description' => 'Retail, healthcare, hospitality, industrial, commercial and education sectors — and what each one demands from its cooling system.',
+    'image'       => '/assets/img/og-default.jpg',
 ];
 
 require __DIR__ . '/../includes/head.php';
 require __DIR__ . '/../includes/header.php';
+
+$ph = [
+    'eyebrow' => 'Sectors',
+    'title'   => 'Engineering that understands the sector',
+    'lede'    => 'A retail floor, a pharmacy and a cold store make completely different demands on a cooling system. We design to what the sector actually needs from the plant — not to a generic load.',
+    'image'   => '/assets/img/logistics-warehouse.jpg',
+    'alt'     => 'Racked storage aisles inside a large distribution warehouse',
+    'meta'    => [
+        'Sectors' => '6 sectors served',
+        'Markets' => 'Zimbabwe · South Africa · United Kingdom',
+    ],
+];
+require __DIR__ . '/../includes/sections/page-hero.php';
 ?>
 
-<section class="page-hero">
-    <div class="page-hero__media">
-        <img src="/assets/img/cold-storage.jpg" alt="" fetchpriority="high">
-    </div>
-    <?php require __DIR__ . '/../includes/breadcrumbs.php'; ?>
-    <div class="container page-hero__inner">
-        <div class="page-hero__content">
-            <p class="eyebrow eyebrow--on-dark">Industries</p>
-            <h1 class="heading-1">Engineering that understands the sector</h1>
-            <p class="lede lede--on-dark">A shop floor, an operating theatre and a hotel bedroom impose completely different demands on air and temperature. We design to the sector's reality, not a generic load.</p>
-        </div>
-    </div>
-</section>
+<?php
+$sector_head = [
+    'eyebrow' => 'Sectors',
+    'title'   => 'Where the work is done',
+    'copy'    => 'The six sectors below are the ones the business is regularly asked to engineer for. Each one lists what it genuinely demands — which is where the design decisions start.',
+];
+require __DIR__ . '/../includes/sections/sectors.php';
+?>
 
-<section class="section section--white">
+<!-- What sector knowledge changes -->
+<section class="section section--ink">
     <div class="container">
-        <div class="section-head reveal">
-            <p class="eyebrow">Sectors</p>
-            <h2 class="display-lg">Industries we serve</h2>
-            <!-- Sector list is gated per market in data/industries.php.
-                 Sector-specific landing pages (/uk/industries/<sector>/) can be
-                 enabled once confirmed with the client. -->
-            <p>Capability areas across our operating markets — United Kingdom and South Africa.</p>
-        </div>
-        <div class="industry-grid reveal">
-<?php foreach ($INDUSTRIES as $ind): ?>
-            <div class="industry-cell">
-                <h3 class="industry-cell__name"><?= e($ind['name']) ?></h3>
-                <p class="industry-cell__copy"><?= e($ind['short']) ?></p>
-                <span class="industry-cell__arrow body-xs"><?= e(implode(' · ', array_map(fn($c) => $MARKETS[$c]['name'], $ind['markets']))) ?></span>
-            </div>
-<?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<section class="section section--pale">
-    <div class="container">
-        <div class="grid grid--2 grid--loose items-start">
+        <div class="grid grid--split">
             <div class="reveal">
-                <p class="eyebrow">Why sector knowledge matters</p>
+                <p class="eyebrow eyebrow--on-dark">Why it matters</p>
                 <h2 class="display-lg">Different duty. Different design.</h2>
             </div>
-            <div class="prose reveal" data-delay="1">
-                <p><strong>Retail and hospitality</strong> run on comfort and presentation — quiet plant, stable display temperatures, no disruption to trading.</p>
-                <p><strong>Industrial and manufacturing</strong> run on process: extraction, ventilation and climate that keep production moving.</p>
-                <p><strong>Healthcare and education</strong> run on air quality and reliability, where ventilation performance is not negotiable.</p>
-                <p><strong>Offices and commercial buildings</strong> run on cost: comfort people accept, at a running cost the operator can defend.</p>
+            <div class="prose prose--on-dark reveal" data-delay="1">
+                <p><strong>Retail and food service</strong> run on product temperature and trading hours. The plant has to work around a shop floor that never closes, and the display cases have to sell as well as hold cold.</p>
+                <p><strong>Healthcare and clinical</strong> run on a defined temperature band, a monitoring regime and a documentation trail. The control system matters as much as the cabinet, and the capacity has to carry a buffer when a delivery is late.</p>
+                <p><strong>Hospitality</strong> runs kitchen refrigeration and guest comfort on the same clock, through the same building, at the same peak hour.</p>
+                <p><strong>Industrial and logistics</strong> run on throughput. Capacity, redundancy and cutover planning decide whether stock and dispatch keep moving while the system is replaced.</p>
+                <p><strong>Commercial buildings</strong> run on comfort and running cost — the two things an operator has to defend to the people who own the building.</p>
+                <p><strong>Education and public sector</strong> run on ventilation performance and value over a long maintenance cycle, with equipment that has to be serviceable by whoever holds the contract.</p>
             </div>
-        </div>
-        <div class="mt-10 reveal" style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <a class="btn btn--primary" href="/contact/">Discuss your sector</a>
-            <a class="btn btn--secondary" href="/projects/">See sector projects</a>
         </div>
     </div>
 </section>
 
-<?php $cta = [
-    'title'   => 'Tell us what the temperature needs to do.',
-    'copy'    => 'The sector, the occupancy, the constraints — we will engineer to them.',
-]; ?>
-<?php require __DIR__ . '/../includes/cta-band.php'; ?>
+<?php
+$cta = [
+    'title'   => 'Which sector is your building in?',
+    'copy'    => 'Tell us the sector and the constraint you are working inside — we will engineer around both.',
+];
+require __DIR__ . '/../includes/sections/cta.php';
+?>
 <?php require __DIR__ . '/../includes/footer.php'; ?>

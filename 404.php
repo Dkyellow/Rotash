@@ -4,8 +4,11 @@ require __DIR__ . '/includes/bootstrap.php';
 
 $page = [
     'key'         => '404',
-    'title'       => 'Page Not Found | Rotash Power Projects',
-    'description' => 'The page you requested could not be found. Return to Rotash Power Projects — refrigeration and air-conditioning engineering services.',
+    'title'       => 'Page not found | Rotash Power Projects',
+    'description' => 'The page you requested could not be found. Navigate to our refrigeration, air conditioning and medical cold chain services, or contact the team directly.',
+    'image'       => '/assets/img/og-default.jpg',
+    'canonical'   => SITE_DOMAIN . '/',
+    'breadcrumbs' => false,
 ];
 http_response_code(404);
 
@@ -13,29 +16,31 @@ require __DIR__ . '/includes/head.php';
 require __DIR__ . '/includes/header.php';
 ?>
 
-<section class="page-hero">
-    <div class="page-hero__media">
-        <img src="/assets/img/commercial_refrigeration_hero.png" alt="" fetchpriority="high">
-    </div>
-    <div class="container page-hero__inner" style="padding-top: 60px;">
-        <div class="page-hero__content">
-            <p class="eyebrow eyebrow--on-dark">Error 404</p>
-            <h1 class="heading-1">This page doesn't exist</h1>
-            <p class="lede lede--on-dark">The link may be out of date. Use the navigation, jump back to the homepage, or switch to your market.</p>
-            <div class="hero__actions" style="margin-top: 32px;">
-                <a class="btn btn--primary" href="/">Back to homepage</a>
-                <a class="btn btn--on-dark" href="/contact/">Contact us</a>
+<section class="section section--white error-page">
+    <div class="container">
+        <div class="error-page__inner">
+            <p class="eyebrow">Error 404</p>
+            <h1 class="display-lg">This page is not here</h1>
+            <p class="lede">The link may be out of date, or the page may have moved as the site was restructured. Use the links below, or go straight to the team.</p>
+            <div class="hero__actions">
+                <a class="btn btn--primary btn--lg" href="<?= e(mp('')) ?>">Back to the homepage</a>
+                <a class="btn btn--secondary btn--lg" href="<?= e(mp('services/')) ?>">Our services</a>
+                <a class="btn btn--secondary btn--lg" href="<?= e(mp('contact/')) ?>">Contact us</a>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="section section--white">
-    <div class="container">
-        <div class="grid grid--3">
-            <a class="card card--hover" href="/services/"><h2 class="card__title">Services</h2><p class="card__copy">Commercial refrigeration, air conditioning, ventilation, maintenance and project delivery.</p></a>
-            <a class="card card--hover" href="/projects/"><h2 class="card__title">Projects</h2><p class="card__copy">Refrigeration &amp; air-conditioning case studies by market, sector and service.</p></a>
-            <a class="card card--hover" href="/locations/"><h2 class="card__title">Locations</h2><p class="card__copy">Offices and contact details for every market.</p></a>
+        <div class="grid grid--3 mt-10">
+<?php
+$links = [
+    ['Services', mp('services/'), 'Refrigeration, air conditioning and medical cold chain — what each discipline covers.'],
+    ['Sectors', mp('industries/'), 'The industries we engineer for, and what each one demands from its plant.'],
+    ['Projects', mp('projects/'), 'Case studies documented by scope, constraint, solution, execution and outcome.'],
+];
+foreach ($links as $i => $l): ?>
+            <a class="card card--hover reveal" data-delay="<?= $i ?>" href="<?= e($l[1]) ?>">
+                <h2 class="card__title"><?= e($l[0]) ?></h2>
+                <p class="card__copy"><?= e($l[2]) ?></p>
+            </a>
+<?php endforeach; ?>
         </div>
     </div>
 </section>

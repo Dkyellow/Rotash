@@ -1,122 +1,129 @@
 <?php require __DIR__ . '/../includes/bootstrap.php';
 
+global $FAQ;
+
+$faqLd = [
+    '@type'      => 'FAQPage',
+    'mainEntity' => array_map(fn($f) => [
+        '@type'          => 'Question',
+        'name'           => $f['q'],
+        'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f['a']],
+    ], $FAQ),
+];
+
 $page = [
     'key'         => 'services',
-    'title'       => 'Refrigeration & Air Conditioning Services | Rotash Power Projects',
-    'description' => 'Commercial refrigeration and air-conditioning services — cold rooms, display refrigeration, split, VRF and packaged cooling, installation, commissioning and maintenance — with supporting building-services capabilities from Rotash Power Projects.',
+    'title'       => 'Our Services — Refrigeration, Air Conditioning, Cold Chain',
+    'description' => 'Commercial refrigeration, air conditioning and ventilation, and specialist medical refrigeration — designed, installed, commissioned and maintained.',
+    'image'       => '/assets/img/og-default.jpg',
+    'jsonld'      => [$faqLd],
 ];
 
 require __DIR__ . '/../includes/head.php';
 require __DIR__ . '/../includes/header.php';
+
+$ph = [
+    'eyebrow' => 'Services',
+    'title'   => 'Refrigeration, air conditioning and medical cold chain',
+    'lede'    => 'Three disciplines, each with a defined capability, delivered by one team under one method. Select a discipline to see what it covers.',
+    'image'   => '/assets/img/hero-cold-rooms.jpg',
+    'alt'     => 'Cold room doors in a refrigerated storage facility lit in blue',
+    'meta'    => [
+        'Disciplines'  => 'Refrigeration · Air conditioning · Medical cold chain',
+        'Delivery'     => 'Survey · Specification · Installation · Commissioning · Maintenance',
+    ],
+];
+require __DIR__ . '/../includes/sections/page-hero.php';
 ?>
 
-<section class="page-hero">
-    <div class="page-hero__media">
-        <img src="/assets/img/hvac-technician.jpg" alt="" fetchpriority="high">
+<!-- In-page contents -->
+<nav class="contents" aria-label="Services on this page">
+    <div class="container contents__inner">
+        <p class="contents__label">On this page</p>
+        <ul class="contents__list">
+<?php foreach (services_for_market(current_market_code()) as $id => $s): ?>
+            <li><a href="#<?= e($id) ?>"><?= e($s['nav']) ?><?php if ($s['kind'] === 'specialist'): ?><span class="contents__tag">Specialist</span><?php endif; ?></a></li>
+<?php endforeach; ?>
+            <li><a href="#method">How we work</a></li>
+            <li><a href="#engagement">Working with us</a></li>
+            <li><a href="#faq">Questions</a></li>
+        </ul>
     </div>
-    <?php require __DIR__ . '/../includes/breadcrumbs.php'; ?>
-    <div class="container page-hero__inner">
-        <div class="page-hero__content">
-            <p class="eyebrow eyebrow--on-dark">Services</p>
-            <h1 class="heading-1">Refrigeration &amp; air conditioning services</h1>
-            <p class="lede lede--on-dark">Two principal services — refrigeration and air conditioning — supported by building-services capability and delivered to one engineering standard in every market.</p>
+</nav>
+
+<?php
+$discipline_head = [
+    'eyebrow' => 'Capabilities',
+    'title'   => 'What each discipline covers',
+    'copy'    => 'Refrigeration and air conditioning are the core of the business. Medical refrigeration is run as a specialist service, with the control regime and the documentation that clinical cold chain requires.',
+];
+require __DIR__ . '/../includes/sections/disciplines.php';
+?>
+
+<!-- Temperature scale -->
+<section class="section section--ink" id="bands">
+    <div class="container">
+        <div class="section-head section-head--center reveal">
+            <p class="eyebrow eyebrow--on-dark">The bands we work to</p>
+            <h2 class="display-lg">Temperature is the specification</h2>
+            <p class="section-head__on-dark">Refrigeration work is decided by a temperature band, a duty and a product. These are the ranges the disciplines are routinely specified, installed and serviced against.</p>
         </div>
+        <ol class="temp-scale reveal">
+<?php global $TEMP_BANDS; foreach ($TEMP_BANDS as $band): ?>
+            <li class="temp-band temp-band--<?= e($band['tone']) ?>">
+                <p class="temp-band__range"><?= e($band['range']) ?></p>
+                <p class="temp-band__label"><?= e($band['label']) ?></p>
+                <p class="temp-band__use"><?= e($band['use']) ?></p>
+            </li>
+<?php endforeach; ?>
+        </ol>
     </div>
 </section>
 
-<!-- Principal services -->
-<section class="section section--white" id="services">
-    <div class="container">
-        <div class="section-head reveal">
-            <p class="eyebrow">Principal services</p>
-            <h2 class="display-lg">Refrigeration and air conditioning</h2>
-            <p>The two categories everything else supports — each scoped per market, surveyed, installed, commissioned and maintained by one accountable team.</p>
+<!-- Method -->
+<?php
+$method = [
+    'eyebrow' => 'Delivery',
+    'title'   => 'One lifecycle, whichever discipline you engage',
+    'copy'    => 'Maintenance without installation knowledge fixes symptoms. Installation without design knowledge guesses. Running the whole lifecycle means every stage informs the next — and the handover is documented.',
+    'cta'     => ['label' => 'See it applied', 'href' => mp('projects/')],
+];
+require __DIR__ . '/../includes/sections/method.php';
+?>
+
+<!-- Engagement models -->
+<?php
+$engagement = [
+    'eyebrow' => 'Working with us',
+    'title'   => 'Appointed directly, or as a subcontractor',
+    'copy'    => 'We hold direct contracts with owners and operators, and we are also appointed by main contractors and equipment manufacturers to deliver a package inside a programme someone else has set.',
+];
+require __DIR__ . '/../includes/sections/engagement.php';
+?>
+
+<!-- FAQ -->
+<section class="section section--white" id="faq">
+    <div class="container container--content">
+        <div class="section-head section-head--center reveal">
+            <p class="eyebrow">Questions</p>
+            <h2 class="display-lg">Straight answers</h2>
         </div>
-        <div class="grid grid--2">
-<?php foreach (['commercial-refrigeration', 'air-conditioning'] as $i => $id): $s = $SERVICES[$id]; ?>
-            <article class="card card--hover svc-card reveal" id="<?= e($s['id']) ?>" data-delay="<?= $i ?>">
-                <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
-                <h3 class="card__title"><?= e($s['name']) ?></h3>
-                <p class="card__copy"><?= e($s['short']) ?></p>
-                <p class="card__foot body-sm text-muted">Markets: <?= e(implode(', ', array_map(fn($c) => $MARKETS[$c]['name'], $s['markets']))) ?></p>
-                <a class="btn-link" href="/contact/">Discuss this service <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-            </article>
+        <div class="faq">
+<?php foreach ($FAQ as $i => $f): ?>
+            <details class="faq__item reveal" data-delay="<?= $i % 3 ?>"<?= $i === 0 ? ' open' : '' ?>>
+                <summary class="faq__q"><?= e($f['q']) ?><span class="faq__mark" aria-hidden="true"></span></summary>
+                <div class="faq__a"><p><?= e($f['a']) ?></p></div>
+            </details>
 <?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<!-- Supporting services -->
-<section class="section section--pale" id="supporting">
-    <div class="container">
-        <div class="section-head reveal">
-            <p class="eyebrow">Supporting capability</p>
-            <h2 class="display-lg">Supporting engineering services</h2>
-            <!-- Each category is structured to become its own SEO landing page
-                 (e.g. /uk/services/air-conditioning/) once confirmed for that market.
-                 Availability is controlled per market in data/services.php. -->
-            <p>Categories that support the two principal services — combined with them into a single scoped programme: survey, design, install, commission, maintain.</p>
-        </div>
-        <div class="grid grid--3">
-<?php $supporting = array_values(array_filter($SERVICES, fn(array $s): bool => empty($s['principal']))); foreach ($supporting as $i => $s): ?>
-            <article class="card card--hover svc-card reveal" id="<?= e($s['id']) ?>" data-delay="<?= $i % 3 ?>">
-                <p class="card__index"><?= str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) ?></p>
-                <h3 class="card__title"><?= e($s['name']) ?></h3>
-                <p class="card__copy"><?= e($s['short']) ?></p>
-                <p class="card__foot body-sm text-muted">Markets: <?= e(implode(', ', array_map(fn($c) => $MARKETS[$c]['name'], $s['markets']))) ?></p>
-                <a class="btn-link" href="/contact/">Discuss this service <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-            </article>
-<?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<!-- Delivery lifecycle -->
-<section class="section section--white">
-    <div class="container">
-        <div class="grid grid--2 grid--loose items-start">
-            <div class="reveal">
-                <p class="eyebrow">Delivery</p>
-                <h2 class="display-lg">One lifecycle, whichever service you engage</h2>
-                <div class="prose mt-6">
-                    <p>Maintenance without installation knowledge fixes symptoms. Installation without design knowledge guesses. We run the full lifecycle so every stage informs the next.</p>
-                </div>
-                <a class="btn btn--secondary mt-8" href="/projects/">See it applied in projects</a>
-            </div>
-            <ol class="process reveal" data-delay="1">
-                <li class="process__item"><span class="process__num">01</span><div><h3 class="process__title">Survey & brief</h3><p class="process__copy">Site conditions, loads, existing plant and operational constraints documented first.</p></div></li>
-                <li class="process__item"><span class="process__num">02</span><div><h3 class="process__title">Design & specification</h3><p class="process__copy">System selection and distribution engineered to the duty and the budget.</p></div></li>
-                <li class="process__item"><span class="process__num">03</span><div><h3 class="process__title">Install & commission</h3><p class="process__copy">Controlled installation, balancing and verification against the brief.</p></div></li>
-                <li class="process__item"><span class="process__num">04</span><div><h3 class="process__title">Maintain & optimise</h3><p class="process__copy">Planned maintenance and performance review to protect the asset over its life.</p></div></li>
-            </ol>
-        </div>
-    </div>
-</section>
-
-<!-- Market routing -->
-<section class="section section--navy">
-    <div class="container">
-        <div class="section-head reveal">
-            <p class="eyebrow eyebrow--on-dark">By market</p>
-            <h2 class="display-lg">Services are scoped per country</h2>
-            <p>Each market page lists what is offered locally, with local contact details and delivery context.</p>
-        </div>
-        <div class="grid grid--2">
-            <a class="card card--dark reveal" href="/uk/services/">
-                <p class="card__index" style="color: rgba(255,255,255,0.55);">United Kingdom</p>
-                <h3 class="card__title">Services in the UK</h3>
-                <p class="card__copy">Air conditioning, ventilation, mechanical services and maintenance for British buildings.</p>
-                <span class="btn-link btn-link--on-dark mt-6" style="display: inline-flex;">UK services <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-            </a>
-            <a class="card card--dark reveal" data-delay="1" href="/south-africa/services/">
-                <p class="card__index" style="color: rgba(255,255,255,0.55);">South Africa</p>
-                <h3 class="card__title">Services in South Africa</h3>
-                <p class="card__copy">Commercial refrigeration, air conditioning, climate control and maintenance across the Eastern Cape and beyond.</p>
-                <span class="btn-link btn-link--on-dark mt-6" style="display: inline-flex;">South Africa services <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h9M7.5 3.5 11 7l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span>
-            </a>
-        </div>
-    </div>
-</section>
-
-<?php require __DIR__ . '/../includes/cta-band.php'; ?>
+<?php
+$cta = [
+    'title'   => 'Let’s discuss the requirement.',
+    'copy'    => 'The facility, the temperature or the comfort duty, and the constraint you are working inside — that is enough for us to be useful.',
+];
+require __DIR__ . '/../includes/sections/cta.php';
+?>
 <?php require __DIR__ . '/../includes/footer.php'; ?>

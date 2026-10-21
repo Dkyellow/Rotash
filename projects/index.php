@@ -2,113 +2,66 @@
 
 $page = [
     'key'         => 'projects',
-    'title'       => 'Refrigeration & Air Conditioning Case Studies | Rotash Power Projects',
-    'description' => 'Selected refrigeration and air-conditioning case studies — documented by location, sector, scope, challenge, engineering solution and outcome.',
-
+    'title'       => 'Project Case Studies | Rotash Power Projects',
+    'description' => 'Refrigeration, air conditioning and medical cold chain project records, documented by scope, constraint, solution, execution and outcome.',
+    'image'       => '/assets/img/og-default.jpg',
 ];
 
 require __DIR__ . '/../includes/head.php';
 require __DIR__ . '/../includes/header.php';
-?>
 
-<section class="page-hero">
-    <div class="page-hero__media">
-        <img src="/assets/img/rooftop-chiller.jpg" alt="" fetchpriority="high">
-    </div>
-    <?php require __DIR__ . '/../includes/breadcrumbs.php'; ?>
-    <div class="container page-hero__inner">
-        <div class="page-hero__content">
-            <p class="eyebrow eyebrow--on-dark">Projects</p>
-            <h1 class="heading-1">Refrigeration &amp; air-conditioning case studies</h1>
-            <p class="lede lede--on-dark">Each refrigeration and air-conditioning project documented the way engineering should be: the scope, the constraint we faced, the solution we engineered and what it delivered.</p>
-        </div>
-    </div>
-</section>
+$ph = [
+    'eyebrow' => 'Projects',
+    'title'   => 'Project records, documented the way engineering should be',
+    'lede'    => 'Every record below sets out the scope, the constraint we were working against, the solution we engineered, how it was executed and what it delivered.',
+    'image'   => '/assets/img/hero-cold-rooms.jpg',
+    'alt'     => 'Cold room doors in a refrigerated storage facility lit in blue',
+    'meta'    => [
+        'Published' => 'Confirmed with the client',
+        'Coverage'  => 'Zimbabwe · South Africa · United Kingdom',
+    ],
+];
+require __DIR__ . '/../includes/sections/page-hero.php';
+?>
 
 <section class="section section--white">
     <div class="container">
         <div class="section-head reveal">
             <p class="eyebrow">Selected work</p>
-            <h2 class="display-lg">Projects by market, sector and service</h2>
-            <!-- Placeholder records in data/projects.php are filtered out at load
-                 (includes/bootstrap.php); publish one by setting placeholder => false
-                 once the client confirms it. -->
+            <h2 class="display-lg">Case studies</h2>
+            <p>Filter by country, sector or discipline. Records are published once the client has confirmed the details, and are shown as technical drawings rather than photography so nothing here can be mistaken for work we have not done.</p>
         </div>
 
-        <div class="filters reveal" data-filters>
-            <div class="filter-group">
-                <span class="filter-group__label">Country</span>
-                <div class="chips">
-                    <button type="button" class="chip is-active" data-filter="country" data-value="all">All</button>
 <?php
-$usedMarkets = array_values(array_unique(array_column($PROJECTS, 'market')));
-foreach ($usedMarkets as $code): ?>
-                    <button type="button" class="chip" data-filter="country" data-value="<?= e($code) ?>"><?= e($MARKETS[$code]['name']) ?></button>
-<?php endforeach; ?>
-                </div>
-            </div>
-            <div class="filter-group">
-                <span class="filter-group__label">Industry</span>
-                <div class="chips">
-                    <button type="button" class="chip is-active" data-filter="sector" data-value="all">All</button>
-<?php
-$usedSectors = array_values(array_unique(array_column($PROJECTS, 'sector')));
-foreach ($usedSectors as $sid): ?>
-                    <button type="button" class="chip" data-filter="sector" data-value="<?= e($sid) ?>"><?= e($INDUSTRIES[$sid]['name']) ?></button>
-<?php endforeach; ?>
-                </div>
-            </div>
-            <div class="filter-group">
-                <span class="filter-group__label">Service</span>
-                <div class="chips">
-                    <button type="button" class="chip is-active" data-filter="service" data-value="all">All</button>
-<?php
-$usedServices = [];
-foreach ($PROJECTS as $p) foreach ($p['services'] as $s) $usedServices[$s] = true;
-foreach (array_keys($usedServices) as $sid): ?>
-                    <button type="button" class="chip" data-filter="service" data-value="<?= e($sid) ?>"><?= e($SERVICES[$sid]['name']) ?></button>
-<?php endforeach; ?>
-                </div>
-            </div>
-        </div>
+$cases = $PROJECTS;
+$show_filters = true;
+require __DIR__ . '/../includes/sections/cases.php';
+?>
+    </div>
+</section>
 
-        <p class="filter-empty" data-filter-empty hidden>No projects match that combination yet — try another filter.</p>
-
-        <div data-project-list>
-<?php foreach ($PROJECTS as $i => $p): ?>
-            <?php $sectorName = $INDUSTRIES[$p['sector']]['name'] ?? $p['sector']; ?>
-            <article class="case reveal<?= $i % 2 ? ' case--flip' : '' ?>"
-                     data-project
-                     data-country="<?= e($p['market']) ?>"
-                     data-sector="<?= e($p['sector']) ?>"
-                     data-services="<?= e(implode(' ', $p['services'])) ?>">
-                <div class="case__media"><img src="<?= e($p['image']) ?>" alt="<?= e($p['title']) ?>" loading="lazy"></div>
-                <div class="case__body">
-                    <p class="case__sector"><?= e($sectorName) ?> · <?= e(strtoupper($MARKETS[$p['market']]['name'])) ?></p>
-                    <h3 class="case__title"><?= e($p['title']) ?></h3>
-                    <dl class="spec">
-                        <div class="spec__row"><dt class="spec__key">Project</dt><dd class="spec__val"><?= e($p['title']) ?></dd></div>
-                        <div class="spec__row"><dt class="spec__key">Location</dt><dd class="spec__val"><?= e($p['location']) ?></dd></div>
-                        <div class="spec__row"><dt class="spec__key">Client</dt><dd class="spec__val"><?= e($p['client']) ?></dd></div>
-                        <div class="spec__row"><dt class="spec__key">Sector</dt><dd class="spec__val"><?= e($sectorName) ?></dd></div>
-                        <div class="spec__row"><dt class="spec__key">Services</dt><dd class="spec__val"><?= e(implode(' · ', array_map(fn($s) => $SERVICES[$s]['name'] ?? $s, $p['services']))) ?></dd></div>
-                    </dl>
-                    <div class="stack-3">
-                        <div><p class="spec__key" style="margin-bottom: 4px;">Challenge</p><p class="card__copy"><?= e($p['challenge']) ?></p></div>
-                        <div><p class="spec__key" style="margin-bottom: 4px;">Engineering solution</p><p class="card__copy"><?= e($p['solution']) ?></p></div>
-                        <div><p class="spec__key" style="margin-bottom: 4px;">Execution</p><p class="card__copy"><?= e($p['execution']) ?></p></div>
-                    </div>
-                    <p class="case__result"><strong>Outcome —</strong> <?= e($p['outcome']) ?></p>
-                </div>
-            </article>
-<?php endforeach; ?>
+<!-- Publishing policy -->
+<section class="section section--pale">
+    <div class="container container--content">
+        <div class="grid grid--split items-start">
+            <div class="reveal">
+                <p class="eyebrow">Our publishing rule</p>
+                <h2 class="display-lg">Why some work is not shown yet</h2>
+            </div>
+            <div class="prose reveal" data-delay="1">
+                <p>Case studies are published with the client’s agreement. Where a project is complete but the client has not yet confirmed the record — or where a location, scope or outcome is still being verified — it stays off the site rather than being published approximately.</p>
+                <p>That means the list is shorter than the work we have done. It also means that everything on it is accurate, which is the point.</p>
+                <p>If you want the detail of a specific project, ask. Where the record is signed off, we will walk you through the scope, the constraint and the outcome in detail.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<?php $cta = [
-    'title'   => "Your project, documented the same way.",
-    'copy'    => 'Scope, constraint, solution, outcome — we start by understanding all four.',
-]; ?>
-<?php require __DIR__ . '/../includes/cta-band.php'; ?>
+<?php
+$cta = [
+    'title'   => 'Your project, documented the same way.',
+    'copy'    => 'Scope, constraint, solution, outcome — we start by establishing all four.',
+];
+require __DIR__ . '/../includes/sections/cta.php';
+?>
 <?php require __DIR__ . '/../includes/footer.php'; ?>

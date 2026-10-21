@@ -1,9 +1,11 @@
 User-agent: *
 Allow: /
 
-# Files
+# Internal
 Disallow: /includes/
 Disallow: /data/
 Disallow: /storage/
+Disallow: /tools/
+Disallow: /sitemap.php
 
 Sitemap: https://rotashpowerprojects.com/sitemap.xml

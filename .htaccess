@@ -1,0 +1,46 @@
+# Rotash Power Projects — server configuration
+# cPanel / Apache. Kept minimal and safe: every directive is wrapped
+# in a module check so the site still works if a module is absent.
+
+Options -Indexes
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+
+# Serve the 404 page for anything that does not resolve.
+ErrorDocument 404 /404.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Canonical trailing slash for directory URLs.
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteRule ^(.*)$ /$1/ [R=301,L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+    AddOutputFilterByType DEFLATE application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresDefault "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+    # Enquiry data and page output must never be cached by a proxy.
+    <FilesMatch "\.(jsonl|json)$">
+        Header set Cache-Control "no-store"
+    </FilesMatch>
+</IfModule>

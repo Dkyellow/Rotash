@@ -1,0 +1,10 @@
+# Enquiry logs are private. This file is also written by the enquiry
+# handler at runtime, so the guard exists even if this copy is not
+# deployed.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

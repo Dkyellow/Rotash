@@ -3,3 +3,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home3/ghzxjcya/public_html/
     - /bin/cp -R * $DEPLOYPATH
+    # Dotfiles are not matched by the glob above, so copy them explicitly.
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp storage/.htaccess $DEPLOYPATH/storage/.htaccess
+    # Build tooling is not part of the public site.
+    - /bin/rm -rf $DEPLOYPATH/tools

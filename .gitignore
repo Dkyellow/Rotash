@@ -1,0 +1,5 @@
+# Build tooling (not deployed)
+/tools/
+
+# Enquiry log (private, written at runtime)
+/storage/*.jsonl

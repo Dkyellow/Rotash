@@ -2,72 +2,80 @@
 declare(strict_types=1);
 
 /* ============================================================
-   Industry / sector structure.
-   Sectors are capability areas, not claims of certification.
-   `markets` gates which country pages present the sector.
-   TODO: confirm with Rotash which sectors are genuinely served
-   in each market before enabling sector-specific landing pages.
+   SECTORS — the industries the work is done for.
+
+   A sector is a description of the demand, not a certification
+   claim. 'markets' gates which country pages present the sector.
+   'demands' states what the sector actually requires from a
+   cooling system, so the page reads as engineering rather than
+   as a list of labels.
    ============================================================ */
 
 $INDUSTRIES = [
-    'commercial-buildings' => [
-        'id'      => 'commercial-buildings',
-        'name'    => 'Commercial Buildings',
-        'short'   => 'Comfort, air quality and energy performance for offices, mixed-use and commercial developments.',
-        'markets' => ['uk', 'south-africa'],
-    ],
     'retail' => [
         'id'      => 'retail',
-        'name'    => 'Retail',
-        'short'   => 'Store climate, back-of-house cooling and display refrigeration for retail environments.',
-        'markets' => ['uk', 'south-africa'],
+        'name'    => 'Retail and food service',
+        'summary' => 'Supermarkets, food stores and food-service operations where product temperature and trading hours decide the specification.',
+        'demands' => [
+            'Product temperature held through trading, not just overnight',
+            'Plant installed around a live shop floor',
+            'Display units that sell, not just that hold cold',
+        ],
+        'markets' => ['zimbabwe', 'south-africa', 'uk'],
+    ],
+    'healthcare' => [
+        'id'      => 'healthcare',
+        'name'    => 'Healthcare and clinical',
+        'summary' => 'Pharmacies, clinics, laboratories and cold-chain facilities where a temperature excursion has a clinical consequence.',
+        'demands' => [
+            'Defined temperature bands with monitoring and alarm escalation',
+            'Documented temperature records and mapping',
+            'Continuity of supply and stock on critical medicines',
+        ],
+        'markets' => ['zimbabwe', 'south-africa', 'uk'],
     ],
     'hospitality' => [
         'id'      => 'hospitality',
         'name'    => 'Hospitality',
-        'short'   => 'Guest-comfort systems for hotels and venues, engineered for quiet, stable operation.',
-        'markets' => ['uk', 'south-africa'],
+        'summary' => 'Hotels, lodges, restaurants and venues running kitchen refrigeration, cold stores and guest comfort on the same clock.',
+        'demands' => [
+            'Kitchen and cold-storage refrigeration that survives peak service',
+            'Quiet plant and discreet plant locations',
+            'Comfort systems that hold temperature through occupancy',
+        ],
+        'markets' => ['zimbabwe', 'south-africa', 'uk'],
     ],
-    'industrial-facilities' => [
-        'id'      => 'industrial-facilities',
-        'name'    => 'Industrial Facilities',
-        'short'   => 'Process and occupancy climate control for plants, warehouses and industrial operations.',
-        'markets' => ['uk', 'south-africa'],
+    'industrial' => [
+        'id'      => 'industrial',
+        'name'    => 'Industrial and logistics',
+        'summary' => 'Cold stores, warehouses, processing and logistics operations where stock and dispatch cannot stop for a breakdown.',
+        'demands' => [
+            'Capacity and redundancy designed around real throughput',
+            'Phased cutovers that keep stock and dispatch moving',
+            'Plants that can be serviced without stopping the operation',
+        ],
+        'markets' => ['zimbabwe', 'south-africa', 'uk'],
     ],
-    'healthcare' => [
-        'id'      => 'healthcare',
-        'name'    => 'Healthcare',
-        'short'   => 'Controlled environments where ventilation, pressure regimes and reliability are critical.',
-        'markets' => ['uk', 'south-africa'],
-    ],
-    'offices' => [
-        'id'      => 'offices',
-        'name'    => 'Offices',
-        'short'   => 'Workplace comfort and efficient plant for corporate and multi-tenant office space.',
-        'markets' => ['uk', 'south-africa'],
-    ],
-    'residential-developments' => [
-        'id'      => 'residential-developments',
-        'name'    => 'Residential Developments',
-        'short'   => 'Communal and apartment climate systems designed for comfort, control and running cost.',
-        'markets' => ['uk', 'south-africa'],
+    'commercial' => [
+        'id'      => 'commercial',
+        'name'    => 'Commercial buildings',
+        'summary' => 'Offices, mixed-use developments and commercial buildings judged on comfort, running cost and the value of the space.',
+        'demands' => [
+            'Comfort and air quality people accept',
+            'Running costs the operator can defend',
+            'Works phased around a building that stays open',
+        ],
+        'markets' => ['zimbabwe', 'south-africa', 'uk'],
     ],
     'education' => [
         'id'      => 'education',
-        'name'    => 'Education',
-        'short'   => 'Ventilation and comfort systems for schools, campuses and training facilities.',
-        'markets' => ['uk', 'south-africa'],
-    ],
-    'data-centres' => [
-        'id'      => 'data-centres',
-        'name'    => 'Data Centres',
-        'short'   => 'Precision cooling and resilient environmental control for critical loads.',
-        'markets' => ['uk'],
-    ],
-    'manufacturing' => [
-        'id'      => 'manufacturing',
-        'name'    => 'Manufacturing',
-        'short'   => 'Extraction, comfort and process air systems for manufacturing environments.',
-        'markets' => ['south-africa'],
+        'name'    => 'Education and public sector',
+        'summary' => 'Schools, campuses and public buildings where ventilation, comfort and value are judged against a public budget.',
+        'demands' => [
+            'Ventilation performance that is demonstrable',
+            'Durable, serviceable equipment in public buildings',
+            'Value for money over a long maintenance cycle',
+        ],
+        'markets' => ['zimbabwe', 'south-africa', 'uk'],
     ],
 ];

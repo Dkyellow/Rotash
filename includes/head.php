@@ -3,24 +3,25 @@
  * <head> + document open.
  * Expects $page: title, description, key (nav active), optional image.
  * Emits canonical, hreflang cluster, Open Graph, and JSON-LD
- * (Organization + per-market LocalBusiness). Add extra JSON-LD
- * blocks by pushing to $page['jsonld'][].
+ * (Organization, WebSite, LocalBusiness, BreadcrumbList). Add extra
+ * JSON-LD blocks by pushing to $page['jsonld'][].
  */
-$m    = market(current_market_code());
-$page += ['title' => SITE_NAME, 'description' => '', 'key' => '', 'image' => '/assets/img/commercial_refrigeration_hero.png', 'jsonld' => []];
-$canonical = absolute_url(current_market_code(), ltrim(relative_route(), '/'));
+$m        = market(current_market_code());
+$code     = current_market_code();
+$page   += ['title' => SITE_NAME, 'description' => '', 'key' => '', 'image' => '/assets/img/og-default.jpg', 'jsonld' => [], 'canonical' => '', 'breadcrumbs' => true];
+$canonical = $page['canonical'] !== '' ? $page['canonical'] : absolute_url($code, ltrim(relative_route(), '/'));
 $ogImage   = SITE_DOMAIN . $page['image'];
 
-$ld = [jsonld_organization(), [
-    '@type'    => 'WebSite',
-    '@id'      => SITE_DOMAIN . '/#website',
-    'url'      => SITE_DOMAIN . '/',
-    'name'     => SITE_NAME,
-    'inLanguage' => $m['lang'],
-]];
-
-if (current_market_code() !== 'global' && isset($OFFICES[current_market_code()])) {
-    $ld[] = jsonld_localbusiness($OFFICES[current_market_code()]);
+$ld = [
+    jsonld_organization(),
+    jsonld_website(),
+];
+$lb = jsonld_localbusiness($code);
+if ($lb) {
+    $ld[] = $lb;
+}
+foreach (jsonld_services($code) as $svc) {
+    $ld[] = $svc;
 }
 $ld = array_merge($ld, $page['jsonld']);
 ?><!DOCTYPE html>
@@ -34,17 +35,24 @@ $ld = array_merge($ld, $page['jsonld']);
 <?php foreach (hreflang_links() as $lang => $url): ?>
     <link rel="alternate" hreflang="<?= e($lang) ?>" href="<?= e($url) ?>">
 <?php endforeach; ?>
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="<?= e(SITE_NAME) ?>">
     <meta property="og:title" content="<?= e($page['title']) ?>">
     <meta property="og:description" content="<?= e($page['description']) ?>">
     <meta property="og:url" content="<?= e($canonical) ?>">
     <meta property="og:image" content="<?= e($ogImage) ?>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="<?= e(str_replace('-', '_', $m['lang'])) ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#00053D">
-    <link rel="icon" type="image/png" href="/assets/img/logo.png">
-    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <meta name="theme-color" content="#061226">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preload" as="image" href="<?= e($page['image']) ?>" fetchpriority="high">
     <link rel="stylesheet" href="/assets/css/main.css">
+    <script>document.documentElement.classList.add('js');</script>
     <script type="application/ld+json"><?= json_encode($ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 </head>
-<body class="page-<?= e($page['key'] ?: 'default') ?>" data-market="<?= e($m['code']) ?>">
+<body class="page-<?= e($page['key'] ?: 'default') ?>" data-market="<?= e($code) ?>">
