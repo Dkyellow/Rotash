@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /* ============================================================
-   Sitemap generator — run:  php sitemap.php > sitemap.xml
+   Sitemap generator. Run: php sitemap.php > sitemap.xml
    Emits every route for every market with xhtml:link hreflang
    annotations. New markets in $MARKETS appear automatically.
    ============================================================ */

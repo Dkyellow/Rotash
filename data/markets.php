@@ -2,11 +2,11 @@
 declare(strict_types=1);
 
 /* ============================================================
-   MARKET COPY — the genuinely local content.
+   MARKET COPY, the genuinely local content.
 
    Structure, layout and method are shared between markets through
-   the components in includes/sections. What differs — the local
-   story, the emphasis, the imagery — lives here.
+   the components in includes/sections. What differs is the local
+   story, the emphasis, and the imagery.
    ============================================================ */
 
 $MARKET_CONTENT = [

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /* ============================================================
-   FREQUENTLY ASKED QUESTIONS — published on the services page.
+   FREQUENTLY ASKED QUESTIONS, published on the services page.
 
    Answers are written to be true of the business as it operates.
    No certification claims, no response promises that the company
@@ -15,10 +15,6 @@ $FAQ = [
         'a' => 'Rotash Power Projects identifies Zimbabwe, South Africa and the United Kingdom as operating markets. South African medical refrigeration work is confirmed in the Eastern Cape. Zimbabwe and UK enquiries are routed according to the service scope and local availability confirmed for each project.',
     ],
     [
-        'q' => 'Do you work as a subcontractor as well as directly with clients?',
-        'a' => 'Yes. We hold direct contracts with owners, operators and facility managers, and we are also appointed as a subcontractor by main contractors, mechanical and electrical contractors and equipment manufacturers to deliver a refrigeration or air-conditioning package inside a programme set by someone else. Both are normal parts of the business and both are described in full on our About page.',
-    ],
-    [
         'q' => 'What does a refrigeration project involve from first call to handover?',
         'a' => 'Four stages. We survey the site and establish the real duty, including loads, usage, ambient conditions, existing plant and operational constraints. We design and specify the system to that duty. We install and commission against drawings and an agreed programme, recording leak testing, balancing and temperature verification. We then hand over documentation, train the operator and agree the maintenance regime that protects performance afterwards.',
     ],
@@ -28,7 +24,7 @@ $FAQ = [
     ],
     [
         'q' => 'Do you supply medical refrigeration and cold chain?',
-        'a' => 'Medical refrigeration is a specialist service in its own right, covering pharmacy and vaccine storage, blood product and mortuary refrigeration, ultra-low temperature storage where a product requires it, outreach cold chain, continuous monitoring with alarm escalation, temperature mapping and documented service records. We build the control regime around the product being stored and the documentation the site is expected to keep.',
+        'a' => 'Rotash installs, services and repairs medical refrigerators for clinics and hospitals across the Eastern Cape. The equipment, site requirements and final service scope are confirmed for each facility.',
     ],
     [
         'q' => 'How do you handle work in a building that stays open?',

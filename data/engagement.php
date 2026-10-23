@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /* ============================================================
-   ENGAGEMENT MODELS — how Rotash works with clients.
+   ENGAGEMENT MODELS, how Rotash works with clients.
    Published in full: the company contracts both directly and as
    a subcontractor, and the site says so plainly.
    ============================================================ */

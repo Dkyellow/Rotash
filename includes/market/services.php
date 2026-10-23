@@ -1,6 +1,6 @@
 <?php
 /**
- * Market services page — shared by every country site.
+ * Market services page, shared by every country site.
  * Expects: $mc, $MK, $MC.
  */
 global $FAQ;
@@ -26,9 +26,7 @@ require __DIR__ . '/../sections/page-hero.php';
 <?php foreach (services_for_market($mc) as $id => $s): ?>
             <li><a href="#<?= e($id) ?>"><?= e($s['nav']) ?><?php if ($s['kind'] === 'specialist'): ?><span class="contents__tag">Specialist</span><?php endif; ?></a></li>
 <?php endforeach; ?>
-            <li><a href="#bands">Temperature bands</a></li>
             <li><a href="#method">How we work</a></li>
-            <li><a href="#engagement">Working with us</a></li>
             <li><a href="#faq">Questions</a></li>
         </ul>
     </div>
@@ -43,25 +41,6 @@ $discipline_head = [
 require __DIR__ . '/../sections/disciplines.php';
 ?>
 
-<section class="section section--ink" id="bands">
-    <div class="container">
-        <div class="section-head section-head--center reveal">
-            <p class="eyebrow eyebrow--on-dark">The bands we work to</p>
-            <h2 class="display-lg">Temperature is the specification</h2>
-            <p class="section-head__on-dark">Refrigeration work is decided by a temperature band, a duty and a product. These are the ranges the disciplines are routinely specified, installed and serviced against.</p>
-        </div>
-        <ol class="temp-scale reveal">
-<?php global $TEMP_BANDS; foreach ($TEMP_BANDS as $band): ?>
-            <li class="temp-band temp-band--<?= e($band['tone']) ?>">
-                <p class="temp-band__range"><?= e($band['range']) ?></p>
-                <p class="temp-band__label"><?= e($band['label']) ?></p>
-                <p class="temp-band__use"><?= e($band['use']) ?></p>
-            </li>
-<?php endforeach; ?>
-        </ol>
-    </div>
-</section>
-
 <?php
 $method = [
     'eyebrow' => 'Delivery',
@@ -70,15 +49,6 @@ $method = [
     'cta'     => ['label' => 'See it applied', 'href' => '/' . $mc . '/projects/'],
 ];
 require __DIR__ . '/../sections/method.php';
-?>
-
-<?php
-$engagement = [
-    'eyebrow' => 'Working with us',
-    'title'   => 'Appointed directly, or as a subcontractor',
-    'copy'    => 'We hold direct contracts with owners and operators, and we are also appointed by main contractors and equipment manufacturers to deliver a package inside a programme someone else has set.',
-];
-require __DIR__ . '/../sections/engagement.php';
 ?>
 
 <section class="section section--white" id="faq">
@@ -101,7 +71,7 @@ require __DIR__ . '/../sections/engagement.php';
 <?php
 $cta = [
     'title'   => 'Let’s discuss your requirement.',
-    'copy'    => 'The facility, the duty, the constraint and the timeline — the ' . $MK['name'] . ' team will take it from there.',
+    'copy'    => 'The facility, the duty, the constraint and the timeline. The ' . $MK['name'] . ' team will take it from there.',
     'primary' => ['label' => 'Request a consultation', 'href' => '/' . $mc . '/contact/'],
     'secondary' => ['label' => 'View services', 'href' => '/' . $mc . '/services/'],
 ];

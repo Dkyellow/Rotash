@@ -105,7 +105,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && isset($_POST['enquiry'])) {
                 if ($key === 'consent') {
                     continue;
                 }
-                $lines[] = $label . ': ' . ($value === '' ? '—' : $value);
+            $lines[] = $label . ': ' . ($value === '' ? '-' : $value);
             }
             $lines[] = '';
             $lines[] = 'Market: ' . $marketCode;
@@ -113,8 +113,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && isset($_POST['enquiry'])) {
             $lines[] = 'Received: ' . gmdate('D, d M Y H:i:s') . ' UTC';
 
             $body = implode("\r\n", $lines);
-            $subject = 'Website enquiry — ' . ($enquiry['values']['company'] ?: $enquiry['values']['name'])
-                . ' — ' . $marketCode;
+            $subject = 'Website enquiry - ' . ($enquiry['values']['company'] ?: $enquiry['values']['name'])
+                . ' - ' . $marketCode;
 
             $headers = [
                 'From: Rotash Power Projects <no-reply@rotashpowerprojects.com>',

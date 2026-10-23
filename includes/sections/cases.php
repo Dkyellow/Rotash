@@ -1,6 +1,6 @@
 <?php
 /**
- * Case studies — drawn technical records, not photography.
+ * Case studies, drawn technical records rather than photography.
  * Expects: $cases (array), $show_filters (bool), $empty_copy (array)
  */
 $cases       = $cases ?? [];

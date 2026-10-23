@@ -1,6 +1,6 @@
 <?php
 /**
- * Market projects page — shared by every country site.
+ * Market projects page, shared by every country site.
  * Expects: $mc, $MK, $MC.
  */
 $mc = $mc ?? current_market_code();
@@ -40,7 +40,7 @@ require __DIR__ . '/../sections/cases.php';
 <?php
 $cta = [
     'title'   => 'Your project, documented the same way.',
-    'copy'    => 'Scope, constraint, solution, outcome — we start by establishing all four.',
+    'copy'    => 'Scope, constraint, solution and outcome. We start by establishing all four.',
     'primary' => ['label' => 'Request a consultation', 'href' => '/' . $mc . '/contact/'],
     'secondary' => ['label' => 'View services', 'href' => '/' . $mc . '/services/'],
 ];

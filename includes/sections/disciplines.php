@@ -1,6 +1,6 @@
 <?php
 /**
- * Discipline blocks — refrigeration, air conditioning and medical
+ * Discipline blocks for refrigeration, air conditioning and medical
  * refrigeration, filtered to the disciplines the current market offers.
  * Expects: $disciplines (optional override), $discipline_head (optional)
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Hero — the primary page opening.
+ * Hero, the primary page opening.
  * Expects: $hero = ['eyebrow', 'title' (html allowed), 'lede', 'image',
  *                     'alt', 'actions' => [['label','href','style']], 'strip']
  */

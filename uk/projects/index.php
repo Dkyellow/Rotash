@@ -6,7 +6,7 @@ $MC = $MARKET_CONTENT[$mc];
 
 $page = [
     'key'         => 'projects',
-    'title'       => 'UK Case Studies — Air Conditioning & Building Services',
+    'title'       => 'UK Case Studies - Air Conditioning & Building Services',
     'description' => 'UK project records documented by scope, constraint, engineering solution, execution and outcome.',
     'image'       => '/assets/img/og-default.jpg',
 ];

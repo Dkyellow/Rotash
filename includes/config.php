@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /* ============================================================
-   ROTASH POWER PROJECTS — global configuration
+   ROTASH POWER PROJECTS global configuration
    Single source of truth: identity, markets, navigation, routes.
    Adding a market later = one entry in $MARKETS + one prefix in
    the routes. Navigation, footer, sitemap and hreflang follow.

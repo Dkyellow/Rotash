@@ -22,13 +22,13 @@ $engagements = [];
 foreach ($ENGAGEMENT_MODELS as $m) {
     $engagements[$m['id']] = $m['name'];
 }
-$engagements['not-sure'] = 'Not sure yet — advise me';
+$engagements['not-sure'] = 'Not sure yet - advise me';
 ?>
 <div class="enquiry" id="enquiry-form">
 <?php if ($state === 'sent'): ?>
     <div class="enquiry__success" role="status">
         <p class="enquiry__success-title">Enquiry received</p>
-        <p>Thank you — your enquiry has reached the team for your market. We aim to respond within <?= e(RESPONSE_TARGET) ?>. If it is urgent, call <?= e(GROUP_CONTACT['phone']) ?>.</p>
+        <p>Thank you. Your enquiry has reached the team for your market. We aim to respond within <?= e(RESPONSE_TARGET) ?>. If it is urgent, call <?= e(GROUP_CONTACT['phone']) ?>.</p>
     </div>
 <?php else: ?>
 <?php if (!empty($errors['form'])): ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Market contact page — shared by every country site.
+ * Market contact page, shared by every country site.
  * Expects: $mc, $MK, $MC.
  */
 $mc = $mc ?? current_market_code();
@@ -40,7 +40,7 @@ require __DIR__ . '/../sections/page-hero.php';
                     <div><dt><?= icon('chat', 'line-icon') ?><span class="visually-hidden">WhatsApp</span></dt><dd><a href="https://wa.me/<?= e($cp['whatsapp']) ?>" target="_blank" rel="noopener">+<?= e($cp['phone']) ?></a></dd></div>
 <?php endif; ?>
 <?php foreach ($cp['offices'] as $loc): ?>
-                    <div><dt><?= icon('pin', 'line-icon') ?><span class="visually-hidden">Office</span></dt><dd><?= e($loc['address']) !== '' ? e($loc['address']) : e($loc['city']) . ' — address to be confirmed' ?></dd></div>
+                    <div><dt><?= icon('pin', 'line-icon') ?><span class="visually-hidden">Office</span></dt><dd><?= e($loc['address']) !== '' ? e($loc['address']) : e($loc['city']) . ', address to be confirmed' ?></dd></div>
 <?php endforeach; ?>
                 </dl>
 

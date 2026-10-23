@@ -13,8 +13,8 @@ $faqLd = [
 
 $page = [
     'key'         => 'services',
-    'title'       => 'Our Services — Refrigeration, Air Conditioning, Cold Chain',
-    'description' => 'Commercial refrigeration, air conditioning and ventilation, and specialist medical refrigeration — designed, installed, commissioned and maintained.',
+    'title'       => 'Refrigeration, Air Conditioning and Cold Chain Services | Rotash',
+    'description' => 'Commercial refrigeration, air conditioning, ventilation and specialist medical refrigeration. Designed, installed, commissioned and maintained.',
     'image'       => '/assets/img/og-default.jpg',
     'jsonld'      => [$faqLd],
 ];
@@ -45,7 +45,6 @@ require __DIR__ . '/../includes/sections/page-hero.php';
             <li><a href="#<?= e($id) ?>"><?= e($s['nav']) ?><?php if ($s['kind'] === 'specialist'): ?><span class="contents__tag">Specialist</span><?php endif; ?></a></li>
 <?php endforeach; ?>
             <li><a href="#method">How we work</a></li>
-            <li><a href="#engagement">Working with us</a></li>
             <li><a href="#faq">Questions</a></li>
         </ul>
     </div>
@@ -60,45 +59,15 @@ $discipline_head = [
 require __DIR__ . '/../includes/sections/disciplines.php';
 ?>
 
-<!-- Temperature scale -->
-<section class="section section--ink" id="bands">
-    <div class="container">
-        <div class="section-head section-head--center reveal">
-            <p class="eyebrow eyebrow--on-dark">The bands we work to</p>
-            <h2 class="display-lg">Temperature is the specification</h2>
-            <p class="section-head__on-dark">Refrigeration work is decided by a temperature band, a duty and a product. These are the ranges the disciplines are routinely specified, installed and serviced against.</p>
-        </div>
-        <ol class="temp-scale reveal">
-<?php global $TEMP_BANDS; foreach ($TEMP_BANDS as $band): ?>
-            <li class="temp-band temp-band--<?= e($band['tone']) ?>">
-                <p class="temp-band__range"><?= e($band['range']) ?></p>
-                <p class="temp-band__label"><?= e($band['label']) ?></p>
-                <p class="temp-band__use"><?= e($band['use']) ?></p>
-            </li>
-<?php endforeach; ?>
-        </ol>
-    </div>
-</section>
-
 <!-- Method -->
 <?php
 $method = [
     'eyebrow' => 'Delivery',
     'title'   => 'One lifecycle, whichever discipline you engage',
-    'copy'    => 'Maintenance without installation knowledge fixes symptoms. Installation without design knowledge guesses. Running the whole lifecycle means every stage informs the next — and the handover is documented.',
+    'copy'    => 'Maintenance without installation knowledge fixes symptoms. Installation without design knowledge guesses. Running the whole lifecycle means every stage informs the next, and the handover is documented.',
     'cta'     => ['label' => 'See it applied', 'href' => mp('projects/')],
 ];
 require __DIR__ . '/../includes/sections/method.php';
-?>
-
-<!-- Engagement models -->
-<?php
-$engagement = [
-    'eyebrow' => 'Working with us',
-    'title'   => 'Appointed directly, or as a subcontractor',
-    'copy'    => 'We hold direct contracts with owners and operators, and we are also appointed by main contractors and equipment manufacturers to deliver a package inside a programme someone else has set.',
-];
-require __DIR__ . '/../includes/sections/engagement.php';
 ?>
 
 <!-- FAQ -->
@@ -122,7 +91,7 @@ require __DIR__ . '/../includes/sections/engagement.php';
 <?php
 $cta = [
     'title'   => 'Let’s discuss the requirement.',
-    'copy'    => 'The facility, the temperature or the comfort duty, and the constraint you are working inside — that is enough for us to be useful.',
+    'copy'    => 'The facility, the temperature or the comfort duty, and the constraint you are working inside. That is enough for us to be useful.',
 ];
 require __DIR__ . '/../includes/sections/cta.php';
 ?>

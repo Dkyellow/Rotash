@@ -1,6 +1,6 @@
 <?php
 /**
- * Delivery method — the four stages, shared by every market page so the
+ * Delivery method, the four stages shared by every market page so the
  * same process is not restated in slightly different words each time.
  * Expects: $method = ['eyebrow','title','copy','cta' => ['label','href']]
  */

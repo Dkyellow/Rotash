@@ -106,7 +106,7 @@ $OFFICES = [
 ];
 
 /**
- * Group contact point — used wherever a market has no confirmed
+     * Group contact point, used wherever a market has no confirmed
  * local details of its own. Never a placeholder number: these are
  * the company's real published contact routes.
  */
@@ -114,5 +114,5 @@ const GROUP_CONTACT = [
     'phone'    => '+27 78 727 9721',
     'email'    => 'rodney@rotashpowerprojects.com',
     'whatsapp' => '27787279721',
-    'hours'    => 'Mon – Fri, 08:00 – 17:00 (SAST)',
+    'hours'    => 'Mon - Fri, 08:00 - 17:00 (SAST)',
 ];

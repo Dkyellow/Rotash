@@ -3,7 +3,7 @@ require __DIR__ . '/../includes/enquiry-handler.php';
 
 $page = [
     'key'         => 'contact',
-    'title'       => 'Contact Us — Send a Project Enquiry | Rotash Power Projects',
+    'title'       => 'Contact Rotash Power Projects | Project Enquiry',
     'description' => 'Send an enquiry about refrigeration, air conditioning or medical cold chain. Choose your country and deal directly with the local team.',
     'image'       => '/assets/img/og-default.jpg',
 ];
@@ -64,7 +64,7 @@ foreach ($switchOrder as $mc):
                         <div><dt><?= icon('chat', 'line-icon') ?><span class="visually-hidden">WhatsApp</span></dt><dd><a href="https://wa.me/<?= e($cp['whatsapp']) ?>" target="_blank" rel="noopener">+<?= e($cp['phone']) ?></a></dd></div>
 <?php endif; ?>
 <?php foreach ($cp['offices'] as $loc): ?>
-                        <div><dt><?= icon('pin', 'line-icon') ?><span class="visually-hidden">Office</span></dt><dd><?= e($loc['address']) !== '' ? e($loc['address']) : e($loc['city']) . ' — address to be confirmed' ?></dd></div>
+                        <div><dt><?= icon('pin', 'line-icon') ?><span class="visually-hidden">Office</span></dt><dd><?= e($loc['address']) !== '' ? e($loc['address']) : e($loc['city']) . ', address to be confirmed' ?></dd></div>
 <?php endforeach; ?>
                     </dl>
                 </div>

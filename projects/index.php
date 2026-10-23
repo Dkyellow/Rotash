@@ -49,7 +49,7 @@ require __DIR__ . '/../includes/sections/cases.php';
                 <h2 class="display-lg">Why some work is not shown yet</h2>
             </div>
             <div class="prose reveal" data-delay="1">
-                <p>Case studies are published with the client’s agreement. Where a project is complete but the client has not yet confirmed the record — or where a location, scope or outcome is still being verified — it stays off the site rather than being published approximately.</p>
+                <p>Case studies are published with the client’s agreement. Where a project is complete but the client has not yet confirmed the record, or where a location, scope or outcome is still being verified, it stays off the site rather than being published approximately.</p>
                 <p>That means the list is shorter than the work we have done. It also means that everything on it is accurate, which is the point.</p>
                 <p>If you want the detail of a specific project, ask. Where the record is signed off, we will walk you through the scope, the constraint and the outcome in detail.</p>
             </div>
@@ -60,7 +60,7 @@ require __DIR__ . '/../includes/sections/cases.php';
 <?php
 $cta = [
     'title'   => 'Your project, documented the same way.',
-    'copy'    => 'Scope, constraint, solution, outcome — we start by establishing all four.',
+    'copy'    => 'Scope, constraint, solution and outcome. We start by establishing all four.',
 ];
 require __DIR__ . '/../includes/sections/cta.php';
 ?>

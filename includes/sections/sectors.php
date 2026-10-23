@@ -1,6 +1,6 @@
 <?php
 /**
- * Sector grid — the industries the work is done for, with a
+ * Sector grid, the industries the work is done for, with a
  * photograph and an icon for each.
  * Expects: $sectors (optional override), $sector_head (optional)
  */

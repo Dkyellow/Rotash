@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /* ============================================================
-   DELIVERY METHOD — the four stages every job passes through,
+   DELIVERY METHOD, the four stages every job passes through,
    whatever the discipline and whichever market it is delivered in.
    Rendered by a single shared component so the same method is
    not restated, slightly differently, on every page.
@@ -31,6 +31,6 @@ $METHOD_STAGES = [
         'num'   => '04',
         'icon'  => 'refresh',
         'name'  => 'Handover and maintenance',
-        'copy'  => 'Documentation, operator training and a maintenance regime so the system keeps performing after practical completion — with us accountable for it under a service agreement.',
+        'copy'  => 'Documentation, operator training and a maintenance regime so the system keeps performing after practical completion, with us accountable for it under a service agreement.',
     ],
 ];

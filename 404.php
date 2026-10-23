@@ -31,7 +31,7 @@ require __DIR__ . '/includes/header.php';
         <div class="grid grid--3 mt-10">
 <?php
 $links = [
-    ['Services', mp('services/'), 'Refrigeration, air conditioning and medical cold chain — what each discipline covers.'],
+    ['Services', mp('services/'), 'Refrigeration, air conditioning and medical cold chain. See what each discipline covers.'],
     ['Sectors', mp('industries/'), 'The industries we engineer for, and what each one demands from its plant.'],
     ['Projects', mp('projects/'), 'Case studies documented by scope, constraint, solution, execution and outcome.'],
 ];

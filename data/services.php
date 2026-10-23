@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /* ============================================================
-   DISCIPLINES — the service structure.
+   DISCIPLINES, the service structure.
 
    Three disciplines, not a long list of near-duplicate categories.
    Each discipline carries its own capability detail and the
@@ -137,15 +137,3 @@ $SERVICES = [
 /* Discipline order used everywhere: refrigeration and air conditioning are the
    core offer, medical refrigeration is the specialist service alongside them. */
 const SERVICE_ORDER = ['refrigeration', 'air-conditioning', 'medical-refrigeration'];
-
-/**
- * Application temperature bands — used to draw the temperature scale.
- * These are the bands the disciplines are routinely specified against.
- */
-$TEMP_BANDS = [
-    ['label' => 'Deep freeze',        'range' => '−30 °C to −18 °C', 'use' => 'Frozen stock, vaccine deep-freeze',      'tone' => 'deep'],
-    ['label' => 'Frozen storage',     'range' => '−18 °C to −12 °C', 'use' => 'Frozen goods, ice cream',              'tone' => 'cold'],
-    ['label' => 'Chilled food',       'range' => '0 °C to +5 °C',   'use' => 'Chilled food, fresh produce',          'tone' => 'chill'],
-    ['label' => 'Clinical',           'range' => '+2 °C to +8 °C', 'use' => 'Vaccines, pharmacy, blood products',   'tone' => 'clinical'],
-    ['label' => 'Controlled room',    'range' => '+15 °C to +25 °C','use' => 'Controlled storage, comfort cooling',  'tone' => 'ambient'],
-];

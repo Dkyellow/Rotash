@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /* ============================================================
-   SECTORS — the industries the work is done for.
+   SECTORS, the industries the work is done for.
 
    A sector is a description of the demand, not a certification
    claim. 'markets' gates which country pages present the sector.

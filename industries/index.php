@@ -2,8 +2,8 @@
 
 $page = [
     'key'         => 'industries',
-    'title'       => 'Sectors We Serve — Cooling Engineered by Industry | Rotash',
-    'description' => 'Retail, healthcare, hospitality, industrial, commercial and education sectors — and what each one demands from its cooling system.',
+    'title'       => 'Sectors We Serve | Rotash Power Projects',
+    'description' => 'Retail, healthcare, hospitality, industrial, commercial and education sectors, and what each one demands from its cooling system.',
     'image'       => '/assets/img/og-default.jpg',
 ];
 
@@ -13,7 +13,7 @@ require __DIR__ . '/../includes/header.php';
 $ph = [
     'eyebrow' => 'Sectors',
     'title'   => 'Engineering that understands the sector',
-    'lede'    => 'A retail floor, a pharmacy and a cold store make completely different demands on a cooling system. We design to what the sector actually needs from the plant — not to a generic load.',
+    'lede'    => 'A retail floor, a pharmacy and a cold store make completely different demands on a cooling system. We design to what the sector actually needs from the plant, not to a generic load.',
     'image'   => '/assets/img/logistics-warehouse.jpg',
     'alt'     => 'Racked storage aisles inside a large distribution warehouse',
     'meta'    => [
@@ -28,7 +28,7 @@ require __DIR__ . '/../includes/sections/page-hero.php';
 $sector_head = [
     'eyebrow' => 'Sectors',
     'title'   => 'Where the work is done',
-    'copy'    => 'The six sectors below are the ones the business is regularly asked to engineer for. Each one lists what it genuinely demands — which is where the design decisions start.',
+    'copy'    => 'The six sectors below are the ones the business is regularly asked to engineer for. Each one lists what it genuinely demands, which is where the design decisions start.',
 ];
 require __DIR__ . '/../includes/sections/sectors.php';
 ?>
@@ -46,7 +46,7 @@ require __DIR__ . '/../includes/sections/sectors.php';
                 <p><strong>Healthcare and clinical</strong> run on a defined temperature band, a monitoring regime and a documentation trail. The control system matters as much as the cabinet, and the capacity has to carry a buffer when a delivery is late.</p>
                 <p><strong>Hospitality</strong> runs kitchen refrigeration and guest comfort on the same clock, through the same building, at the same peak hour.</p>
                 <p><strong>Industrial and logistics</strong> run on throughput. Capacity, redundancy and cutover planning decide whether stock and dispatch keep moving while the system is replaced.</p>
-                <p><strong>Commercial buildings</strong> run on comfort and running cost — the two things an operator has to defend to the people who own the building.</p>
+                <p><strong>Commercial buildings</strong> run on comfort and running cost, the two things an operator has to defend to the people who own the building.</p>
                 <p><strong>Education and public sector</strong> run on ventilation performance and value over a long maintenance cycle, with equipment that has to be serviceable by whoever holds the contract.</p>
             </div>
         </div>
@@ -56,7 +56,7 @@ require __DIR__ . '/../includes/sections/sectors.php';
 <?php
 $cta = [
     'title'   => 'Which sector is your building in?',
-    'copy'    => 'Tell us the sector and the constraint you are working inside — we will engineer around both.',
+    'copy'    => 'Tell us the sector and the constraint you are working inside. We will engineer around both.',
 ];
 require __DIR__ . '/../includes/sections/cta.php';
 ?>

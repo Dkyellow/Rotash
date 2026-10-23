@@ -1,6 +1,6 @@
 <?php
 /**
- * Capability strip — verifiable facts only. No invented numbers.
+ * Capability strip, verifiable facts only. No invented numbers.
  * Expects: $facts = [['value','label','note','icon'], ...]
  */
 $facts = $facts ?? [
