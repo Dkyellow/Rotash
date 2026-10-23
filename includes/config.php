@@ -15,7 +15,7 @@ const PARENT_GROUP = 'Rotash Group';
 /* Brand line. The registered logo carries "Engineering the Future";
    the descriptive line below is what the business does. */
 const BRAND_LINE   = 'Engineering the future';
-const TAGLINE      = 'Refrigeration, air conditioning and medical cold chain — engineered to perform.';
+const TAGLINE      = 'Refrigeration, air conditioning and medical cold chain, engineered to perform.';
 
 /* Stated enquiry response target. Centralised so it can be changed
    in one place if the operating commitment changes. */

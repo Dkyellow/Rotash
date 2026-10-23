@@ -17,12 +17,12 @@ $OFFICES = [
     'global' => [
         'market_code'   => 'global',
         'market_prefix' => '/',
-        'name'          => 'Rotash Power Projects — Group',
+        'name'          => 'Rotash Power Projects, Group',
         'country_code'  => 'ZW',
         'phone'         => '+27 78 727 9721',
         'email'         => 'rodney@rotashpowerprojects.com',
         'whatsapp'      => '27787279721',
-        'hours_label'   => 'Mon – Fri, 08:00 – 17:00 (SAST)',
+        'hours_label'   => 'Mon - Fri, 08:00 - 17:00 (SAST)',
         'hours_schema'  => 'Mo-Fr 08:00-17:00',
         'locations'     => [],
         'geo'           => null,
@@ -34,7 +34,7 @@ $OFFICES = [
     'zimbabwe' => [
         'market_code'   => 'zimbabwe',
         'market_prefix' => '/zimbabwe/',
-        'name'          => 'Rotash Power Projects — Zimbabwe',
+        'name'          => 'Rotash Power Projects, Zimbabwe',
         'country_code'  => 'ZW',
         'phone'         => '',
         'email'         => '',
@@ -51,18 +51,18 @@ $OFFICES = [
         'geo'           => null,
         'service_areas' => ['Zimbabwe'],
         'pending'       => true,
-        'note'          => 'Zimbabwe office details are being confirmed. Enquiries are handled by the group team meanwhile — tell us the requirement and it will reach the right people.',
+        'note'          => 'Zimbabwe office details are being confirmed. Enquiries are handled by the group team meanwhile. Tell us the requirement and it will reach the right people.',
     ],
 
     'south-africa' => [
         'market_code'   => 'south-africa',
         'market_prefix' => '/south-africa/',
-        'name'          => 'Rotash Power Projects — South Africa',
+        'name'          => 'Rotash Power Projects, South Africa',
         'country_code'  => 'ZA',
         'phone'         => '+27 78 727 9721',
         'email'         => 'admin@rotash.co.za',
         'whatsapp'      => '27787279721',
-        'hours_label'   => 'Mon – Fri, 08:00 – 17:00 (SAST)',
+        'hours_label'   => 'Mon - Fri, 08:00 - 17:00 (SAST)',
         'hours_schema'  => 'Mo-Fr 08:00-17:00',
         'locations'     => [
             [
@@ -90,7 +90,7 @@ $OFFICES = [
     'uk' => [
         'market_code'   => 'uk',
         'market_prefix' => '/uk/',
-        'name'          => 'Rotash Power Projects — United Kingdom',
+        'name'          => 'Rotash Power Projects, United Kingdom',
         'country_code'  => 'GB',
         'phone'         => '',
         'email'         => '',
@@ -101,7 +101,7 @@ $OFFICES = [
         'geo'           => null,
         'service_areas' => ['United Kingdom'],
         'pending'       => true,
-        'note'          => 'The UK operation delivers air conditioning and building services. Local office details are being confirmed — enquiries are handled by the group team meanwhile.',
+        'note'          => 'The UK operation delivers air conditioning and building services. Local office details are being confirmed. Enquiries are handled by the group team meanwhile.',
     ],
 ];
 

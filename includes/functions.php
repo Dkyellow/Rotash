@@ -190,7 +190,7 @@ function contact_point(string $code): array
     if (!empty($o['pending']) || empty($o['phone'])) {
         return [
             'source'      => 'group',
-            'name'        => 'Rotash Power Projects — Group',
+            'name'        => 'Rotash Power Projects, Group',
             'phone'       => GROUP_CONTACT['phone'],
             'email'       => GROUP_CONTACT['email'],
             'whatsapp'    => GROUP_CONTACT['whatsapp'],

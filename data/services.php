@@ -22,13 +22,13 @@ $SERVICES = [
         'nav'       => 'Refrigeration',
         'kind'      => 'principal',
         'summary'   => 'Cold rooms, display refrigeration and cold-chain systems that hold temperature through trading, production and dispatch.',
-        'detail'    => 'Refrigeration is the discipline Rotash Power Projects started in and the one it is known for. We design, install, commission and maintain the plant that keeps stock sellable and operations running — from a single walk-in freezer to a multi-zone cold store with redundant capacity and monitored alarms.',
+        'detail'    => 'Refrigeration is the discipline Rotash Power Projects started in and the one it is known for. We design, install, commission and maintain plant that keeps stock sellable and operations running, from a single walk-in freezer to a multi-zone cold store.',
         'markets'   => ['zimbabwe', 'south-africa'],
         'image'     => '/assets/img/hero-cold-rooms.jpg',
         'capabilities' => [
             [
                 'name' => 'Walk-in cold rooms and freezers',
-                'copy' => 'Panel-built and site-assembled cold rooms sized to the product and the throughput — with doors, ramps, drainage, curtains and alarms specified to the operation.',
+                'copy' => 'Panel-built and site-assembled cold rooms sized to the product and throughput, with doors, ramps, drainage, curtains and alarms specified to the operation.',
             ],
             [
                 'name' => 'Display refrigeration and counters',
@@ -57,7 +57,7 @@ $SERVICES = [
         'name'      => 'Air Conditioning and Ventilation',
         'nav'       => 'Air conditioning',
         'kind'      => 'principal',
-        'summary'   => 'Cooling, heating and fresh-air systems for commercial and industrial buildings — specified to the building, its duty and its running cost.',
+        'summary'   => 'Cooling, heating and fresh-air systems for commercial and industrial buildings, specified to the building, its duty and its running cost.',
         'detail'    => 'Air conditioning is a building-services discipline, so the specification has to answer three questions at once: what the space needs to feel like, what it costs to run, and how the plant will be serviced in five years. We handle that from first survey through to handover documentation and the maintenance regime that follows.',
         'markets'   => ['zimbabwe', 'south-africa', 'uk'],
         'image'     => '/assets/img/hero-air-conditioning.jpg',

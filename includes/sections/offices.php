@@ -24,8 +24,11 @@ $office_head = $office_head ?? [];
     $o = office($mc);
     $mk = market($mc);
     $cp = contact_point($mc);
+    $officeImages = ['zimbabwe' => ['/assets/img/hero-condenser.jpg', 'Commercial air-conditioning equipment in Zimbabwe'], 'south-africa' => ['/assets/img/hero-cold-rooms.jpg', 'Cold room engineering in the Eastern Cape'], 'uk' => ['/assets/img/commercial-buildings.jpg', 'Commercial building services in the United Kingdom']];
+    $officeImage = $officeImages[$mc] ?? ['/assets/img/site-works.jpg', 'Rotash engineering services'];
 ?>
             <article class="office-card reveal">
+                <figure class="office-card__media"><?= img($officeImage[0], $officeImage[1], '', false, '(max-width: 720px) 100vw, 33vw') ?></figure>
                 <header class="office-card__head">
                     <p class="office-card__country"><?= e($mk['name']) ?></p>
                     <h3 class="office-card__region"><?= e($mk['region']) ?></h3>
@@ -34,8 +37,8 @@ $office_head = $office_head ?? [];
 
 <?php if ($cp['pending']): ?>
                 <div class="office-card__pending">
-                    <p class="label">Contact</p>
-                    <p><?= e($cp['note']) ?></p>
+                    <p class="label">Group contact route</p>
+                    <p>Local details are being confirmed. Group enquiries are handled centrally.</p>
                     <p class="office-card__routing">
                         <a href="tel:<?= e(tel_href($cp['phone'])) ?>"><?= e($cp['phone']) ?></a>
                         <a href="mailto:<?= e($cp['email']) ?>"><?= e($cp['email']) ?></a>

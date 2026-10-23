@@ -30,28 +30,20 @@ $i = 0;
 ?>
             <article class="discipline<?= $s['kind'] === 'specialist' ? ' discipline--specialist' : '' ?>" id="<?= e($id) ?>">
                 <header class="discipline__head">
-                    <div class="discipline__top">
-                        <span class="icon-badge"><?= icon($s['icon'] ?? 'ruler') ?></span>
-                        <p class="discipline__index"><?= str_pad((string) $i, 2, '0', STR_PAD_LEFT) ?></p>
-                    </div>
+                    <div class="discipline__top"><p class="discipline__index"><?= str_pad((string) $i, 2, '0', STR_PAD_LEFT) ?></p><span class="icon-badge"><?= icon($s['icon'] ?? 'ruler') ?></span></div>
+<?php if (!empty($s['photo'])): ?>
+                    <figure class="discipline__photo"><?= img($s['photo'], $alt, '', false, '(max-width: 720px) 100vw, 33vw') ?></figure>
+<?php endif; ?>
                     <h3 class="display-md"><?= e($s['name']) ?></h3>
 <?php if ($s['kind'] === 'specialist'): ?>
                     <p class="chip chip--specialist">Specialist service</p>
 <?php endif; ?>
                     <p class="discipline__summary"><?= e($s['summary']) ?></p>
-                    <p class="discipline__detail"><?= e($s['detail']) ?></p>
-<?php if (!empty($s['photo'])): ?>
-                    <figure class="discipline__photo">
-                        <?= img($s['photo'], $alt, '', false, '(max-width: 960px) 100vw, 38vw') ?>
-                    </figure>
-<?php endif; ?>
-                    <p class="discipline__foot"><span class="label">Delivered in</span> <?= e(implode(' · ', $markets)) ?></p>
                 </header>
                 <ul class="capabilities">
-<?php foreach ($s['capabilities'] as $cap): ?>
+<?php foreach (array_slice($s['capabilities'], 0, 4) as $cap): ?>
                     <li class="capability">
                         <h4 class="capability__name"><?= e($cap['name']) ?></h4>
-                        <p class="capability__copy"><?= e($cap['copy']) ?></p>
                     </li>
 <?php endforeach; ?>
                 </ul>

@@ -20,7 +20,7 @@ $FAQ = [
     ],
     [
         'q' => 'What does a refrigeration project involve from first call to handover?',
-        'a' => 'Four stages. We survey the site and establish the real duty — loads, usage, ambient conditions, existing plant and operational constraints. We design and specify the system to that duty. We install and commission against drawings and an agreed programme, recording leak testing, balancing and temperature verification. We then hand over documentation, train the operator and agree the maintenance regime that protects performance afterwards.',
+        'a' => 'Four stages. We survey the site and establish the real duty, including loads, usage, ambient conditions, existing plant and operational constraints. We design and specify the system to that duty. We install and commission against drawings and an agreed programme, recording leak testing, balancing and temperature verification. We then hand over documentation, train the operator and agree the maintenance regime that protects performance afterwards.',
     ],
     [
         'q' => 'Can you service systems you did not install?',

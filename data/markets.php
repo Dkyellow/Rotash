@@ -17,7 +17,7 @@ $MARKET_CONTENT = [
             'alt'   => 'Cold room doors in a refrigerated storage facility lit in blue',
             'eyebrow' => 'Rotash Power Projects · South Africa',
             'title' => 'Commercial refrigeration and cooling<br>in the Eastern Cape.',
-            'lede'  => 'Commercial refrigeration, air conditioning and medical cold chain for retail, hospitality, healthcare and industrial operations — delivered from three offices in the Eastern Cape and held to one group engineering standard.',
+            'lede'  => 'Commercial refrigeration, air conditioning and medical cold chain for retail, hospitality, healthcare and industrial operations. Delivered from three offices in the Eastern Cape and held to one group engineering standard.',
             'actions' => [
                 ['label' => 'Request a consultation', 'href' => '/south-africa/contact/', 'style' => 'primary'],
                 ['label' => 'South Africa services', 'href' => '/south-africa/services/', 'style' => 'on-dark'],
@@ -35,14 +35,14 @@ $MARKET_CONTENT = [
             'eyebrow' => 'The South African operation',
             'title'   => 'Built on cold-chain reality',
             'paragraphs' => [
-                'The South African operation runs from the Eastern Cape, with teams in Queenstown, East London and Mthatha. The work started in commercial refrigeration — cold rooms, display cases and the systems that keep stock sellable — and grew from there into full climate and medical services.',
+                'The South African operation runs from the Eastern Cape, with teams in Queenstown, East London and Mthatha. The work started in commercial refrigeration, including cold rooms, display cases and the systems that keep stock sellable, and grew from there into full climate and medical services.',
                 'That background shapes everything. Temperature stability, plant reliability and maintenance access are not features of the job; they are the job. A supermarket that loses trading for an afternoon, a pharmacy that loses a batch of vaccine and a hospital with a failed cold room all fail in the same way.',
                 'Retail floors, hotel kitchens, clinics, warehouses and offices get the same treatment: survey the real duty first, engineer to it, install around the operation, and prove performance before anything is signed off.',
             ],
         ],
         'focus' => [
             'title' => 'What we deliver in South Africa',
-            'copy'  => 'Commercial refrigeration leads the South African operation, with air conditioning and medical cold chain delivered by the same teams — so a store, a clinic and a plant room can be covered by one contract.',
+            'copy'  => 'Commercial refrigeration leads the South African operation, with air conditioning and medical cold chain delivered by the same teams. A store, a clinic and a plant room can be covered by one contract.',
         ],
         'services_note' => 'Both principal disciplines and the medical cold chain service are delivered by the South African teams directly.',
         'facts' => [
@@ -54,9 +54,9 @@ $MARKET_CONTENT = [
         'coverage' => [
             'title' => 'Coverage',
             'items' => [
-                'Eastern Cape — Queenstown, East London and Mthatha offices',
-                'South Africa — commercial refrigeration, air conditioning and medical cold chain',
-                'Group routes — enquiries outside the local area are handled centrally',
+                'Eastern Cape: Queenstown, East London and Mthatha offices',
+                'South Africa: commercial refrigeration, air conditioning and medical cold chain',
+                'Group routes: enquiries outside the local area are handled centrally',
             ],
         ],
     ],
@@ -104,9 +104,9 @@ $MARKET_CONTENT = [
         'coverage' => [
             'title' => 'Coverage',
             'items' => [
-                'Harare and Zimbabwe — refrigeration and air conditioning enquiries',
-                'Project scope — confirmed with the facility before a service is proposed',
-                'Group route — enquiries are handled centrally while local contact details remain under confirmation',
+                'Harare and Zimbabwe: refrigeration and air conditioning enquiries',
+                'Project scope: confirmed with the facility before a service is proposed',
+                'Group route: enquiries are handled centrally while local contact details remain under confirmation',
             ],
         ],
     ],
@@ -154,9 +154,9 @@ $MARKET_CONTENT = [
         'coverage' => [
             'title' => 'Coverage',
             'items' => [
-                'United Kingdom — air conditioning, ventilation and building-services enquiries',
-                'Service area and project scope — confirmed before proposal',
-                'Group route — local UK contact details remain under confirmation',
+                'United Kingdom: air conditioning, ventilation and building-services enquiries',
+                'Service area and project scope: confirmed before proposal',
+                'Group route: local UK contact details remain under confirmation',
             ],
         ],
     ],

@@ -13,7 +13,7 @@ $ENGAGEMENT_MODELS = [
         'icon'    => 'users',
         'name'    => 'Direct contract',
         'summary' => 'We contract straight with the client and carry the whole package.',
-        'detail'  => 'The owner, operator or facility manager appoints us directly. We own the survey, the specification, the installation, the commissioning and the handover — and the responsibility for the system performing afterwards.',
+        'detail'  => 'The owner, operator or facility manager appoints us directly. We own the survey, the specification, the installation, the commissioning and the handover, including responsibility for the system performing afterwards.',
         'owns'    => [
             'System selection and specification',
             'Procurement and programme management',
@@ -39,7 +39,7 @@ $ENGAGEMENT_MODELS = [
         'icon'    => 'calendar',
         'name'    => 'Maintenance and service agreements',
         'summary' => 'Planned servicing and fault response for installed plant, including plant we did not install.',
-        'detail'  => 'A refrigeration system only holds its temperature if somebody is accountable for it. We take on planned preventive maintenance, reactive call-out and system optimisation for installed base — and for equipment inherited from a previous contractor once we have surveyed and recorded it.',
+        'detail'  => 'A refrigeration system only holds its temperature if somebody is accountable for it. We take on planned preventive maintenance, reactive call-out and system optimisation for installed base, as well as equipment inherited from a previous contractor once we have surveyed and recorded it.',
         'owns'    => [
             'Service visits against a planned schedule',
             'Fault response and priority attendance',
@@ -52,7 +52,7 @@ $ENGAGEMENT_MODELS = [
         'icon'    => 'document',
         'name'    => 'Survey, design and tender support',
         'summary' => 'Independent technical input before anything is bought or built.',
-        'detail'  => 'Sometimes the useful work happens before there is a project to install — an assessment of what is already installed, a load calculation, a tender specification, or an opinion on a system another contractor has quoted. We take on that work on its own, documented properly.',
+        'detail'  => 'Sometimes the useful work happens before there is a project to install. This can include an assessment of what is already installed, a load calculation, a tender specification, or an opinion on a system another contractor has quoted. We document that work properly.',
         'owns'    => [
             'Site survey and existing-plant assessment',
             'Load calculation and system options',

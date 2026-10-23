@@ -13,7 +13,7 @@ require __DIR__ . '/../includes/header.php';
 $ph = [
     'eyebrow' => 'About us',
     'title'   => 'A cooling company built on the work, not on the marketing',
-    'lede'    => 'Rotash Power Projects is the refrigeration, air conditioning and medical cold chain business of the ' . PARENT_GROUP . '. We started by installing, commissioning and maintaining plant in live facilities — and that is still how we are measured.',
+    'lede'    => 'Rotash Power Projects is the refrigeration, air conditioning and medical cold chain business of the ' . PARENT_GROUP . '. We started by installing, commissioning and maintaining plant in live facilities, and that is still how we are measured.',
     'image'   => '/assets/img/site-works.jpg',
     'alt'     => 'Engineers on a building site during coordinated construction works',
     'meta'    => [
@@ -34,8 +34,8 @@ require __DIR__ . '/../includes/sections/page-hero.php';
                 <h2 class="display-lg">From a hands-on engineering operation to three countries</h2>
             </div>
             <div class="prose reveal" data-delay="1">
-                <p>The business grew out of hands-on work: surveying installations, installing plant, commissioning it, and then spending years servicing what had been built. That practical foundation still decides how the company operates — drawings before decisions, verification before claims.</p>
-                <p>Today the work runs from three countries. The South African operation, established around three offices in the Eastern Cape — Queenstown, East London and Mthatha — carries commercial refrigeration, air conditioning and medical cold chain. The Zimbabwe operation works from Harare, and the United Kingdom operation delivers air conditioning and building services to British clients.</p>
+                <p>The business grew out of hands-on work: surveying installations, installing plant, commissioning it, and then spending years servicing what had been built. That practical foundation still decides how the company operates. Drawings before decisions, verification before claims.</p>
+                <p>Today the work runs from three countries. The South African operation, established around three offices in the Eastern Cape, Queenstown, East London and Mthatha, carries commercial refrigeration, air conditioning and medical cold chain. The Zimbabwe operation works from Harare, and the United Kingdom operation delivers air conditioning and building services to British clients.</p>
                 <p>All three are part of <?= e(PARENT_GROUP) ?>, the parent organisation coordinating the group, and all three are run to one engineering standard: the same survey, the same specification discipline, the same commissioning records and the same maintenance expectation.</p>
             </div>
         </div>
@@ -54,7 +54,7 @@ require __DIR__ . '/../includes/sections/page-hero.php';
 <?php
 $principles = [
     ['Survey before specifying', 'Real loads, real usage patterns and real constraints are established on site. Nothing is selected from a catalogue before the duty is known.'],
-    ['Specify to the duty', 'Plant is sized for the building, the climate and the operating budget — including the ambient conditions the system will actually work in.'],
+    ['Specify to the duty', 'Plant is sized for the building, the climate and the operating budget, including the ambient conditions the system will actually work in.'],
     ['Prove performance', 'Balancing, leak testing, temperature verification and commissioning records are produced before a job is called complete.'],
     ['Design for maintenance', 'Access, spares, controls and service routes are designed in, so the operator can keep the system running for years.'],
 ];
@@ -130,7 +130,7 @@ require __DIR__ . '/../includes/sections/offices.php';
 <?php
 $cta = [
     'title'   => 'Tell us what has to keep running.',
-    'copy'    => 'The facility, the duty, the constraint and the timeline — the team for your market will take it from there.',
+    'copy'    => 'The facility, the duty, the constraint and the timeline. The team for your market will take it from there.',
 ];
 require __DIR__ . '/../includes/sections/cta.php';
 ?>
