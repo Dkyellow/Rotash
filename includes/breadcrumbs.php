@@ -3,9 +3,7 @@
  * Breadcrumb trail + BreadcrumbList JSON-LD. Call after head include.
  */
 $crumbs = breadcrumbs();
-$ld = jsonld_breadcrumbs($crumbs);
 ?>
-    <script type="application/ld+json"><?= json_encode($ld, JSON_UNESCAPED_SLASHES) ?></script>
     <nav class="breadcrumbs" aria-label="Breadcrumb">
         <div class="container">
             <ol class="breadcrumbs__list">

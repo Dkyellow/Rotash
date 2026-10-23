@@ -7,7 +7,7 @@ $MC = $MARKET_CONTENT[$mc];
 $page = [
     'key'         => 'home',
     'title'       => 'Air Conditioning & Building Services in the UK | Rotash',
-    'description' => 'Air conditioning design, installation, commissioning and maintenance for commercial buildings across the United Kingdom.',
+    'description' => 'Explore Rotash air conditioning and building-services capabilities for UK commercial and industrial sites. Contact the team to confirm availability.',
     'image'       => '/assets/img/og-default.jpg',
 ];
 

@@ -16,6 +16,11 @@ $ld = [
     jsonld_organization(),
     jsonld_website(),
 ];
+$crumbs = [];
+if (($page['breadcrumbs'] ?? true) !== false) {
+    $crumbs = breadcrumbs();
+    $ld[] = jsonld_breadcrumbs($crumbs);
+}
 $lb = jsonld_localbusiness($code);
 if ($lb) {
     $ld[] = $lb;
@@ -46,7 +51,7 @@ $ld = array_merge($ld, $page['jsonld']);
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="<?= e(str_replace('-', '_', $m['lang'])) ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#061226">
+    <meta name="theme-color" content="#172D46">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
     <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">

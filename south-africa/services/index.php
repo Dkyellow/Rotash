@@ -6,8 +6,8 @@ $MC = $MARKET_CONTENT[$mc];
 
 $page = [
     'key'         => 'services',
-    'title'       => 'South Africa Services — Refrigeration & Air Conditioning',
-    'description' => 'Commercial refrigeration, air conditioning, ventilation and medical cold chain in South Africa — installation and maintenance.',
+    'title'       => 'Commercial Refrigeration in the Eastern Cape | Rotash',
+    'description' => 'Commercial refrigeration, cold rooms, bottle coolers, air conditioning and medical refrigerator support in the Eastern Cape.',
     'image'       => '/assets/img/og-default.jpg',
 ];
 

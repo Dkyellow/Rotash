@@ -24,7 +24,7 @@ $INDUSTRIES = [
             'Plant installed around a live shop floor',
             'Display units that sell, not just that hold cold',
         ],
-        'markets' => ['zimbabwe', 'south-africa', 'uk'],
+        'markets' => ['zimbabwe', 'south-africa'],
     ],
     'healthcare' => [
         'id'      => 'healthcare',
@@ -38,7 +38,7 @@ $INDUSTRIES = [
             'Documented temperature records and mapping',
             'Continuity of supply and stock on critical medicines',
         ],
-        'markets' => ['zimbabwe', 'south-africa', 'uk'],
+        'markets' => ['zimbabwe', 'south-africa'],
     ],
     'hospitality' => [
         'id'      => 'hospitality',
@@ -52,7 +52,7 @@ $INDUSTRIES = [
             'Quiet plant and discreet plant locations',
             'Comfort systems that hold temperature through occupancy',
         ],
-        'markets' => ['zimbabwe', 'south-africa', 'uk'],
+        'markets' => ['zimbabwe', 'south-africa'],
     ],
     'industrial' => [
         'id'      => 'industrial',
@@ -66,7 +66,7 @@ $INDUSTRIES = [
             'Phased cutovers that keep stock and dispatch moving',
             'Plants that can be serviced without stopping the operation',
         ],
-        'markets' => ['zimbabwe', 'south-africa', 'uk'],
+        'markets' => ['zimbabwe', 'south-africa'],
     ],
     'commercial' => [
         'id'      => 'commercial',

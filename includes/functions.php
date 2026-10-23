@@ -372,13 +372,17 @@ function jsonld_services(string $code): array
 {
     $out = [];
     foreach (services_for_market($code) as $id => $s) {
+        $areas = array_values(array_map(
+            static fn (string $marketCode): string => market($marketCode)['name'],
+            $s['markets']
+        ));
         $out[] = [
             '@type'       => 'Service',
             'name'        => $s['name'],
             'description' => $s['summary'],
             'serviceType' => $s['name'],
             'provider'    => ['@id' => SITE_DOMAIN . '/#organization'],
-            'areaServed'  => ['Zimbabwe', 'South Africa', 'United Kingdom'],
+            'areaServed'  => $areas,
         ];
     }
     return $out;

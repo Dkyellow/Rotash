@@ -12,6 +12,11 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # Short regional URLs from the current sitemap resolve to the established
+    # market hubs without duplicating their content or canonical metadata.
+    RewriteRule ^zw/?$ /zimbabwe/ [R=301,L]
+    RewriteRule ^za/?$ /south-africa/ [R=301,L]
+
     # Canonical trailing slash for directory URLs.
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteCond %{REQUEST_URI} !/$

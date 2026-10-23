@@ -6,8 +6,8 @@ $MC = $MARKET_CONTENT[$mc];
 
 $page = [
     'key'         => 'services',
-    'title'       => 'Refrigeration & Medical Cold Chain in Zimbabwe | Rotash',
-    'description' => 'Refrigeration, medical cold chain, air conditioning and ventilation in Zimbabwe — installation, commissioning and maintenance.',
+    'title'       => 'Refrigeration & Air Conditioning Services in Harare | Rotash',
+    'description' => 'Explore Rotash refrigeration and air conditioning services in Harare, Zimbabwe, including installation, servicing and repairs.',
     'image'       => '/assets/img/og-default.jpg',
 ];
 

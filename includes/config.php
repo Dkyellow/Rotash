@@ -92,12 +92,10 @@ $ROUTES = [
 
 /** Primary navigation. */
 $NAV = [
-    ['label' => 'About',      'path' => 'about/',      'key' => 'about'],
-    ['label' => 'Services',   'path' => 'services/',   'key' => 'services'],
-    ['label' => 'Sectors',    'path' => 'industries/', 'key' => 'industries'],
-    ['label' => 'Projects',   'path' => 'projects/',   'key' => 'projects'],
-    ['label' => 'Locations',  'path' => 'locations/',  'key' => 'locations'],
-    ['label' => 'Contact',    'path' => 'contact/',    'key' => 'contact'],
+    ['label' => 'Services', 'path' => 'services/', 'key' => 'services'],
+    ['label' => 'About', 'path' => 'about/', 'key' => 'about'],
+    ['label' => 'Regions', 'path' => 'locations/', 'key' => 'locations'],
+    ['label' => 'Contact', 'path' => 'contact/', 'key' => 'contact'],
 ];
 
 /** Breadcrumb labels for every route, including market hubs. */

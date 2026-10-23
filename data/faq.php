@@ -12,7 +12,7 @@ declare(strict_types=1);
 $FAQ = [
     [
         'q' => 'Which countries do you work in?',
-        'a' => 'Rotash Power Projects operates from Zimbabwe, South Africa and the United Kingdom. The South African operation runs from three offices in the Eastern Cape — Queenstown, East London and Mthatha — and delivers commercial refrigeration, air conditioning and medical refrigeration. The Zimbabwe and United Kingdom operations cover the same core disciplines in their markets.',
+        'a' => 'Rotash Power Projects identifies Zimbabwe, South Africa and the United Kingdom as operating markets. South African medical refrigeration work is confirmed in the Eastern Cape. Zimbabwe and UK enquiries are routed according to the service scope and local availability confirmed for each project.',
     ],
     [
         'q' => 'Do you work as a subcontractor as well as directly with clients?',
