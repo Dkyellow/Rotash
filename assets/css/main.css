@@ -968,3 +968,26 @@ body { background:#fff; color:var(--text); }
 .office-grid { align-items:stretch; }.office-card { padding:0; overflow:hidden; background:#fff; }.office-card__media { height:190px; margin:0; overflow:hidden; }.office-card__media img { width:100%; height:100%; object-fit:cover; transition:transform .35s var(--ease); }.office-card:hover .office-card__media img { transform:scale(1.04); }.office-card__head,.office-card__summary,.office-card__pending,.office-card__lines,.office-card__link { margin-left:22px; margin-right:22px; }.office-card__head { padding-top:20px; }.office-card__summary { min-height:45px; }.office-card__pending { margin-bottom:20px; }.office-card__link { display:inline-flex; margin-bottom:22px; }
 @media (max-width:960px) { .disciplines { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:620px) { .disciplines { grid-template-columns:1fr; }.discipline__photo { height:230px; }.office-card__media { height:220px; } }
+
+/* Interior pages stay on a clean white canvas. The home feature panel remains dark. */
+body:not(.page-home) .section--ink,
+body:not(.page-home) .section--pale,
+body:not(.page-home) .cta-band { background:#fff; color:var(--text); }
+body:not(.page-home) .section--ink .display-lg,
+body:not(.page-home) .section--ink h1,
+body:not(.page-home) .section--ink h2,
+body:not(.page-home) .section--ink h3,
+body:not(.page-home) .section--ink .method__copy,
+body:not(.page-home) .section--ink .section-head__on-dark,
+body:not(.page-home) .section--ink .prose p { color:var(--text); }
+body:not(.page-home) .section--ink .eyebrow--on-dark { color:var(--brand); }
+body:not(.page-home) .section--ink .btn--on-dark { color:var(--text); border-color:var(--line); }
+body:not(.page-home) .section--ink .btn--on-dark:hover { background:var(--brand-pale); border-color:var(--brand); }
+body:not(.page-home) .section--ink .method__item { border-color:var(--line); }
+body:not(.page-home) .section--ink .method__title { color:var(--text); }
+body:not(.page-home) .section--ink .method__title svg { color:var(--brand); }
+body:not(.page-home) .section--ink .contact-desk { background:var(--frost); border-color:var(--line); }
+body:not(.page-home) .section--ink .contact-desk__row a { color:var(--text); }
+body:not(.page-home) .section--ink .contact-desk__row span,
+body:not(.page-home) .section--ink .contact-desk__label { color:var(--muted); }
+body:not(.page-home) .cta-band .cta-band__copy { color:var(--text-2); }
