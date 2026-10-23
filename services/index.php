@@ -36,20 +36,6 @@ $ph = [
 require __DIR__ . '/../includes/sections/page-hero.php';
 ?>
 
-<!-- In-page contents -->
-<nav class="contents" aria-label="Services on this page">
-    <div class="container contents__inner">
-        <p class="contents__label">On this page</p>
-        <ul class="contents__list">
-<?php foreach (services_for_market(current_market_code()) as $id => $s): ?>
-            <li><a href="#<?= e($id) ?>"><?= e($s['nav']) ?><?php if ($s['kind'] === 'specialist'): ?><span class="contents__tag">Specialist</span><?php endif; ?></a></li>
-<?php endforeach; ?>
-            <li><a href="#method">How we work</a></li>
-            <li><a href="#faq">Questions</a></li>
-        </ul>
-    </div>
-</nav>
-
 <?php
 $discipline_head = [
     'eyebrow' => 'Capabilities',
